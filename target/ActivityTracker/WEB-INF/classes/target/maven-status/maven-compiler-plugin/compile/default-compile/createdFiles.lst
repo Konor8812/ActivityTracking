@@ -1,0 +1,9 @@
+com\my\DAO\DaoFactory.class
+com\my\command\LoginUser.class
+com\my\command\CommandFactory.class
+com\my\DAO\ActivityDAO.class
+com\my\command\Command.class
+com\my\command\RegUser.class
+com\my\database\DBManager.class
+com\my\controller\Controller.class
+com\my\DAO\UserDAO.class
