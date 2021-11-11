@@ -1,6 +1,6 @@
 package model.dao;
 
-import model.database.DBManager;
+import model.database.ConnectionPool;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -20,7 +20,8 @@ public class UserDAO {
     public void insertUser(String login, String pass) {
         Connection con;
         try {
-            con = DBManager.getInstance().getConnection();
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
             Statement stmt = con.createStatement();
             stmt.execute(getInsertString(login, pass));
         } catch (SQLException e) {
@@ -31,7 +32,8 @@ public class UserDAO {
     public void deleteUser(String login) {
         Connection con;
         try {
-            con = DBManager.getInstance().getConnection();
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
             Statement stmt = con.createStatement();
             stmt.execute(getDeleteUserString(login));
         } catch (SQLException e) {
@@ -42,7 +44,8 @@ public class UserDAO {
     public void deleteAllUsers() {
         Connection con;
         try {
-            con = DBManager.getInstance().getConnection();
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
             Statement stmt = con.createStatement();
             stmt.execute(getClearAllUsersExceptAdmin());
         } catch (SQLException e) {

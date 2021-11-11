@@ -23,7 +23,12 @@ public class CommandFactory {
             case "regUser":
                 com = new RegUser(req.getParameter("login"), req.getParameter("password"));
                 break;
-
+            case "deleteAllUsers":
+                com = new DeleteAllUsers();
+                break;
+            case "showUsersList":
+                com = new ShowUsersList();
+                break;
         }
         return com;
     }

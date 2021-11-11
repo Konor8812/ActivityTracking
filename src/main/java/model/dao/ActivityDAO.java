@@ -10,4 +10,11 @@ public class ActivityDAO {
         }
         return instance;
     }
+
+
+    public void insertActivity(String name){
+
+    }
+
+
 }

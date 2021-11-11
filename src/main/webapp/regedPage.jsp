@@ -7,5 +7,10 @@
 <body>
     <hr>
     Success!
+
+    <form action="ActivityTracker?command=deleteAllUsers" method="post" >
+        <input type="submit" value="delete all users!"/>
+    </form>
+
 </body>
 </html>
