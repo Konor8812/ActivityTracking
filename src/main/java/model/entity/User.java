@@ -4,13 +4,12 @@ public class User {
 
     private final String login;
     private String password;
-
     private String role;
 
-    public User(String login, String password) {
+    public User(String login, String password, String role) {
         this.login = login;
         this.password = password;
-        this.role = "user";
+        this.role = role;
     }
 
     public String getLogin() {
@@ -29,7 +28,13 @@ public class User {
         return role;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+
+    public User(String login) {
+        this.login = login;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "login='" + login + "'}";
     }
 }

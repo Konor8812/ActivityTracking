@@ -8,7 +8,7 @@ import java.io.IOException;
 public class CommandFactory {
     private static CommandFactory instance;
 
-    private CommandFactory(){}
+    private CommandFactory(){ }
 
     public static synchronized CommandFactory getInstance(){
         if(instance == null){
@@ -17,11 +17,18 @@ public class CommandFactory {
         return  instance;
     }
 
+    public void executeCommand(HttpServletRequest req, HttpServletResponse resp, String command) throws IOException {
+        Command com = getCommand(command, req, resp);
+        String next = com.execute(req);
+
+        resp.sendRedirect(next);
+    }
+
     public Command getCommand(String name, HttpServletRequest req, HttpServletResponse resp){
         Command com = null;
         switch(name){
             case "regUser":
-                com = new RegUser(req.getParameter("login"), req.getParameter("password"));
+                com = new RegUser(req.getParameter("login"), req.getParameter("password"), req);
                 break;
             case "deleteAllUsers":
                 com = new DeleteAllUsers();
@@ -29,14 +36,12 @@ public class CommandFactory {
             case "showUsersList":
                 com = new ShowUsersList();
                 break;
+            case "logIn":
+                com = new LoginUser(req.getParameter("login"));
+                break;
         }
         return com;
     }
 
-    public void executeCommand(HttpServletRequest req, HttpServletResponse resp, String command) throws IOException {
-        Command com = this.getCommand(command, req, resp);
-        String next = com.execute();
-        resp.sendRedirect(next);
 
-    }
 }

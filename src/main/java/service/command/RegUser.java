@@ -3,9 +3,9 @@ package service.command;
 
 import model.dao.DaoFactory;
 import model.dao.UserDAO;
-import model.database.ConnectionPool;
+import model.entity.User;
 
-import java.sql.Connection;
+import javax.servlet.http.HttpServletRequest;
 
 public class RegUser implements  Command{
     private final Object[] params;
@@ -16,13 +16,17 @@ public class RegUser implements  Command{
     }
 
     @Override
-    public String execute() {
+    public String execute(HttpServletRequest req) {
         String login = (String)params[0];
         String pass = (String)params[1];
-        System.out.printf("regUser login ==> %s pass ==> %s", login, pass);
+
+        System.out.printf("regUser login ==> %s pass ==> %s\n", login, pass);
         UserDAO userDAO = DaoFactory.getInstance().getUserDAO();
         userDAO.insertUser(login, pass);
 
-        return "regedPage.jsp";
+        req.getSession().setAttribute("regedAs", "user");
+        req.getSession().setAttribute("login", login);
+
+        return "regedUserPage.jsp";
     }
 }

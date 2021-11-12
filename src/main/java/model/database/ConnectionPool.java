@@ -25,7 +25,6 @@ public class ConnectionPool {
         Context ctx;
         Connection con = null;
         try {
-//            Class.forName("com.mysql.cj.jdbc.Driver");
             ctx = new InitialContext();
             DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/FPDatabase");
             con = ds.getConnection();

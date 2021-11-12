@@ -1,7 +1,8 @@
 package service.command;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface Command {
 
-
-    public String execute();
+    String execute(HttpServletRequest req);
 }

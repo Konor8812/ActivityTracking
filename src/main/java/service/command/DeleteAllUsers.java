@@ -3,19 +3,19 @@ package service.command;
 import model.dao.DaoFactory;
 import model.dao.UserDAO;
 
+import javax.servlet.http.HttpServletRequest;
+
 public class DeleteAllUsers implements Command{
-    private final Object[] params;
 
 
-    public DeleteAllUsers(Object... params) {
-        this.params = params;
-    }
+    public DeleteAllUsers() { }
 
     @Override
-    public String execute() {
+    public String execute(HttpServletRequest req) {
         UserDAO userDAO = DaoFactory.getInstance().getUserDAO();
         userDAO.deleteAllUsers();
-
-        return "index.jsp";
+        req.setAttribute("users", null);
+        req.getSession().setAttribute("shouldPrintUsers", false);
+        return "regedAdminPage.jsp";
     }
 }
