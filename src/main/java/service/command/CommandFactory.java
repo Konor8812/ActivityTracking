@@ -8,13 +8,14 @@ import java.io.IOException;
 public class CommandFactory {
     private static CommandFactory instance;
 
-    private CommandFactory(){ }
+    private CommandFactory() {
+    }
 
-    public static synchronized CommandFactory getInstance(){
-        if(instance == null){
+    public static synchronized CommandFactory getInstance() {
+        if (instance == null) {
             instance = new CommandFactory();
         }
-        return  instance;
+        return instance;
     }
 
     public void executeCommand(HttpServletRequest req, HttpServletResponse resp, String command) throws IOException {
@@ -24,24 +25,41 @@ public class CommandFactory {
         resp.sendRedirect(next);
     }
 
-    public Command getCommand(String name, HttpServletRequest req, HttpServletResponse resp){
+    public Command getCommand(String name, HttpServletRequest req, HttpServletResponse resp) {
         Command com = null;
-        switch(name){
+        switch (name) {
             case "regUser":
                 com = new RegUser(req.getParameter("login"), req.getParameter("password"), req);
                 break;
             case "deleteAllUsers":
                 com = new DeleteAllUsers();
                 break;
-            case "showUsersList":
+            case "deleteUser":
+                com = new DeleteUser();
+                break;
+            case "showUsers":
                 com = new ShowUsersList();
                 break;
             case "logIn":
-                com = new LoginUser(req.getParameter("login"));
+                com = new LoginUser();
+                break;
+            case "showActivities":
+                com = new ShowActivitiesList();
+                break;
+            case "addActivity":
+                com = new InsertActivity();
+                break;
+            case "getActivitiesDescription":
+                com = new GetActivityDescription();
+                break;
+            case "hideActivitiesDescription":
+                com = new HideActivityDescription();
+                break;
+            case "logOut":
+                com = new LogOut();
                 break;
         }
         return com;
     }
-
 
 }

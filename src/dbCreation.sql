@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="database" uuid="4930325f-fc8e-4f06-accc-aa5e17ab7f0a">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/FPDatabase</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-      <init-script>-- MySQL Workbench Forward Engineering
+-- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
@@ -30,11 +21,11 @@ USE `FPDatabase` ;
 CREATE TABLE IF NOT EXISTS `FPDatabase`.`user` (
                                                    `id` INT NOT NULL AUTO_INCREMENT,
                                                    `login` VARCHAR(20) NOT NULL,
-                                                   `role` VARCHAR(45) NOT NULL DEFAULT 'user',
-                                                   `password` VARCHAR(20) NOT NULL,
-                                                   `total_points` DECIMAL(10) NOT NULL DEFAULT 0,
-                                                   PRIMARY KEY (`id`),
-                                                   UNIQUE INDEX `id_UNIQUE` (`id` ASC) INVISIBLE)
+    `role` VARCHAR(45) NOT NULL DEFAULT 'user',
+    `password` VARCHAR(20) NOT NULL,
+    `total_points` DECIMAL(10) NOT NULL DEFAULT 0,
+    PRIMARY KEY (`id`),
+    UNIQUE INDEX `id_UNIQUE` (`id` ASC) INVISIBLE)
     ENGINE = InnoDB;
 
 
@@ -44,12 +35,12 @@ CREATE TABLE IF NOT EXISTS `FPDatabase`.`user` (
 CREATE TABLE IF NOT EXISTS `FPDatabase`.`activity` (
                                                        `id` INT NOT NULL AUTO_INCREMENT,
                                                        `name` VARCHAR(50) NOT NULL,
-                                                       `duration` VARCHAR(45) NOT NULL,
-                                                       `reward` double(4,1) NOT NULL,
-                                                       `description` VARCHAR(200) NULL,
-                                                       `status` TINYINT(1) NOT NULL DEFAULT 0,
-                                                       UNIQUE INDEX `activity_UNIQUE` (`name` ASC) VISIBLE,
-                                                       PRIMARY KEY (`id`))
+    `duration` VARCHAR(45) NOT NULL,
+    `reward` double(4,1) NOT NULL,
+    `description` VARCHAR(200) NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 0,
+    UNIQUE INDEX `activity_UNIQUE` (`name` ASC) VISIBLE,
+    PRIMARY KEY (`id`))
     ENGINE = InnoDB;
 
 
@@ -60,18 +51,18 @@ CREATE TABLE IF NOT EXISTS `FPDatabase`.`user_has_activity` (
                                                                 `user_id` INT NOT NULL,
                                                                 `activity_id` INT NOT NULL,
                                                                 PRIMARY KEY (`user_id`, `activity_id`),
-                                                                INDEX `fk_user_has_activity_activity1_idx` (`activity_id` ASC) VISIBLE,
-                                                                INDEX `fk_user_has_activity_user_idx` (`user_id` ASC) VISIBLE,
-                                                                CONSTRAINT `fk_user_has_activity_user`
-                                                                    FOREIGN KEY (`user_id`)
-                                                                        REFERENCES `FPDatabase`.`user` (`id`)
-                                                                        ON DELETE CASCADE
-                                                                        ON UPDATE CASCADE,
-                                                                CONSTRAINT `fk_user_has_activity_activity1`
-                                                                    FOREIGN KEY (`activity_id`)
-                                                                        REFERENCES `FPDatabase`.`activity` (`id`)
-                                                                        ON DELETE CASCADE
-                                                                        ON UPDATE CASCADE)
+    INDEX `fk_user_has_activity_activity1_idx` (`activity_id` ASC) VISIBLE,
+    INDEX `fk_user_has_activity_user_idx` (`user_id` ASC) VISIBLE,
+    CONSTRAINT `fk_user_has_activity_user`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `FPDatabase`.`user` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    CONSTRAINT `fk_user_has_activity_activity1`
+    FOREIGN KEY (`activity_id`)
+    REFERENCES `FPDatabase`.`activity` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
     ENGINE = InnoDB;
 
 INSERT INTO user (login, role, password, total_points) VALUES ('admin', 'admin', 'admin', 0);
@@ -87,7 +78,6 @@ INSERT INTO activity (name, duration, reward, description) VALUES ('bicycling', 
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;</init-script>
-    </data-source>
-  </component>
-</project>
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+

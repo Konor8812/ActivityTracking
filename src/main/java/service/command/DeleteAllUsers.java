@@ -16,6 +16,6 @@ public class DeleteAllUsers implements Command{
         userDAO.deleteAllUsers();
         req.setAttribute("users", null);
         req.getSession().setAttribute("shouldPrintUsers", false);
-        return "regedAdminPage.jsp";
+        return "Admin.jsp";
     }
 }

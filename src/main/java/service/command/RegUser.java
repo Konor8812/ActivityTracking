@@ -3,7 +3,6 @@ package service.command;
 
 import model.dao.DaoFactory;
 import model.dao.UserDAO;
-import model.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -27,6 +26,6 @@ public class RegUser implements  Command{
         req.getSession().setAttribute("regedAs", "user");
         req.getSession().setAttribute("login", login);
 
-        return "regedUserPage.jsp";
+        return "User.jsp";
     }
 }

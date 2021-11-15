@@ -14,12 +14,12 @@ public class ShowUsersList implements Command{
 
     @Override
     public String execute(HttpServletRequest req) {
-
         UserDAO userDAO = DaoFactory.getInstance().getUserDAO();
         List<User> users = userDAO.getUsersList();
         req.getSession().setAttribute("users", users);
-        req.getSession().setAttribute("shouldPrintUsers", true);
-        return null;
+        req.getSession().setAttribute("shouldShowUsers", true);
+        req.getSession().setAttribute("shouldShowActivities", false);
+        return "Admin.jsp";
     }
 
 
