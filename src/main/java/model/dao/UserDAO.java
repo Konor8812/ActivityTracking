@@ -15,7 +15,7 @@ public class UserDAO {
     private static final String INSERT_USER = "INSERT INTO user (login, password) VALUES (?, ?)";
     private static final String DELETE_USER = "DELETE FROM user WHERE login=(?)";
     private static final String DELETE_ALL_USERS = "DELETE FROM user WHERE role='user'";
-
+    private static final String CHECK_IF_LOGIN_EXISTS = "SELECT * FROM user WHERE login=(?)";
     public static synchronized UserDAO getInstance() {
         if (instance == null) {
             instance = new UserDAO();
@@ -23,7 +23,7 @@ public class UserDAO {
         return instance;
     }
 
-    public void insertUser(String login, String pass) {
+    public User regUser(String login, String pass) {
         Connection con = null;
         PreparedStatement prstmt = null;
         try {
@@ -38,6 +38,7 @@ public class UserDAO {
         }finally{
             close(prstmt, con);
         }
+        return getLogedInUser(login, pass);
     }
 
     public void deleteUser(String login) {
@@ -92,7 +93,7 @@ public class UserDAO {
         return users;
     }
 
-    public User getLogedInUser(String login){
+    public User getLogedInUser(String login, String password){
         User user = null;
         Connection con = null;
         ResultSet rs = null;
@@ -103,14 +104,19 @@ public class UserDAO {
             prstmt = con.prepareStatement(GET_LOGGED_IN_USER);
             prstmt.setString(1, login);
             rs = prstmt.executeQuery();
-            if(rs.next()){
-                String role = "user";
-                if(rs.getString("role").equals("admin")){
-                    role = "admin";
+            if(rs.next()) {
+                if (password.equals(rs.getString("password"))) {
+                    String role = "user";
+                    if (rs.getString("role").equals("admin")) {
+                        role = "admin";
+                    }
+                    user = new User(rs.getInt("id"),
+                            rs.getString("login"),
+                            rs.getString("password"),
+                            role);
+                    user.setTotalPoints(rs.getInt("total_points"));
                 }
-                user = new User(rs.getString("login"), rs.getString("password"), role);
             }
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }finally{
@@ -130,4 +136,25 @@ public class UserDAO {
         }
     }
 
+    public boolean checkIfLoginExists(String login) {
+        Connection con = null;
+        ResultSet rs = null;
+        PreparedStatement prstmt = null;
+        try{
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(CHECK_IF_LOGIN_EXISTS);
+            prstmt.setString(1, login);
+            rs = prstmt.executeQuery();
+            if(rs.next()) {
+                return true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally{
+            close(rs, prstmt, con);
+        }
+
+        return false;
+    }
 }

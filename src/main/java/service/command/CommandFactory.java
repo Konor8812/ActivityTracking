@@ -29,7 +29,7 @@ public class CommandFactory {
         Command com = null;
         switch (name) {
             case "regUser":
-                com = new RegUser(req.getParameter("login"), req.getParameter("password"), req);
+                com = new RegUser();
                 break;
             case "deleteAllUsers":
                 com = new DeleteAllUsers();
@@ -58,6 +58,8 @@ public class CommandFactory {
             case "logOut":
                 com = new LogOut();
                 break;
+            case "regActivityForUser":
+                com = new RegisterActivityForUser();
         }
         return com;
     }

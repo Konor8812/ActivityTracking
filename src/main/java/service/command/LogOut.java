@@ -8,9 +8,7 @@ public class LogOut implements Command{
     @Override
     public String execute(HttpServletRequest req) {
 
-        req.getSession().setAttribute("login", "");
-        req.getSession().setAttribute("role", "");
-
+        req.getSession().removeAttribute("regedAs");
         return "index.jsp";
     }
 }

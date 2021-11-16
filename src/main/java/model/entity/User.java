@@ -1,14 +1,15 @@
 package model.entity;
 
 public class User {
-
+    private int id;
     private final String login;
     private String password;
     private String role;
     private int activitiesAmount;
     private int totalPoints;
 
-    public User(String login, String password, String role) {
+    public User(int id, String login, String password, String role) {
+        this.id = id;
         this.login = login;
         this.password = password;
         this.role = role;
@@ -52,6 +53,14 @@ public class User {
 
     public void setTotalPoints(int totalPoints) {
         this.totalPoints = totalPoints;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

@@ -1,7 +1,6 @@
 package service.command;
 
-import model.dao.ActivityDAO;
-import model.entity.Activity;
+import model.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,6 +10,12 @@ public class GetActivityDescription implements Command {
     public String execute(HttpServletRequest req) {
 
         req.getSession().setAttribute("shouldShowTags", true);
-        return "Admin.jsp";
+        User user =(User)req.getSession().getAttribute("regedAs");
+
+        if(user.getRole().equals("admin")) {
+            return "Admin.jsp";
+        } else{
+            return "User.jsp";
+        }
     }
 }

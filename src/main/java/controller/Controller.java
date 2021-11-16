@@ -36,11 +36,6 @@ public class Controller extends HttpServlet {
 
     private void executeCommand(HttpServletRequest req, HttpServletResponse resp, String command) {
         CommandFactory cf = CommandFactory.getInstance();
-        try{
-            System.out.println("Activity name ==>  "+req.getParameter("activityName"));
-        } catch(Exception e){
-            e.printStackTrace();
-        }
         try {
             cf.executeCommand(req, resp, command);
         } catch(Exception e){

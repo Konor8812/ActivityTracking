@@ -1,5 +1,7 @@
 package service.command;
 
+import model.entity.User;
+
 import javax.servlet.http.HttpServletRequest;
 
 public class HideActivityDescription implements Command {
@@ -7,6 +9,12 @@ public class HideActivityDescription implements Command {
     public String execute(HttpServletRequest req) {
 
         req.getSession().setAttribute("shouldShowTags", false);
-        return "Admin.jsp";
+        User user =(User)req.getSession().getAttribute("regedAs");
+
+        if(user.getRole().equals("admin")) {
+            return "Admin.jsp";
+        } else{
+            return "User.jsp";
+        }
     }
 }

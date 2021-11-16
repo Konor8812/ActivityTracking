@@ -6,7 +6,7 @@
     <title>Login</title>
 </head>
 <body>
-
+<c:if test="${empty sessionScope.regedAs}">
 <form action="ActivityTracker?command=regUser" method="post" >
     <input name="login"/> <br>
     <input name="password"/> <br>
@@ -22,5 +22,18 @@
     <c:if test="${sessionScope.loginError == true}">
         <c:out value="login error: either pass or login are wrong" />
     </c:if>
+</c:if>
+<c:if test="${sessionScope.regError == true}">
+    <c:out value="Registration error^ user with such login exists!" />
+</c:if>
+<c:if test="${not empty sessionScope.regedAs}">
+    <%
+        if(session.getAttribute("regedAs").equals("user")) {
+            response.sendRedirect("User.jsp");
+        } else{
+            response.sendRedirect("Admin.jsp");
+        }
+    %>
+</c:if>
 </body>
 </html>

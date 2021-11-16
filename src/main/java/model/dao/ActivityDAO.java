@@ -10,7 +10,7 @@ import java.util.List;
 public class ActivityDAO {
     private static ActivityDAO instance;
 
-    private static final String INSERT_ACTIVITY = "INSERT INTO activity (name, duration, reward) VALUES (?,?,?)";
+    private static final String INSERT_ACTIVITY = "INSERT INTO activity (name, duration, reward, description) VALUES (?,?,?,?)";
     private static final String ALL_ACTIVITIES_LIST = "select * from activity";
     private static final String GET_ACTIVITY_BY_ID = "SELECT * FROM activity WHERE id=(?)";
     private static final String GET_ACTIVITY_BY_NAME = "SELECT * FROM activity WHERE name=(?)";
@@ -25,7 +25,7 @@ public class ActivityDAO {
     }
 
 
-    public void insertActivity(String name, String duration, double reward){
+    public void insertActivity(String name, String duration, double reward, String description){
         Connection con = null;
         PreparedStatement prstmt = null;
         try {
@@ -35,6 +35,7 @@ public class ActivityDAO {
             prstmt.setString(1, name);
             prstmt.setString(2, duration);
             prstmt.setDouble(3, reward);
+            prstmt.setString(4, description);
             prstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
