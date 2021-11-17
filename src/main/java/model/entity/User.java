@@ -2,17 +2,16 @@ package model.entity;
 
 public class User {
     private int id;
-    private final String login;
+    private String login;
     private String password;
     private String role;
     private int activitiesAmount;
     private int totalPoints;
 
-    public User(int id, String login, String password, String role) {
-        this.id = id;
+    public User() { }
+
+    public void setLogin(String login) {
         this.login = login;
-        this.password = password;
-        this.role = role;
     }
 
     public String getLogin() {
@@ -62,9 +61,11 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
-
-    @Override
-    public String toString() {
-        return "User{" + "login='" + login + "'}";
+    public void incrementActivitiesAmount(){
+        ++activitiesAmount;
     }
+    public void decrementActivitiesAmount(){
+        --activitiesAmount;
+    }
+
 }

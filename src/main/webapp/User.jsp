@@ -41,11 +41,17 @@
                     <c:out value="${activity.description}" />
                 </c:if>
             </td>
-            <td><a href="ActivityTracker?command=regActivityForUser&userLogin=${sessionScope.regedAs.id}&activityId=${activity.id}">take activity</a></td>
+            <td><a href="ActivityTracker?command=regActivityForUser&userId=${sessionScope.regedAs.id}&activityId=${activity.id}">take activity</a></td>
         </tr>
     </c:forEach>
     </table>
+    <c:if test="${sessionScope.activityTaken}">
+        <c:out value="You have already taken this activity!"/>
+    </c:if>
 </c:if>
+<form method="post" action="ActivityTracker?command=showProfile">
+    <input type="submit" value="profile">
+</form>
     
 </body>
 </html>

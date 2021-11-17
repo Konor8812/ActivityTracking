@@ -60,6 +60,28 @@ public class CommandFactory {
                 break;
             case "regActivityForUser":
                 com = new RegisterActivityForUser();
+                break;
+            case "showProfile":
+                com = new ShowProfile();
+                break;
+            case "changePass":
+                com = new ChangePass();
+                break;
+            case "returnToMain":
+                com = new ReturnToMain();
+                break;
+            case "showUsersActivities":
+                com = new ShowUsersActivities();
+                break;
+            case "giveUpActivity":
+                com = new DeleteUsersActivity();
+                break;
+            case "deleteActivity":
+                com = new DeleteActivity();
+                break;
+            case "hideUsersActivities":
+                com = new HideUsersActivities();
+                break;
         }
         return com;
     }

@@ -11,6 +11,9 @@
     <form action="ActivityTracker?command=logOut" method="post">
         <input type="submit" value="logOut" name="log out"/>
     </form>
+    <form method="post" action="ActivityTracker?command=showProfile">
+        <input type="submit" value="profile">
+    </form>
     <c:if test="${sessionScope.shouldShowUsers == true}">
         <form action="ActivityTracker?command=showActivities&showDescription=false" method="post">
             <input type="submit" value="get activities!"/>
@@ -63,6 +66,7 @@
                         <c:out value="${activity.description}" />
                     </c:if>
                     </td>
+                    <td><a href="ActivityTracker?command=deleteActivity&activityId=${activity.id}"> delete </a> </td>
                 </tr>
             </c:forEach>
         </table>

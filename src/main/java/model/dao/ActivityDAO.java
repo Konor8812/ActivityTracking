@@ -14,8 +14,9 @@ public class ActivityDAO {
     private static final String ALL_ACTIVITIES_LIST = "select * from activity";
     private static final String GET_ACTIVITY_BY_ID = "SELECT * FROM activity WHERE id=(?)";
     private static final String GET_ACTIVITY_BY_NAME = "SELECT * FROM activity WHERE name=(?)";
-
-
+    private static final String DELETE_ACTIVITY = "DELETE FROM activity WHERE id=(?)";
+    private ActivityDAO() {
+    }
 
     public static synchronized ActivityDAO getInstance() {
         if (instance == null) {
@@ -83,6 +84,7 @@ public class ActivityDAO {
             prstmt.setString(1, id);
             rs = prstmt.executeQuery();
             if(rs.next()){
+                activity.setId(rs.getInt("id"));
                 activity.setName(rs.getString("name"));
                 activity.setDuration(rs.getString("duration"));
                 activity.setReward(rs.getDouble("reward"));
@@ -119,6 +121,7 @@ public class ActivityDAO {
         }
         return activity;
     }
+
     private void close(AutoCloseable... ac){
         try{
             for(AutoCloseable autoCloseable: ac){
@@ -126,6 +129,22 @@ public class ActivityDAO {
             }
         }  catch(Exception e){
             e.printStackTrace();
+        }
+    }
+
+    public void deleteActivity(String activityId){
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        try {
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(DELETE_ACTIVITY);
+            prstmt.setString(1, activityId);
+            prstmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            close(prstmt, con);
         }
     }
 

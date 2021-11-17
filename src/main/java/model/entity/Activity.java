@@ -1,11 +1,21 @@
 package model.entity;
 
 public class Activity {
+    private int id;
     private String name;
     private String duration;
     private double reward;
     private String description;
-    private int id;
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public Activity() {
     }
 
@@ -50,14 +60,4 @@ public class Activity {
 
     }
 
-    @Override
-    public String toString() {
-        return "Activity{" +
-                "name='" + name + '\'' +
-                ", duration='" + duration + '\'' +
-                ", reward=" + reward +
-                ", description='" + description + '\'' +
-                ", id=" + id +
-                '}';
-    }
 }

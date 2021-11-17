@@ -24,7 +24,7 @@
     </c:if>
 </c:if>
 <c:if test="${sessionScope.regError == true}">
-    <c:out value="Registration error^ user with such login exists!" />
+    <c:out value="Registration error: user with such login exists!" />
 </c:if>
 <c:if test="${not empty sessionScope.regedAs}">
     <%

@@ -22,14 +22,14 @@ public class Controller extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         String command = req.getParameter("command");
-        System.out.println("command ==> " + command);
+        System.out.println("Get#command ==> " + command);
         executeCommand(req, resp, command);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String command = req.getParameter("command");
-        System.out.println("command ==> " + command);
+        System.out.println("Post#command ==> " + command);
         executeCommand(req, resp, command);
 
     }

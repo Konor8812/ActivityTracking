@@ -19,7 +19,6 @@ public class InsertActivity implements Command {
         String description  = req.getParameter("description");
         ActivityDAO ad = ActivityDAO.getInstance();
         ad.insertActivity(name, duration, reward, description);
-
-        return "Admin.jsp";
+        return CommandFactory.getInstance().getCommand("showActivities", req, null).execute(req);
     }
 }

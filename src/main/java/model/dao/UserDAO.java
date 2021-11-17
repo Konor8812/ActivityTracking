@@ -11,11 +11,15 @@ public class UserDAO {
     private static UserDAO instance;
 
     private static final String GET_LOGGED_IN_USER = "SELECT * FROM user WHERE login=(?)";
+    private static final String GET_USER_BY_ID = "SELECT * FROM user WHERE id=(?)";
     private static final String GET_USERS_AS_LIST = "SELECT * FROM user WHERE role='user'";
     private static final String INSERT_USER = "INSERT INTO user (login, password) VALUES (?, ?)";
     private static final String DELETE_USER = "DELETE FROM user WHERE login=(?)";
     private static final String DELETE_ALL_USERS = "DELETE FROM user WHERE role='user'";
     private static final String CHECK_IF_LOGIN_EXISTS = "SELECT * FROM user WHERE login=(?)";
+    private static final String UPDATE_PASSWORD = "UPDATE user SET password=(?) WHERE id=(?)";
+    private static final String CHANGE_ACTIVITIES_AMOUNT = "UPDATE user SET activities_amount=(?) WHERE id=(?)";
+
     public static synchronized UserDAO getInstance() {
         if (instance == null) {
             instance = new UserDAO();
@@ -106,15 +110,7 @@ public class UserDAO {
             rs = prstmt.executeQuery();
             if(rs.next()) {
                 if (password.equals(rs.getString("password"))) {
-                    String role = "user";
-                    if (rs.getString("role").equals("admin")) {
-                        role = "admin";
-                    }
-                    user = new User(rs.getInt("id"),
-                            rs.getString("login"),
-                            rs.getString("password"),
-                            role);
-                    user.setTotalPoints(rs.getInt("total_points"));
+                    user = getUserById(Integer.toString(rs.getInt("id")));
                 }
             }
         } catch (SQLException throwables) {
@@ -157,4 +153,123 @@ public class UserDAO {
 
         return false;
     }
+
+
+    public void activityTakenByUser(String userId) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        ResultSet rs = null;
+        try{
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(GET_USER_BY_ID);
+            prstmt.setString(1, userId);
+            rs = prstmt.executeQuery();
+            if(rs.next()) {
+                int activitiesAmount = rs.getInt("activities_amount");
+                prstmt = con.prepareStatement(CHANGE_ACTIVITIES_AMOUNT);
+                prstmt.setString(1, Integer.toString(++activitiesAmount));
+                prstmt.setString(2, userId);
+                prstmt.execute();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally{
+            close(rs, prstmt, con);
+        }
+
+    }
+
+    public void changeUserPassword(int id, String newPassword) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        try{
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(UPDATE_PASSWORD);
+            prstmt.setString(1, newPassword);
+            prstmt.setString(2, Integer.toString(id));
+            prstmt.execute();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally{
+            close( prstmt, con);
+        }
+
+    }
+
+    public void deleteUsersActivity(String userId) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        try{
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(CHANGE_ACTIVITIES_AMOUNT);
+            User user = getUserById(userId);
+            int activitiesAmount = user.getActivitiesAmount();
+            prstmt.setInt(1, --activitiesAmount);
+            prstmt.setString(2, userId);
+            prstmt.execute();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally{
+            close(prstmt, con);
+        }
+    }
+
+    private User getUserById(String userId) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        ResultSet rs = null;
+        User user = null;
+        try{
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(GET_USER_BY_ID);
+            prstmt.setString(1, userId);
+            rs = prstmt.executeQuery();
+            if(rs.next()){
+                System.out.println("~~~~");
+                user = new User();
+                user.setId(rs.getInt("id"));
+                user.setLogin(rs.getString("login"));
+                user.setPassword((rs.getString("password")));
+                user.setRole(rs.getString("role"));
+                user.setTotalPoints(rs.getInt("total_points"));
+                user.setActivitiesAmount(rs.getInt("activities_amount"));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally{
+            close(rs, prstmt, con);
+        }
+        return user;
+    }
+
+    public void updateActivitiesAmount(String activityId) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        try{
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(CHANGE_ACTIVITIES_AMOUNT);
+
+            UserActivityDAO uad = UserActivityDAO.getInstance();
+            List<Integer> usersIdHadActivity = uad.getListOfUsersHadThisActivity(activityId);
+            for(int i: usersIdHadActivity){
+               User user = getUserById(Integer.toString(i));
+               int activitiesAmount = user.getActivitiesAmount();
+                prstmt.setInt(1,--activitiesAmount);
+                prstmt.setInt(2, i);
+                prstmt.execute();
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally{
+            close(prstmt, con);
+        }
+
+    }
 }
+
