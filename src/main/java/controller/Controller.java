@@ -1,6 +1,8 @@
 package controller;
 
 
+import model.dao.UserDAO;
+import org.apache.log4j.Logger;
 import service.command.CommandFactory;
 
 import javax.servlet.ServletException;
@@ -13,7 +15,7 @@ import java.io.IOException;
 
 @WebServlet("/ActivityTracker")
 public class Controller extends HttpServlet {
-
+    private static Logger logger = Logger.getLogger(UserDAO.class);
 
     @Override
     public void init() { }
@@ -30,6 +32,7 @@ public class Controller extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String command = req.getParameter("command");
         System.out.println("Post#command ==> " + command);
+        logger.info("Post#command ==> " + command);
         executeCommand(req, resp, command);
 
     }

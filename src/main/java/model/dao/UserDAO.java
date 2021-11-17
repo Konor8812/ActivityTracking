@@ -2,6 +2,7 @@ package model.dao;
 
 import model.database.ConnectionPool;
 import model.entity.User;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class UserDAO {
     private static final String CHECK_IF_LOGIN_EXISTS = "SELECT * FROM user WHERE login=(?)";
     private static final String UPDATE_PASSWORD = "UPDATE user SET password=(?) WHERE id=(?)";
     private static final String CHANGE_ACTIVITIES_AMOUNT = "UPDATE user SET activities_amount=(?) WHERE id=(?)";
+    private static Logger logger = Logger.getLogger(UserDAO.class);
 
     public static synchronized UserDAO getInstance() {
         if (instance == null) {

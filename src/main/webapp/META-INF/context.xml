@@ -12,5 +12,3 @@
     maxIdle="4"/>
 
 </Context>
-
-        <!--    driverClassName="com.mysql.jdbc.Driver"-->
