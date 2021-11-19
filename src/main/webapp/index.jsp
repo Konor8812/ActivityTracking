@@ -35,5 +35,8 @@
         }
     %>
 </c:if>
+<c:if test="${sessionScope.userIsBlocked == true}">
+    <c:out value="You are blocked by admin!"/>
+</c:if>
 </body>
 </html>

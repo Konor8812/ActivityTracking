@@ -7,7 +7,7 @@
 </head>
 <body>
 <c:if test="${sessionScope.regedAs.role == 'admin'}">
-    Loged in as admin
+    Logged in as admin
     <form action="ActivityTracker?command=logOut" method="post">
         <input type="submit" value="logOut" name="log out"/>
     </form>
@@ -17,25 +17,55 @@
     <c:if test="${sessionScope.shouldShowUsers == true}">
         <form action="ActivityTracker?command=showActivities&showDescription=false" method="post">
             <input type="submit" value="get activities!"/>
+        </form><hr>
+        <form action="ActivityTracker?command=showOnlyBlockedUsers" method="post">
+            <input type="submit" value="get blocked users only">
         </form>
         <table>
             <tr>
-                <th> Login</th>
+                <th> Login </th>
+                <th> Status </th>
                 <th> Activities amount</th>
-                <th> has requests</th>
+                <th> total points </th>
+                <th> Block user </th>
             </tr>
 
             <c:forEach var="user" items="${sessionScope.users}">
                 <tr>
                     <td>${user.login}</td>
+                    <td>${user.status}</td>
                     <td>${user.activitiesAmount}</td>
                     <td>${user.totalPoints}</td>
+                    <td> <a href="ActivityTracker?command=blockUser&userId=${user.id}">block!</a> </td>
                     <td> <a href="ActivityTracker?command=deleteUser&userId=${user.id}">delete!</a> </td>
                 </tr>
             </c:forEach>
             <form action="ActivityTracker?command=deleteAllUsers" method="post">
                 <input type="submit" value="delete all users!"/>
             </form>
+
+        </table>
+    </c:if>
+    <c:if test="${sessionScope.shouldShowBlockedUsers == true}">
+        <form action="ActivityTracker?command=showUsers" method="post">
+            <input type="submit" value="back to all users"/>
+        </form>
+        <table>
+            <tr>
+                <th> Login </th>
+                <th> Activities amount</th>
+                <th> total points </th>
+                <th> Unblock user </th>
+            </tr>
+            <c:forEach var="user" items="${sessionScope.blockedUsers}">
+                <tr>
+                    <td>${user.login}</td>
+                    <td>${user.activitiesAmount}</td>
+                    <td>${user.totalPoints}</td>
+                    <td> <a href="ActivityTracker?command=unblockUser&userId=${user.id}">unblock!</a> </td>
+                    <td> <a href="ActivityTracker?command=deleteUser&userId=${user.id}">delete!</a> </td>
+                </tr>
+            </c:forEach>
         </table>
     </c:if>
     <c:if test="${sessionScope.shouldShowActivities == true}">

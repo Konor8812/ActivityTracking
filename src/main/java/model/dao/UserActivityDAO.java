@@ -99,7 +99,11 @@ public class UserActivityDAO {
             prstmt.setInt(1, userId);
             rs = prstmt.executeQuery();
             while(rs.next()){
-                usersActivities.add(ad.getActivityById(rs.getInt("activity_id")));
+
+                Activity activity = ad.getActivityById(rs.getInt("activity_id"));
+                activity.setStatus(getUserActivityStatus(userId, activity.getId()));
+                usersActivities.add(activity);
+
             }
         } catch (SQLException e) {
             logger.error("Error while getting users activities", e);
@@ -107,6 +111,29 @@ public class UserActivityDAO {
             close(rs, prstmt, con);
         }
         return usersActivities;
+    }
+
+    private String getUserActivityStatus(int userId, int activityId) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        ResultSet rs = null;
+        try {
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(CHECK_IF_ACTIVITY_ALREADY_TAKEN_BY_USER);
+            prstmt.setInt(1, userId);
+            prstmt.setInt(2, activityId);
+            rs = prstmt.executeQuery();
+            if(rs.next()){
+                return rs.getString("status");
+            }
+
+        } catch (SQLException  e) {
+            e.printStackTrace();
+        } finally{
+            close(rs, prstmt, con);
+        }
+        return "";
     }
 
     public void deleteUsersActivity(int userId, int activityId, boolean isCompleted) {

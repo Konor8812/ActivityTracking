@@ -14,7 +14,7 @@ public class ActivityDAO {
     private static Logger logger = Logger.getLogger(ActivityDAO.class);
 
     private static final String INSERT_ACTIVITY = "INSERT INTO activity (name, duration, reward, description, taken_by) VALUES (?,?,?,?,?)";
-    private static final String ALL_ACTIVITIES_LIST = "select * from activity";
+    private static final String ALL_ACTIVITIES_LIST = "SELECT * FROM activity";
     private static final String GET_ACTIVITY_BY_ID = "SELECT * FROM activity WHERE id=(?)";
     private static final String GET_ACTIVITY_BY_NAME = "SELECT * FROM activity WHERE name=(?)";
     private static final String DELETE_ACTIVITY = "DELETE FROM activity WHERE id=(?)";
@@ -45,7 +45,7 @@ public class ActivityDAO {
                 prstmt.setDouble(3, activity.getReward());
                 prstmt.setString(4, activity.getDescription());
                 prstmt.setInt(5, 0);
-                prstmt.executeUpdate();
+                prstmt.execute();
             } else{
                 throw new ActivityAlreadyExists();
             }
@@ -112,8 +112,9 @@ public class ActivityDAO {
                 autoCloseable.close();
             }
         }  catch(Exception e){
-            logger.info("AutoCloseable wasn't closed", e);
+            logger.info("AutoCloseable wasn't closed successfully");
         }
+
     }
 
     public boolean deleteActivity(int activityId){
@@ -202,6 +203,8 @@ public class ActivityDAO {
                 activity.setReward(rs.getDouble("reward"));
                 activity.setDescription(rs.getString("description"));
                 activity.setTakenByAmount(rs.getInt("taken_by"));
+            }else{
+                return null;
             }
         } catch(Exception e){
             logger.error("Error getting activity by name", e);

@@ -10,6 +10,7 @@ public class ReturnToMain implements Command {
 
         User user = (User)req.getSession().getAttribute("regedAs");
         req.getSession().removeAttribute("shouldShowUsersActivities");
+        req.getSession().removeAttribute("activityTaken");
         return user.getRole().equals("user") ? "User.jsp" : "Admin.jsp";
     }
 }

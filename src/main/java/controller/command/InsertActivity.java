@@ -17,7 +17,6 @@ public class InsertActivity implements Command {
         activity.setReward(Double.parseDouble(req.getParameter("reward")));
         activity.setDescription(req.getParameter("description"));
 
-
         ActivityService activityService = new ActivityService();
         try {
             activityService.add(activity);

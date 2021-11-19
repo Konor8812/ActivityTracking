@@ -57,8 +57,8 @@ public class UserService implements UserExtension {
     }
 
     @Override
-    public void blockUser(int userId) {
-        userDAO.blockUser(userId);
+    public void changeUsersStatus(int userId, boolean block) {
+        userDAO.blockUser(userId, block);
     }
 
     @Override

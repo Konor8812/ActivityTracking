@@ -8,6 +8,16 @@ public class Activity {
     private String description;
     private int takenByAmount = 0;
 
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public int getTakenByAmount() {
         return takenByAmount;
     }

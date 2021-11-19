@@ -82,6 +82,15 @@ public class CommandFactory {
             case "hideUsersActivities":
                 com = new HideUsersActivities();
                 break;
+            case "blockUser":
+                com = new BlockUser();
+                break;
+            case "unblockUser":
+                com = new UnblockUser();
+                break;
+            case "showOnlyBlockedUsers":
+                com = new GetAllBlocked();
+                break;
         }
         return com;
     }

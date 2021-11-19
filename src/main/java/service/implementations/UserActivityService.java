@@ -36,7 +36,7 @@ public class UserActivityService implements UserActivityFunctionality {
 
     @Override
     public List<Activity> getUsersActivities(int userId) {
-        return null;
+        return userActivityDAO.getUsersActivities(userId);
     }
 
     @Override

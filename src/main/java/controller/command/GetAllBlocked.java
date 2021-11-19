@@ -6,24 +6,15 @@ import service.implementations.UserService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-public class ShowUsersList implements Command{
-
-
-    public ShowUsersList() { }
-
+public class GetAllBlocked implements Command {
     @Override
     public String execute(HttpServletRequest req) {
-
         UserService userService = new UserService();
-        List<User> users = userService.getAllItemsAsList();
-        req.getSession().removeAttribute("blockedUsers");
-        req.getSession().setAttribute("users", users);
-        req.getSession().setAttribute("shouldShowUsers", true);
+        List<User> blockedUsers = userService.getAllBlocked();
+        req.getSession().setAttribute("blockedUsers", blockedUsers);
+        req.getSession().setAttribute("shouldShowUsers", false);
         req.getSession().setAttribute("shouldShowActivities", false);
-        req.getSession().setAttribute("shouldShowBlockedUsers", false);
+        req.getSession().setAttribute("shouldShowBlockedUsers", true);
         return "Admin.jsp";
-
     }
-
-
 }

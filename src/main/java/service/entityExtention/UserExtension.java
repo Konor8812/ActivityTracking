@@ -24,5 +24,5 @@ public interface UserExtension extends ItemService<Integer, User> {
 
     void userCompletedActivity(int userId, double pointForActivity);
 
-    void blockUser(int userId);
+    void changeUsersStatus(int userId, boolean block);
 }
