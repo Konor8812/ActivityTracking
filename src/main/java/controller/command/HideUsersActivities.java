@@ -1,11 +1,12 @@
-package service.command;
+package controller.command;
 
 import javax.servlet.http.HttpServletRequest;
 
 public class HideUsersActivities implements Command {
     @Override
     public String execute(HttpServletRequest req) {
-        req.getSession().setAttribute("shouldShowUsersActivities", false);
+
+        req.getSession().removeAttribute("shouldShowUsersActivities");
         return "Profile.jsp";
     }
 }

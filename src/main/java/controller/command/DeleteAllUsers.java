@@ -1,7 +1,6 @@
-package service.command;
+package controller.command;
 
-import model.dao.DaoFactory;
-import model.dao.UserDAO;
+import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,10 +11,13 @@ public class DeleteAllUsers implements Command{
 
     @Override
     public String execute(HttpServletRequest req) {
-        UserDAO userDAO = DaoFactory.getInstance().getUserDAO();
-        userDAO.deleteAllUsers();
-        req.setAttribute("users", null);
+
+        UserService userService = new UserService();
+        userService.deleteAllUsers();
+
+        req.getSession().removeAttribute("users");
         req.getSession().setAttribute("shouldPrintUsers", false);
+
         return "Admin.jsp";
     }
 }

@@ -3,7 +3,7 @@ package controller;
 
 import model.dao.UserDAO;
 import org.apache.log4j.Logger;
-import service.command.CommandFactory;
+import controller.command.CommandFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

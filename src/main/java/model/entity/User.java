@@ -4,9 +4,18 @@ public class User {
     private int id;
     private String login;
     private String password;
-    private String role;
-    private int activitiesAmount;
-    private int totalPoints;
+    private String role = "user";
+    private int activitiesAmount = 0;
+    private double totalPoints = 0;
+    private String status = "available";
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public User() { }
 
@@ -46,7 +55,7 @@ public class User {
         this.role = role;
     }
 
-    public int getTotalPoints() {
+    public double getTotalPoints() {
         return totalPoints;
     }
 

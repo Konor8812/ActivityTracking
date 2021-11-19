@@ -30,7 +30,7 @@
                     <td>${user.login}</td>
                     <td>${user.activitiesAmount}</td>
                     <td>${user.totalPoints}</td>
-                    <td> <a href="ActivityTracker?command=deleteUser&login=${user.login}">delete!</a> </td>
+                    <td> <a href="ActivityTracker?command=deleteUser&userId=${user.id}">delete!</a> </td>
                 </tr>
             </c:forEach>
             <form action="ActivityTracker?command=deleteAllUsers" method="post">

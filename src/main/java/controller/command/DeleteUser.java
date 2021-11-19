@@ -1,7 +1,6 @@
-package service.command;
+package controller.command;
 
-import model.dao.DaoFactory;
-import model.dao.UserDAO;
+import service.implementations.UserService;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,9 +10,12 @@ public class DeleteUser implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
+
         CommandFactory cf = CommandFactory.getInstance();
-        UserDAO ud = DaoFactory.getInstance().getUserDAO();
-        ud.deleteUser(req.getParameter("login"));
+
+        UserService userService = new UserService();
+        int id = Integer.parseInt(req.getParameter("userId"));
+        userService.delete(id);
 
         return cf.getCommand("showUsers", req, null).execute(req);
     }

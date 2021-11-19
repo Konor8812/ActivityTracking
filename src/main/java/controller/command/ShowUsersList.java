@@ -1,8 +1,7 @@
-package service.command;
+package controller.command;
 
-import model.dao.DaoFactory;
-import model.dao.UserDAO;
 import model.entity.User;
+import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -14,12 +13,15 @@ public class ShowUsersList implements Command{
 
     @Override
     public String execute(HttpServletRequest req) {
-        UserDAO userDAO = DaoFactory.getInstance().getUserDAO();
-        List<User> users = userDAO.getUsersList();
+
+        UserService userService = new UserService();
+        List<User> users = userService.getAllItemsAsList();
+
         req.getSession().setAttribute("users", users);
         req.getSession().setAttribute("shouldShowUsers", true);
         req.getSession().setAttribute("shouldShowActivities", false);
         return "Admin.jsp";
+
     }
 
 

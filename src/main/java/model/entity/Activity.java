@@ -6,14 +6,14 @@ public class Activity {
     private String duration;
     private double reward;
     private String description;
-    private String status;
+    private int takenByAmount = 0;
 
-    public String getStatus() {
-        return status;
+    public int getTakenByAmount() {
+        return takenByAmount;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setTakenByAmount(int takenByAmount) {
+        this.takenByAmount = takenByAmount;
     }
 
     public Activity() {

@@ -1,0 +1,86 @@
+19:00:14,271  INFO http-nio-8080-exec-4 UserDAO:doPost:35 - Post#command ==> logIn
+10:49:05,645  INFO http-nio-8080-exec-1 UserDAO:doPost:35 - Post#command ==> logIn
+10:49:39,130  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> showActivities
+10:49:52,241  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> showUsers
+10:49:52,836  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> showActivities
+10:50:09,889  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> showProfile
+10:50:11,486  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> returnToMain
+10:50:12,327  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> logOut
+10:50:17,299  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> regUser
+10:50:17,324  INFO http-nio-8080-exec-2 UserDAO:close:163 - AutoCloseable wasn't closed
+java.lang.NullPointerException
+	at model.dao.UserDAO.close(UserDAO.java:160)
+	at model.dao.UserDAO.regUser(UserDAO.java:61)
+	at service.implementations.UserService.add(UserService.java:71)
+	at controller.command.RegUser.execute(RegUser.java:23)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:43)
+	at controller.Controller.doPost(Controller.java:36)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+10:50:22,255  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> logIn
+10:50:25,925  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> logIn
+10:53:40,204  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> logIn
+10:53:47,053  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+10:53:48,970  INFO http-nio-8080-exec-12 UserDAO:doPost:35 - Post#command ==> hideUsersActivities
+10:53:49,595  INFO http-nio-8080-exec-6 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+10:53:51,685  INFO http-nio-8080-exec-11 UserDAO:doPost:35 - Post#command ==> returnToMain
+10:53:52,906  INFO http-nio-8080-exec-10 UserActivityDAO:close:63 - AutoCloseable wasn't closed
+java.lang.NullPointerException
+	at model.dao.UserActivityDAO.close(UserActivityDAO.java:60)
+	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:53)
+	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
+	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:43)
+	at controller.Controller.doGet(Controller.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+10:53:56,970  INFO http-nio-8080-exec-14 UserDAO:doPost:35 - Post#command ==> returnToMain
+10:53:57,718  INFO http-nio-8080-exec-11 UserDAO:doPost:35 - Post#command ==> logOut
+10:54:01,271  INFO http-nio-8080-exec-12 UserDAO:doPost:35 - Post#command ==> logIn
+10:54:02,355  INFO http-nio-8080-exec-16 UserDAO:doPost:35 - Post#command ==> showProfile

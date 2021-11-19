@@ -1,8 +1,7 @@
-package service.command;
+package controller.command;
 
-import model.dao.DaoFactory;
-import model.dao.UserDAO;
 import model.entity.User;
+import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,9 +15,12 @@ public class ChangePass implements Command{
         }
 
         User user = (User)req.getSession().getAttribute("regedAs");
+        int id = user.getId();
         String newPassword = req.getParameter("newPassword");
-        UserDAO ud = DaoFactory.getInstance().getUserDAO();
-        ud.changeUserPassword(user.getId(), newPassword);
+
+        UserService userService = new UserService();
+        userService.changePass(id, newPassword);
+
         user.setPassword(newPassword);
         req.getSession().setAttribute("regedAs", user);
         req.getSession().removeAttribute("showChangePassField");

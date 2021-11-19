@@ -1,15 +1,14 @@
-package service.command;
+package controller.command;
 
 import model.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class GetActivityDescription implements Command {
-
+public class HideActivityDescription implements Command {
     @Override
     public String execute(HttpServletRequest req) {
 
-        req.getSession().setAttribute("shouldShowTags", true);
+        req.getSession().setAttribute("shouldShowTags", false);
         User user =(User)req.getSession().getAttribute("regedAs");
 
         if(user.getRole().equals("admin")) {
