@@ -9,9 +9,17 @@ public class Activity {
     private int takenByAmount = 0;
 
     private String status;
-
+    private String timeSpent = "";
     public String getStatus() {
         return status;
+    }
+
+    public String getTimeSpent() {
+        return timeSpent;
+    }
+
+    public void setTimeSpent(String timeSpent) {
+        this.timeSpent = timeSpent;
     }
 
     public void setStatus(String status) {

@@ -20,11 +20,12 @@ public class UserActivityDAO {
     private static Logger logger = Logger.getLogger(UserActivityDAO.class);
 
 
-    private static final String REG_ACTIVITY_FOR_USER = "INSERT INTO user_has_activity (user_id, activity_id) VALUES (?,?)";
+    private static final String REG_ACTIVITY_FOR_USER = "INSERT INTO user_has_activity (user_id, activity_id, time_spent) VALUES (?,?,?)";
     private static final String CHECK_IF_ACTIVITY_ALREADY_TAKEN_BY_USER = "SELECT * FROM user_has_activity WHERE user_id=(?) AND activity_id=(?)";
     private static final String GET_USERS_ACTIVITIES = "SELECT * FROM user_has_activity WHERE user_id=(?)";
     private static final String DELETE_USERS_ACTIVITY = "DELETE FROM user_has_activity WHERE user_id=(?) AND activity_id=(?)";
     private static final String GET_USERS_WITH_THIS_ACTIVITY = "SELECT * FROM user_has_activity WHERE activity_id=(?)";
+    private static final String GET_TIME_SPENT = "SELECT * FROM user_has_activity WHERE user_id=(?) AND activity_id=(?)";
 
     public static synchronized UserActivityDAO getInstance() {
         if (instance == null) {
@@ -43,6 +44,7 @@ public class UserActivityDAO {
                 prstmt = con.prepareStatement(REG_ACTIVITY_FOR_USER);
                 prstmt.setInt(1, userId);
                 prstmt.setInt(2, activityId);
+                prstmt.setLong(3, System.currentTimeMillis());
                 prstmt.execute();
             }else{
                 throw new ActivityAlreadyTaken();
@@ -102,6 +104,9 @@ public class UserActivityDAO {
 
                 Activity activity = ad.getActivityById(rs.getInt("activity_id"));
                 activity.setStatus(getUserActivityStatus(userId, activity.getId()));
+                long timeSpentForActivity = System.currentTimeMillis() - getTimeSpent(userId, activity.getId());
+
+                activity.setTimeSpent(getFormattedTime(timeSpentForActivity));
                 usersActivities.add(activity);
 
             }
@@ -184,5 +189,59 @@ public class UserActivityDAO {
         }
 
         return result;
+    }
+
+    public long getTimeSpent(int userId, int activityId) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        ResultSet rs = null;
+        try {
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(GET_TIME_SPENT);
+            prstmt.setInt(1, userId);
+            prstmt.setInt(2, activityId);
+            rs = prstmt.executeQuery();
+            if(rs.next()){
+                return rs.getLong("time_spent");
+            }
+        } catch (SQLException e) {
+            logger.error("Error while getting time spend by user for activity", e);
+        }finally{
+            close(rs, prstmt, con);
+        }
+        return 0;
+    }
+
+
+    private String getFormattedTime(long millis){
+        StringBuilder sb = new StringBuilder();
+        long second = 1000;
+        long minute = 60*second;
+        long hour = 60*minute;
+        long day = 24*hour;
+
+
+        long days = millis / day;
+        long leftOver = millis % day;
+        long hours = leftOver / hour;
+        leftOver = leftOver % hour;
+        long minutes = leftOver / minute;
+        leftOver = leftOver % minute;
+        long seconds = leftOver / second;
+        if(days != 0){
+            sb.append(days).append(" days ");
+        }
+        if(hours != 0){
+            sb.append(hours).append(" hours ");
+        }
+        if(minutes != 0){
+            sb.append(minutes).append(" minutes ");
+        }
+        if(seconds != 0){
+            sb.append(seconds).append(" seconds ");
+        }
+        System.out.println(sb);
+        return sb.toString();
     }
 }

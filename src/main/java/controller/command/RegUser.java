@@ -21,6 +21,7 @@ public class RegUser implements  Command{
         UserService userService = new UserService();
         try {
             userService.add(user);
+            user = userService.getUserByLoginAndPassword(login,pass);
             req.getSession().setAttribute("regedAs", user);
             CommandFactory cf = CommandFactory.getInstance();
             req.getSession().removeAttribute("loginError");

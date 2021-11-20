@@ -14,9 +14,11 @@ public class LoginUser implements Command {
         UserService us = new UserService();
         try {
             User user = us.getUserByLoginAndPassword(login, password);
+
             req.getSession().removeAttribute("loginError");
             req.getSession().removeAttribute("regError");
             req.getSession().removeAttribute("userIsBlocked");
+
             String role = user.getRole();
             if(user.getStatus().equals("blocked")){
                 req.getSession().setAttribute("userIsBlocked", true);

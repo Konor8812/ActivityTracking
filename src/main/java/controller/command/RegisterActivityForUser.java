@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 public class RegisterActivityForUser implements Command {
     @Override
     public String execute(HttpServletRequest req) {
-        req.getSession().setAttribute("activityTaken", false);
+        req.getSession().removeAttribute("activityTaken");
         int userId = Integer.parseInt(req.getParameter("userId"));
         int activityId = Integer.parseInt(req.getParameter("activityId"));
         User user = (User) req.getSession().getAttribute("regedAs");

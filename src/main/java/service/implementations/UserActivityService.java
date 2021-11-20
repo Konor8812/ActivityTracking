@@ -5,7 +5,7 @@ import model.dao.UserActivityDAO;
 import model.entity.Activity;
 import model.exception.ServiceException;
 import org.apache.log4j.Logger;
-import service.factory.UserActivityFunctionality;
+import service.entityExtention.UserActivityFunctionality;
 
 import java.util.List;
 
@@ -32,6 +32,11 @@ public class UserActivityService implements UserActivityFunctionality {
         userService.userTookActivity(userId);
         ActivityService activityService = new ActivityService();
         activityService.wasTakenOrCompleted(activityId, true);
+    }
+
+    @Override
+    public long getTimeSpent(int userId, int activityId) {
+        return userActivityDAO.getTimeSpent(userId, activityId);
     }
 
     @Override

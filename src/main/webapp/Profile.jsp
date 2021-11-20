@@ -37,6 +37,7 @@
             <th> Reward </th>
             <th> Description </th>
             <th> Status </th>
+            <th> Time spent </th>
         </tr>
             <c:forEach var="activity" items="${sessionScope.usersActivities}">
                 <tr>
@@ -45,6 +46,7 @@
                     <td>${activity.reward}</td>
                     <td>${activity.description}</td>
                     <td>${activity.status}</td>
+                    <td>${activity.timeSpent}</td>
                     <td> <a href="ActivityTracker?command=giveUpActivity&activityId=${activity.id}">give up</a> </td>
                 </tr>
             </c:forEach>
