@@ -6,6 +6,7 @@
     <title>Profile</title>
 </head>
 <body>
+<c:if test="${not empty sessionScope.regedAs}">
     <c:out value="${sessionScope.regedAs.login}"/><br>
     You are <c:out value="${sessionScope.regedAs.role}"/><br>
     <c:if test="${sessionScope.regedAs.role == 'user'}">
@@ -59,5 +60,11 @@
 <form method="post" action="ActivityTracker?command=returnToMain">
     <input type="submit" value="go back">
 </form>
+</c:if>
+<c:if test="${empty sessionScope.regedAs}">
+    <%
+        response.sendRedirect("index.jsp");
+    %>
+</c:if>
 </body>
 </html>

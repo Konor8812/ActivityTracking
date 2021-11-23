@@ -8,6 +8,7 @@
     <title>Activity Tracker</title>
 </head>
 <body>
+<c:if test="${sessionScope.regedAs.role == 'user'}">
     <hr>
     Success!
     <c:out value="You are logged as ${sessionScope.regedAs.login}" />
@@ -52,6 +53,10 @@
 <form method="post" action="ActivityTracker?command=showProfile">
     <input type="submit" value="profile">
 </form>
-    
+</c:if>
+    <c:if test="${sessionScope.regedAs.role ne 'user'}">
+        <c:out value="Access denied!!!"/><br>
+        <a href="index.jsp">Log in</a>
+    </c:if>
 </body>
 </html>

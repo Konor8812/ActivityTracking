@@ -15,14 +15,13 @@ import java.io.IOException;
 
 @WebServlet("/ActivityTracker")
 public class Controller extends HttpServlet {
-    private static Logger logger = Logger.getLogger(UserDAO.class);
+    private static Logger logger = Logger.getLogger(Controller.class);
 
     @Override
     public void init() { }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
         String command = req.getParameter("command");
         logger.info("Get#command ==> " + command);
         executeCommand(req, resp, command);
