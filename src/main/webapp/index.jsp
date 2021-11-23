@@ -8,14 +8,14 @@
 <body>
 <c:if test="${empty sessionScope.regedAs}">
 <form action="ActivityTracker?command=regUser" method="post" >
-    <input name="login"/> <br>
-    <input name="password"/> <br>
+    Enter login    <input name="login"/> <br>
+    Enter password <input name="password"/> <br>
     <input type="submit" value="register new user"/>
 </form>
 <hr>
 <form action="ActivityTracker?command=logIn" method="post">
-    <input name="login"/> <br>
-    <input name="password"/> <br>
+    Enter login    <input name="login"/> <br>
+    Enter password <input name="password"/> <br>
     <input type="submit" value="log in!" />
 </form>
 <hr>

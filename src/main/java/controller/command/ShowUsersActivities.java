@@ -14,10 +14,11 @@ public class ShowUsersActivities implements Command {
     public String execute(HttpServletRequest req) {
         req.getSession().setAttribute("shouldShowUsersActivities", true);
         User user = (User)req.getSession().getAttribute("regedAs");
+
         UserActivityService userActivityService = new UserActivityService();
 
         List<Activity> usersActivities = userActivityService.getUsersActivities(user.getId());
         req.getSession().setAttribute("usersActivities", usersActivities);
-        return "Profile.jsp";
+        return CommandFactory.getInstance().getCommand("showProfile", req, null).execute(req);
     }
 }

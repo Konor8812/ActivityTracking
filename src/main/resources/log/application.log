@@ -52,7 +52,7 @@ java.lang.NullPointerException
 	at model.dao.UserActivityDAO.close(UserActivityDAO.java:60)
 	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:53)
 	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
-	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:21)
 	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
 	at controller.Controller.executeCommand(Controller.java:43)
 	at controller.Controller.doGet(Controller.java:28)
@@ -200,7 +200,7 @@ java.lang.NullPointerException
 	at model.dao.UserActivityDAO.close(UserActivityDAO.java:60)
 	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:53)
 	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
-	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:21)
 	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
 	at controller.Controller.executeCommand(Controller.java:43)
 	at controller.Controller.doGet(Controller.java:28)
@@ -276,7 +276,7 @@ java.lang.NullPointerException
 	at model.dao.UserActivityDAO.close(UserActivityDAO.java:60)
 	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:53)
 	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
-	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:21)
 	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
 	at controller.Controller.executeCommand(Controller.java:43)
 	at controller.Controller.doGet(Controller.java:28)
@@ -413,7 +413,7 @@ java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child 
 	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
 	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:48)
 	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
-	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:21)
 	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
 	at controller.Controller.executeCommand(Controller.java:43)
 	at controller.Controller.doGet(Controller.java:28)
@@ -457,7 +457,7 @@ java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child 
 	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
 	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:48)
 	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
-	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:21)
 	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
 	at controller.Controller.executeCommand(Controller.java:43)
 	at controller.Controller.doGet(Controller.java:28)
@@ -497,7 +497,7 @@ java.lang.NullPointerException
 	at model.dao.UserActivityDAO.close(UserActivityDAO.java:62)
 	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:55)
 	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
-	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:21)
 	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
 	at controller.Controller.executeCommand(Controller.java:43)
 	at controller.Controller.doGet(Controller.java:28)
@@ -586,7 +586,7 @@ java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child 
 	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
 	at model.dao.UserActivityDAO.regActivityForUser(UserActivityDAO.java:48)
 	at service.implementations.UserActivityService.userTookActivity(UserActivityService.java:30)
-	at controller.command.RegisterActivityForUser.execute(RegisterActivityForUser.java:21)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:21)
 	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
 	at controller.Controller.executeCommand(Controller.java:43)
 	at controller.Controller.doGet(Controller.java:28)
@@ -618,3 +618,944 @@ java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child 
 18:33:38,937  INFO http-nio-8080-exec-37 UserDAO:doPost:35 - Post#command ==> regUser
 18:34:00,687  INFO http-nio-8080-exec-30 UserDAO:doPost:35 - Post#command ==> showUsersActivities
 18:34:04,520  INFO http-nio-8080-exec-38 UserDAO:doPost:35 - Post#command ==> returnToMain
+20:39:28,990  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> logIn
+20:39:36,742  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> showProfile
+20:39:38,808  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+20:39:39,541  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> hideUsersActivities
+20:39:40,302  INFO http-nio-8080-exec-6 UserDAO:doPost:35 - Post#command ==> returnToMain
+20:39:41,704 ERROR http-nio-8080-exec-8 UserActivityDAO:reqActivityForUser:224 - Error while getting time spend by user for activity
+java.sql.SQLException: Statement.executeQuery() cannot issue statements that do not produce result sets.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:965)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:121)
+	at model.dao.UserActivityDAO.reqActivityForUser(UserActivityDAO.java:219)
+	at service.implementations.UserActivityService.userRequestedActivity(UserActivityService.java:55)
+	at controller.command.ApproveActivityForUser.execute(RegisterActivityForUser.java:22)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:43)
+	at controller.Controller.doGet(Controller.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:39:43,037  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+20:39:47,855  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> hideUsersActivities
+20:41:03,592  INFO http-nio-8080-exec-6 UserDAO:doPost:35 - Post#command ==> logIn
+20:41:05,535  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> showProfile
+20:41:07,262  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+20:41:07,827  INFO http-nio-8080-exec-11 UserDAO:doPost:35 - Post#command ==> hideUsersActivities
+20:41:08,279  INFO http-nio-8080-exec-12 UserDAO:doPost:35 - Post#command ==> returnToMain
+20:41:10,171  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+20:41:28,094  INFO http-nio-8080-exec-11 UserDAO:doPost:35 - Post#command ==> returnToMain
+20:41:31,489  INFO http-nio-8080-exec-16 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+20:41:34,172  INFO http-nio-8080-exec-14 UserDAO:doPost:35 - Post#command ==> returnToMain
+20:41:34,797  INFO http-nio-8080-exec-11 UserDAO:doPost:35 - Post#command ==> showProfile
+22:34:34,259  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> regUser
+22:34:47,882  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> showProfile
+22:34:49,838  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+22:34:54,995  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> returnToMain
+22:34:58,553  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+22:35:06,618  INFO http-nio-8080-exec-4 UserDAO:doPost:35 - Post#command ==> returnToMain
+22:35:07,660  INFO http-nio-8080-exec-6 UserDAO:doPost:35 - Post#command ==> showProfile
+22:35:08,679  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> returnToMain
+22:35:09,424  INFO http-nio-8080-exec-1 UserDAO:doPost:35 - Post#command ==> logOut
+22:35:12,364  INFO http-nio-8080-exec-4 UserDAO:doPost:35 - Post#command ==> logIn
+23:09:42,762  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> logIn
+23:09:51,736  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> showProfile
+23:09:54,634  INFO http-nio-8080-exec-1 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+23:09:56,002  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> returnToMain
+23:09:58,081  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> showProfile
+23:09:59,139  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> returnToMain
+23:10:13,551  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> returnToMain
+23:10:25,948  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> returnToMain
+23:10:29,339  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> logOut
+23:10:32,434  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> logIn
+23:10:37,703  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> showOnlyBlockedUsers
+23:10:45,683  INFO http-nio-8080-exec-6 UserDAO:doPost:35 - Post#command ==> showActivities
+23:10:50,194  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> showUsers
+23:10:51,487  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> showProfile
+23:10:52,417  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> returnToMain
+23:19:16,670  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> logIn
+23:19:28,317  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> showActivities
+23:19:32,980  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> showUsers
+23:20:46,665  INFO http-nio-8080-exec-8 UserActivityDAO:denyApproval:246 - SQLException occurred during denying activity for user
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10-1' for key 'user_has_activity.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserActivityDAO.denyApproval(UserActivityDAO.java:244)
+	at service.implementations.UserActivityService.denyApprovalActivityForUser(UserActivityService.java:53)
+	at controller.command.DenyApproval.execute(DenyApproval.java:14)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:43)
+	at controller.Controller.doGet(Controller.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+23:20:49,429  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> showUsers
+23:29:11,807  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> logIn
+23:29:18,332  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> showOnlyBlockedUsers
+23:30:29,150  INFO http-nio-8080-exec-1 UserDAO:doPost:35 - Post#command ==> showActivities
+23:30:32,129  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> logOut
+23:30:38,463  INFO http-nio-8080-exec-6 UserDAO:doPost:35 - Post#command ==> regUser
+23:30:43,155  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> logIn
+23:30:47,108  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> logIn
+23:30:50,686  INFO http-nio-8080-exec-6 UserDAO:doPost:35 - Post#command ==> showProfile
+23:30:53,049  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+23:30:54,316  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> returnToMain
+23:31:09,697  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> returnToMain
+23:31:10,493  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> logOut
+23:31:13,043  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> logIn
+23:31:23,563  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> showUsers
+23:31:28,688  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> logOut
+23:31:34,566  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> logIn
+23:31:35,728  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> showProfile
+23:31:36,852  INFO http-nio-8080-exec-4 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+23:31:45,949  INFO http-nio-8080-exec-8 UserDAO:doPost:35 - Post#command ==> returnToMain
+12:59:58,935  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> logIn
+13:00:38,840  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> logOut
+13:00:42,296  INFO http-nio-8080-exec-1 UserDAO:doPost:35 - Post#command ==> logIn
+13:00:49,025  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> showOnlyBlockedUsers
+13:00:50,237  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> showUsers
+13:01:01,597  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> showOnlyBlockedUsers
+13:01:03,940  INFO http-nio-8080-exec-1 UserDAO:doPost:35 - Post#command ==> logOut
+13:01:23,438  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> logIn
+13:01:30,441  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> regUser
+13:01:43,909  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> logIn
+13:01:52,149  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> showProfile
+13:01:59,079  INFO http-nio-8080-exec-7 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+13:02:00,153  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> returnToMain
+13:02:01,609  INFO http-nio-8080-exec-2 UserDAO:doPost:35 - Post#command ==> logOut
+13:06:28,213  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> logIn
+13:06:37,570  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> showOnlyBlockedUsers
+13:06:48,890  INFO http-nio-8080-exec-10 UserDAO:doPost:35 - Post#command ==> logOut
+13:06:54,682  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> logIn
+13:06:56,940  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> showProfile
+13:07:02,574  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> showUsersActivities
+13:07:03,523  INFO http-nio-8080-exec-5 UserDAO:doPost:35 - Post#command ==> returnToMain
+13:07:56,022  INFO http-nio-8080-exec-9 UserDAO:doPost:35 - Post#command ==> showProfile
+13:07:59,708  INFO http-nio-8080-exec-3 UserDAO:doPost:35 - Post#command ==> returnToMain
+13:14:33,700  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logIn
+13:14:36,776  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showProfile
+13:14:42,662  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:14:43,564  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+13:14:44,231  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:18:31,569  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> logIn
+13:18:33,843  INFO http-nio-8080-exec-12 UserDAO:doPost:34 - Post#command ==> showProfile
+13:18:46,216  INFO http-nio-8080-exec-16 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:18:46,881  INFO http-nio-8080-exec-22 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:18:48,649  INFO http-nio-8080-exec-15 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+13:18:49,974  INFO http-nio-8080-exec-24 UserDAO:doGet:27 - Get#command ==> hideActivitiesDescription
+13:18:50,688  INFO http-nio-8080-exec-25 UserDAO:doPost:34 - Post#command ==> showProfile
+13:18:52,022  INFO http-nio-8080-exec-26 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:18:54,479  INFO http-nio-8080-exec-27 UserDAO:doGet:27 - Get#command ==> reqActivity
+13:19:00,981  INFO http-nio-8080-exec-25 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:19:01,983  INFO http-nio-8080-exec-26 UserDAO:doPost:34 - Post#command ==> logOut
+13:19:04,804  INFO http-nio-8080-exec-23 UserDAO:doPost:34 - Post#command ==> logIn
+13:19:10,084  INFO http-nio-8080-exec-24 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+13:19:11,253  INFO http-nio-8080-exec-25 UserDAO:doPost:34 - Post#command ==> showUsers
+13:19:12,713  INFO http-nio-8080-exec-26 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+13:19:24,831  INFO http-nio-8080-exec-27 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+13:19:27,503  INFO http-nio-8080-exec-25 UserDAO:doPost:34 - Post#command ==> showUsers
+13:19:33,218  INFO http-nio-8080-exec-26 UserDAO:doPost:34 - Post#command ==> showActivities
+13:19:34,757  INFO http-nio-8080-exec-23 UserDAO:doPost:34 - Post#command ==> showUsers
+13:19:39,763  INFO http-nio-8080-exec-24 UserDAO:doPost:34 - Post#command ==> logOut
+13:19:47,276  INFO http-nio-8080-exec-26 UserDAO:doPost:34 - Post#command ==> logIn
+13:19:54,114  INFO http-nio-8080-exec-23 UserDAO:doPost:34 - Post#command ==> showProfile
+13:19:55,074  INFO http-nio-8080-exec-27 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:19:58,500  INFO http-nio-8080-exec-25 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+13:20:02,457  INFO http-nio-8080-exec-26 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:20:03,584  INFO http-nio-8080-exec-23 UserDAO:doGet:27 - Get#command ==> reqActivity
+13:20:07,595  INFO http-nio-8080-exec-28 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+13:35:31,919  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+13:35:38,858  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+13:35:40,878  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:35:42,337  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:35:45,491  INFO http-nio-8080-exec-1 UserDAO:doGet:27 - Get#command ==> reqActivity
+13:35:56,857  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:35:58,865  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> reqActivity
+13:36:04,258  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:36:05,270  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logOut
+13:36:08,943  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+13:36:38,997  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+13:36:45,010  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+13:36:47,799  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+13:36:51,916  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+13:36:57,495  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> denyApproval
+13:36:59,082  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showUsers
+13:37:00,235  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logOut
+13:37:03,630  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logIn
+13:37:04,482  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+13:37:06,576  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:50:43,612  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+13:50:55,936  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+13:50:58,429  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:51:04,022  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:51:07,357  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+13:51:08,399  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:51:11,089  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:51:12,274  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> reqActivity
+13:51:14,152  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> reqActivity
+13:51:14,533 ERROR http-nio-8080-exec-2 UserActivityDAO:reqActivityForUser:209 - Error while user requested activity
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10-11' for key 'user_has_activity.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserActivityDAO.reqActivityForUser(UserActivityDAO.java:203)
+	at service.implementations.UserActivityService.userRequestedActivity(UserActivityService.java:44)
+	at controller.command.RequestedActivity.execute(RequestedActivity.java:18)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doGet(Controller.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+14:11:46,666  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+14:11:53,438  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+14:11:55,336  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:16:08,818  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logIn
+14:16:11,142  INFO http-nio-8080-exec-1 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+14:16:12,058  INFO http-nio-8080-exec-11 UserDAO:doGet:27 - Get#command ==> hideActivitiesDescription
+14:16:12,777  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+14:16:13,887  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:16:19,734  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:16:22,517  INFO http-nio-8080-exec-11 UserDAO:doGet:27 - Get#command ==> reqActivity
+14:16:25,210  INFO http-nio-8080-exec-13 UserDAO:doGet:27 - Get#command ==> reqActivity
+14:16:27,235  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> reqActivity
+14:16:35,015  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:16:35,890  INFO http-nio-8080-exec-12 UserDAO:doPost:34 - Post#command ==> showProfile
+14:16:37,486  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:16:38,224  INFO http-nio-8080-exec-19 UserDAO:doPost:34 - Post#command ==> logOut
+14:16:41,360  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> logIn
+14:16:56,702  INFO http-nio-8080-exec-12 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+14:17:00,211  INFO http-nio-8080-exec-13 UserDAO:doGet:27 - Get#command ==> unblockUser
+14:17:07,292  INFO http-nio-8080-exec-14 UserDAO:doGet:27 - Get#command ==> deleteUser
+14:17:10,699  INFO http-nio-8080-exec-11 UserDAO:doGet:27 - Get#command ==> blockUser
+14:17:13,544  INFO http-nio-8080-exec-12 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+14:17:27,440  INFO http-nio-8080-exec-19 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+14:17:31,149  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> showUsers
+14:17:33,732  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> logOut
+14:17:36,590  INFO http-nio-8080-exec-16 UserDAO:doPost:34 - Post#command ==> logIn
+14:17:37,983  INFO http-nio-8080-exec-19 UserDAO:doPost:34 - Post#command ==> showProfile
+14:17:38,786  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:17:48,392  INFO http-nio-8080-exec-15 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+14:17:58,658  INFO http-nio-8080-exec-19 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+14:17:59,636  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:18:00,808  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> showProfile
+14:18:01,947  INFO http-nio-8080-exec-16 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:35:50,127  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+14:35:53,175  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showProfile
+14:35:55,094  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:36:03,719  INFO http-nio-8080-exec-8 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+14:36:07,514  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:36:08,495  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showProfile
+14:36:09,484  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:36:15,457  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:36:16,706  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logOut
+14:36:19,688  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> logIn
+14:36:23,696  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logOut
+14:36:33,416  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+14:36:38,321  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> regUser
+14:36:40,374  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+14:36:41,175  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+14:36:43,039  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:36:43,626  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:36:44,552  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> reqActivity
+14:36:47,706  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:36:48,520  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logOut
+14:36:51,798  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> logIn
+14:36:53,847  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+14:36:56,515  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+14:37:00,495  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsers
+14:37:02,873  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> logOut
+14:37:07,174  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logIn
+14:37:08,372  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showProfile
+14:37:10,042  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:37:13,046  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+14:37:20,370  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> returnToMain
+14:37:21,260  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+14:37:22,663  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+14:37:26,320  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:04:13,232  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> regUser
+19:04:25,722  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+19:04:26,656  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> hideActivitiesDescription
+19:04:27,495  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> showProfile
+19:04:31,885  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:04:42,618  INFO http-nio-8080-exec-8 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:04:55,341  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+19:04:56,195  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:04:57,290  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:04:58,718  INFO http-nio-8080-exec-8 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:05:01,018  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:05:03,998  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:05:05,778  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logOut
+19:05:09,179  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logIn
+19:05:10,718  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showProfile
+19:05:11,857  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:05:13,233  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:05:14,101  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logOut
+19:05:16,971  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+19:05:29,065  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> blockUser
+19:05:31,828  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+19:05:35,819  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showUsers
+19:05:40,225  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+19:05:56,665  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+19:06:00,565  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> denyApproval
+19:06:02,212  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showUsers
+19:06:08,186  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+19:06:10,224  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showUsers
+19:06:13,985  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logOut
+19:06:17,698  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> logIn
+19:06:19,949  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showProfile
+19:06:21,007  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:06:31,960  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+19:06:36,099  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:06:37,262  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:06:37,352 ERROR http-nio-8080-exec-6 UserActivityDAO:reqActivityForUser:201 - Error while user requested activity
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '27-1' for key 'user_has_activity.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserActivityDAO.reqActivityForUser(UserActivityDAO.java:195)
+	at service.implementations.UserActivityService.userRequestedActivity(UserActivityService.java:43)
+	at controller.command.RequestedActivity.execute(RequestedActivity.java:18)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doGet(Controller.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:06:45,200  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:06:46,503  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:06:49,382  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showProfile
+19:06:50,422  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:06:52,051  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:06:53,184  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logOut
+19:06:56,421  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logIn
+19:06:58,023  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+19:06:59,534  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> showUsers
+19:07:06,300  INFO http-nio-8080-exec-1 UserDAO:doGet:27 - Get#command ==> blockUser
+19:07:09,537  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logOut
+19:07:12,833  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+19:07:19,632  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logIn
+19:08:26,824  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> regUser
+19:08:34,556  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> regUser
+19:08:39,583  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logIn
+19:08:43,297  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logIn
+19:08:44,572  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+19:08:48,271  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> unblockUser
+19:08:55,208  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showActivities
+19:08:58,860  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logOut
+19:09:01,614  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+19:09:02,768  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> showProfile
+19:09:04,130  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:09:05,641  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:09:07,593  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logOut
+19:09:10,847  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logIn
+19:09:13,547  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showActivities
+19:09:14,906  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+19:10:55,325  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> addActivity
+19:10:59,735  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logOut
+19:11:05,080  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logIn
+19:11:07,623  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:11:12,567  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:11:13,376  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logOut
+19:11:16,360  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logIn
+19:11:17,466  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+19:11:19,387  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+19:11:22,308  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showUsers
+19:11:26,298  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logOut
+19:11:32,394  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logIn
+19:11:33,681  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+19:11:34,816  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:11:37,330  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+19:11:37,800  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:11:39,035  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+19:11:41,449  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:11:44,536  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:11:45,854  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logOut
+19:11:49,048  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logIn
+19:11:52,130  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showProfile
+19:11:53,245  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:12:03,780  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:12:04,810  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:12:06,166  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showProfile
+19:12:07,196  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:12:08,854  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:12:10,034  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:12:12,312  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showProfile
+19:12:13,298  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:12:16,004  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:12:17,116  INFO http-nio-8080-exec-8 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:12:17,118 ERROR http-nio-8080-exec-8 UserActivityDAO:reqActivityForUser:201 - Error while user requested activity
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10-1' for key 'user_has_activity.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserActivityDAO.reqActivityForUser(UserActivityDAO.java:195)
+	at service.implementations.UserActivityService.userRequestedActivity(UserActivityService.java:43)
+	at controller.command.RequestedActivity.execute(RequestedActivity.java:18)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doGet(Controller.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:12:19,815  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:12:21,464  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:12:21,469 ERROR http-nio-8080-exec-5 UserActivityDAO:reqActivityForUser:201 - Error while user requested activity
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10-10' for key 'user_has_activity.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserActivityDAO.reqActivityForUser(UserActivityDAO.java:195)
+	at service.implementations.UserActivityService.userRequestedActivity(UserActivityService.java:43)
+	at controller.command.RequestedActivity.execute(RequestedActivity.java:18)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doGet(Controller.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:12:23,046  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:12:24,861  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logOut
+19:12:28,284  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+19:12:30,448  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+19:12:32,818  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showUsers
+19:12:34,586  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logOut
+19:33:03,448  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> regUser
+19:33:13,143  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> regUser
+19:33:13,486 ERROR http-nio-8080-exec-3 UserDAO:regUser:61 - SQLException during registration occurred 
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserDAO.regUser(UserDAO.java:56)
+	at service.implementations.UserService.add(UserService.java:78)
+	at controller.command.RegUser.execute(RegUser.java:23)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doPost(Controller.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:33:26,371  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logIn
+19:33:30,583  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+19:33:34,007  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showUsers
+19:33:44,854  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logOut
+19:33:55,456  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> regUser
+19:33:55,461 ERROR http-nio-8080-exec-1 UserDAO:regUser:61 - SQLException during registration occurred 
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserDAO.regUser(UserDAO.java:56)
+	at service.implementations.UserService.add(UserService.java:78)
+	at controller.command.RegUser.execute(RegUser.java:23)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:23)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doPost(Controller.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:36:31,651  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> regUser
+19:36:56,486  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logOut
+19:37:04,580  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> regUser
+19:37:10,505  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> logIn
+19:37:16,223  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logOut
+19:37:26,987  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> regUser
+19:37:37,697  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+19:37:43,421  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> hideActivitiesDescription
+19:37:45,076  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+19:37:58,183  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:38:00,678  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+19:38:04,963  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:38:08,404  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:38:16,328  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:38:17,735  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:38:19,259  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:38:20,680  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:38:27,979  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:38:31,784  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logOut
+19:38:34,564  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+19:38:43,434  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+19:38:51,114  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:38:57,124  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showActivities
+19:39:00,134  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+19:39:00,815  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> hideActivitiesDescription
+19:39:56,346  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> addActivity
+19:40:01,899  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showUsers
+19:40:03,897  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logOut
+19:40:13,106  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logIn
+19:40:23,833  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logIn
+19:40:37,034  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+19:40:41,128  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+19:40:42,591  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:40:43,218  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logOut
+19:43:26,468  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+19:43:30,287  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+19:43:31,879  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+19:43:36,827  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:43:40,214  INFO http-nio-8080-exec-15 UserDAO:doGet:27 - Get#command ==> reqActivity
+19:43:44,767  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> returnToMain
+19:43:45,491  INFO http-nio-8080-exec-12 UserDAO:doPost:34 - Post#command ==> logOut
+19:43:48,111  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> logIn
+19:43:51,726  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> logIn
+19:45:41,901  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+19:45:51,516  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+19:45:59,257  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+19:46:03,109  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+19:46:06,818  INFO http-nio-8080-exec-1 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+19:46:08,780  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> denyApproval
+19:46:13,464  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsers
+19:46:17,065  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logOut
+19:46:26,281  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logIn
+19:46:28,019  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showProfile
+19:46:29,248  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+21:47:35,918  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> logIn
+21:47:51,072  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+21:48:18,023  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+21:48:24,548  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> logOut
+21:48:32,125  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logIn
+21:48:34,591  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showProfile
+21:48:36,317  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+21:48:41,008  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+21:48:47,673  INFO http-nio-8080-exec-8 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+21:48:58,366  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+21:49:01,710  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> returnToMain
+21:49:02,504  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logOut
+21:49:05,395  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logIn
+21:49:08,128  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+21:49:09,223  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showUsers
+21:49:12,098  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logOut
+21:49:24,587  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logIn
+21:49:27,745  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> reqActivity
+21:49:33,152  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+21:49:33,864  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> returnToMain
+21:49:35,306  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logOut
+12:40:25,294  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+12:40:59,100  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+12:41:07,167  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showUsers
+12:41:12,387  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showActivities
+12:44:42,948  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+12:44:49,051  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showActivities
+12:44:58,462  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:47:47,857  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+12:47:52,300  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showActivities
+12:47:55,623  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:48:13,334  INFO http-nio-8080-exec-1 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:48:18,556  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:48:22,859  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:54:06,082  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+12:54:12,754  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showActivities
+12:54:15,119  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:54:27,955  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:55:57,315  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> addActivity
+12:56:02,420  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:56:03,329  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:56:07,724  INFO http-nio-8080-exec-1 UserDAO:doGet:27 - Get#command ==> sortActivities
+12:56:10,238  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:46:39,734  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+13:46:49,365  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showActivities
+13:46:51,327  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:46:54,296  INFO http-nio-8080-exec-1 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:46:56,989  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:50:13,304  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> logIn
+13:50:15,499  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> showActivities
+13:50:17,093  INFO http-nio-8080-exec-8 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:50:19,369  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:50:20,437  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+13:50:21,354  INFO http-nio-8080-exec-11 UserDAO:doGet:27 - Get#command ==> hideActivitiesDescription
+13:50:22,264  INFO http-nio-8080-exec-13 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:50:24,955  INFO http-nio-8080-exec-17 UserDAO:doGet:27 - Get#command ==> sortActivities
+13:50:44,006  INFO http-nio-8080-exec-11 UserDAO:doGet:27 - Get#command ==> deleteActivity
+13:50:50,075  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> logOut
+13:51:45,847  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> logIn
+13:51:48,458  INFO http-nio-8080-exec-12 UserDAO:doPost:34 - Post#command ==> showProfile
+13:51:50,171  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:52:07,480  INFO http-nio-8080-exec-19 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:52:08,230  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> logOut
+13:52:10,855  INFO http-nio-8080-exec-12 UserDAO:doPost:34 - Post#command ==> logIn
+13:52:12,079  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> showActivities
+13:52:15,461  INFO http-nio-8080-exec-19 UserDAO:doGet:27 - Get#command ==> deleteActivity
+13:52:17,902  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> logOut
+13:52:25,147  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> logIn
+13:52:26,296  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> showProfile
+13:52:27,097  INFO http-nio-8080-exec-19 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+13:52:32,142  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:52:33,814  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> showProfile
+13:52:34,801  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> returnToMain
+13:52:35,699  INFO http-nio-8080-exec-19 UserDAO:doPost:34 - Post#command ==> logOut
+13:52:38,227  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> logIn
+13:52:40,692  INFO http-nio-8080-exec-12 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+13:52:44,239  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> showUsers
+15:15:39,174  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> regUser
+15:16:04,795  INFO http-nio-8080-exec-4 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+15:16:06,241  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> hideActivitiesDescription
+15:16:07,168  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showProfile
+15:16:15,120  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:16:17,603  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:16:19,170  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:16:21,628  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:16:24,567  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:16:26,191  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:16:27,485  INFO http-nio-8080-exec-5 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:16:28,915  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:16:30,124  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:16:34,043  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:16:41,601  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showProfile
+15:16:42,600  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:16:44,275  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:16:45,162  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logOut
+15:16:47,859  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logIn
+15:16:55,284  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> blockUser
+15:16:57,859  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logOut
+15:17:01,645  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logIn
+15:17:04,959  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logIn
+15:17:06,389  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+15:17:07,374  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> unblockUser
+15:17:08,430  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logOut
+15:17:10,913  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logIn
+15:17:12,334  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showProfile
+15:17:12,983  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:17:14,154  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:17:14,785  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logOut
+15:17:17,131  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logIn
+15:17:39,397  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showActivities
+15:17:44,395  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> sortActivities
+15:17:46,565  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> sortActivities
+15:17:55,855  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logOut
+15:17:59,933  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> logIn
+15:18:05,256  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logOut
+15:18:07,980  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logIn
+15:18:09,264  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> blockUser
+15:18:10,879  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showProfile
+15:18:13,894  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:18:19,751  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logOut
+15:18:26,683  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+15:18:33,948  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+15:18:39,298  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showOnlyBlockedUsers
+15:18:40,169  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> unblockUser
+15:18:42,140  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showActivities
+15:18:43,120  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+15:19:25,280  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> addActivity
+15:19:28,002  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showUsers
+15:19:28,516  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showActivities
+15:20:28,342  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> addActivity
+15:20:32,773  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> addActivity
+15:20:36,249  INFO http-nio-8080-exec-2 UserDAO:doPost:34 - Post#command ==> showUsers
+15:20:41,882  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:20:49,230  INFO http-nio-8080-exec-9 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+15:20:53,256  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+15:20:54,836  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> denyApproval
+15:21:00,681  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showUsers
+15:21:06,610  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logOut
+15:21:11,006  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+15:21:12,489  INFO http-nio-8080-exec-5 UserDAO:doPost:34 - Post#command ==> showProfile
+15:21:13,602  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:21:18,471  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+15:21:30,304  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+15:21:30,855  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:21:32,877  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> hideUsersActivities
+15:21:34,005  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:21:34,817  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:21:35,938  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showProfile
+15:21:36,785  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:21:39,905  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> deleteUsersActivity
+15:21:43,140  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:21:45,261  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showProfile
+15:21:45,999  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:21:48,496  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:21:50,177  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:21:52,435  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:21:57,139  INFO http-nio-8080-exec-8 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:21:58,937  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+15:22:00,487  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:22:05,050  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:22:06,453  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> logOut
+15:22:12,431  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logIn
+15:22:17,320  INFO http-nio-8080-exec-6 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:22:18,874  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsers
+15:22:20,668  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showActivities
+15:22:23,029  INFO http-nio-8080-exec-3 UserDAO:doGet:27 - Get#command ==> deleteActivity
+15:22:26,007  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> showUsers
+15:22:27,438  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:22:28,951  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showUsers
+15:22:33,202  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> logOut
+15:22:36,684  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logIn
+15:22:37,811  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showProfile
+15:22:39,452  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:22:44,432  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:22:53,074  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showProfile
+15:22:54,246  INFO http-nio-8080-exec-8 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:41:40,156  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> regUser
+15:41:48,001  INFO http-nio-8080-exec-1 UserDAO:doPost:34 - Post#command ==> logIn
+15:41:55,235  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> logOut
+15:42:01,534  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> regUser
+15:42:04,963  INFO http-nio-8080-exec-18 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:42:05,490  INFO http-nio-8080-exec-13 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:42:09,934  INFO http-nio-8080-exec-19 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:42:10,866  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> logOut
+15:42:13,542  INFO http-nio-8080-exec-18 UserDAO:doPost:34 - Post#command ==> logIn
+15:42:15,607  INFO http-nio-8080-exec-14 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:42:18,314  INFO http-nio-8080-exec-16 UserDAO:doGet:27 - Get#command ==> regActivityForUser
+15:42:19,685  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> showUsers
+15:42:21,191  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> showActivities
+15:42:24,512  INFO http-nio-8080-exec-19 UserDAO:doGet:27 - Get#command ==> deleteActivity
+15:42:27,884  INFO http-nio-8080-exec-16 UserDAO:doPost:34 - Post#command ==> showUsers
+15:42:30,165  INFO http-nio-8080-exec-17 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:42:31,391  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> showUsers
+15:43:48,739  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> logIn
+15:43:51,086  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> showProfile
+15:43:52,291  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:43:54,003  INFO http-nio-8080-exec-18 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:43:57,718  INFO http-nio-8080-exec-20 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:44:00,693  INFO http-nio-8080-exec-16 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:44:05,341  INFO http-nio-8080-exec-24 UserDAO:doPost:34 - Post#command ==> logOut
+15:44:07,859  INFO http-nio-8080-exec-25 UserDAO:doPost:34 - Post#command ==> logIn
+15:44:12,221  INFO http-nio-8080-exec-27 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:44:14,790  INFO http-nio-8080-exec-17 UserDAO:doPost:34 - Post#command ==> showUsers
+15:44:20,911  INFO http-nio-8080-exec-24 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:44:22,202  INFO http-nio-8080-exec-26 UserDAO:doPost:34 - Post#command ==> showUsers
+15:44:28,442  INFO http-nio-8080-exec-27 UserDAO:doPost:34 - Post#command ==> showActivities
+15:44:30,667  INFO http-nio-8080-exec-29 UserDAO:doGet:27 - Get#command ==> deleteActivity
+15:44:32,864  INFO http-nio-8080-exec-28 UserDAO:doPost:34 - Post#command ==> showUsers
+15:44:34,408  INFO http-nio-8080-exec-21 UserDAO:doGet:27 - Get#command ==> getUsersRequests
+15:44:35,323  INFO http-nio-8080-exec-22 UserDAO:doPost:34 - Post#command ==> showUsers
+15:44:35,999  INFO http-nio-8080-exec-23 UserDAO:doPost:34 - Post#command ==> logOut
+15:44:39,681  INFO http-nio-8080-exec-28 UserDAO:doPost:34 - Post#command ==> logIn
+15:44:43,003  INFO http-nio-8080-exec-22 UserDAO:doPost:34 - Post#command ==> logIn
+15:44:44,156  INFO http-nio-8080-exec-23 UserDAO:doPost:34 - Post#command ==> showProfile
+15:44:44,868  INFO http-nio-8080-exec-24 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:44:47,174  INFO http-nio-8080-exec-26 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:52:03,033  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> logIn
+15:52:07,036  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> showProfile
+15:52:08,346  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> showUsersActivities
+15:52:09,398  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:52:10,930  INFO http-nio-8080-exec-10 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:52:13,111  INFO http-nio-8080-exec-6 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:52:14,076  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logOut
+15:52:16,416  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> logIn
+15:52:21,174  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showActivities
+15:52:25,806  INFO http-nio-8080-exec-7 UserDAO:doGet:27 - Get#command ==> deleteActivity
+15:52:27,900  INFO http-nio-8080-exec-9 UserDAO:doPost:34 - Post#command ==> showProfile
+15:52:28,556  INFO http-nio-8080-exec-10 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:52:29,249  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showUsers
+15:53:28,176  INFO http-nio-8080-exec-7 UserDAO:doPost:34 - Post#command ==> logIn
+15:53:29,813  INFO http-nio-8080-exec-4 UserDAO:doPost:34 - Post#command ==> showActivities
+15:53:40,999  INFO http-nio-8080-exec-3 UserDAO:doPost:34 - Post#command ==> addActivity
+15:53:42,576  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> logOut
+15:53:46,010  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> logIn
+15:53:48,148  INFO http-nio-8080-exec-2 UserDAO:doGet:27 - Get#command ==> reqActivity
+15:53:50,210  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> returnToMain
+15:53:50,735  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> logOut
+15:53:53,305  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> logIn
+15:54:07,266  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> showActivities
+15:54:07,960  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> showUsers
+15:54:09,694  INFO http-nio-8080-exec-12 UserDAO:doPost:34 - Post#command ==> showActivities
+15:54:11,083  INFO http-nio-8080-exec-13 UserDAO:doGet:27 - Get#command ==> deleteActivity
+15:54:12,917  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> showUsers
+15:54:31,153  INFO http-nio-8080-exec-11 UserDAO:doPost:34 - Post#command ==> showActivities
+15:54:51,172  INFO http-nio-8080-exec-13 UserDAO:doPost:34 - Post#command ==> addActivity
+15:55:03,422  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> addActivity
+15:55:15,220  INFO http-nio-8080-exec-20 UserDAO:doPost:34 - Post#command ==> addActivity
+15:55:29,026  INFO http-nio-8080-exec-14 UserDAO:doPost:34 - Post#command ==> addActivity
+15:58:06,233  INFO http-nio-8080-exec-16 UserDAO:doPost:34 - Post#command ==> addActivity
+15:58:08,622  INFO http-nio-8080-exec-20 UserDAO:doGet:27 - Get#command ==> sortActivities
+15:58:10,992  INFO http-nio-8080-exec-13 UserDAO:doGet:27 - Get#command ==> sortActivities
+15:58:13,384  INFO http-nio-8080-exec-15 UserDAO:doGet:27 - Get#command ==> sortActivities
+15:58:18,559  INFO http-nio-8080-exec-16 UserDAO:doGet:27 - Get#command ==> getActivitiesDescription
+15:58:20,691  INFO http-nio-8080-exec-20 UserDAO:doGet:27 - Get#command ==> sortActivities
+15:58:24,009  INFO http-nio-8080-exec-18 UserDAO:doGet:27 - Get#command ==> sortActivities
+15:58:26,702  INFO http-nio-8080-exec-15 UserDAO:doPost:34 - Post#command ==> showUsers
+15:58:32,817  INFO http-nio-8080-exec-16 UserDAO:doPost:34 - Post#command ==> showActivities

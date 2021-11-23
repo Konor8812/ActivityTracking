@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ItemService <K, T> {
 
-    T getItemById(K id) throws DBException, ServiceException;
+    T getItemById(K id) throws ServiceException;
 
     void add(T entity) throws ServiceException, EntityAlreadyExist;
 

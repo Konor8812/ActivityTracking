@@ -59,7 +59,7 @@ public class CommandFactory {
                 com = new LogOut();
                 break;
             case "regActivityForUser":
-                com = new RegisterActivityForUser();
+                com = new ApproveActivityForUser();
                 break;
             case "showProfile":
                 com = new ShowProfile();
@@ -73,7 +73,7 @@ public class CommandFactory {
             case "showUsersActivities":
                 com = new ShowUsersActivities();
                 break;
-            case "giveUpActivity":
+            case "deleteUsersActivity":
                 com = new DeleteUsersActivity();
                 break;
             case "deleteActivity":
@@ -90,6 +90,18 @@ public class CommandFactory {
                 break;
             case "showOnlyBlockedUsers":
                 com = new GetAllBlocked();
+                break;
+            case "reqActivity":
+                com = new RequestedActivity();
+                break;
+            case "getUsersRequests":
+                com = new GetUsersRequests();
+                break;
+            case "denyApproval":
+                com = new DenyApproval();
+                break;
+            case "sortActivities":
+                com = new SortActivities();
                 break;
         }
         return com;

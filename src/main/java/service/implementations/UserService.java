@@ -24,10 +24,7 @@ public class UserService implements UserExtension {
         return userDAO.getAllBlockedUsers();
     }
 
-    @Override
-    public void userTookActivity(int userId) {
-        userDAO.activityTakenByUser(userId);
-    }
+
 
     @Override
     public List<Activity> getUsersActivities(int userId) {
@@ -52,6 +49,11 @@ public class UserService implements UserExtension {
     }
 
     @Override
+    public void userTookActivity(int userId) {
+        userDAO.activityTakenByUser(userId);
+    }
+
+    @Override
     public void userCompletedActivity(int userId, double pointForActivity) {
         userDAO.decrementUsersActivitiesAmount(userId, pointForActivity);
     }
@@ -62,7 +64,12 @@ public class UserService implements UserExtension {
     }
 
     @Override
-    public User getItemById(Integer id) throws DBException, ServiceException {
+    public void changeUsersRequestsAmount(int userId, boolean increment) {
+        userDAO.changeUsersRequestsAmount(userId, increment);
+    }
+
+    @Override
+    public User getItemById(Integer id) throws ServiceException {
         return userDAO.getUserById(id);
     }
 
@@ -84,6 +91,11 @@ public class UserService implements UserExtension {
     @Override
     public List<User> getAllItemsAsList() {
         return userDAO.getUsersList();
+    }
+
+    @Override
+    public List<Activity> getRequestedActivities(int userId) {
+        return userDAO.getUsersRequestedActivities(userId);
     }
 
 

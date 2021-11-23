@@ -9,7 +9,7 @@
     <c:out value="${sessionScope.regedAs.login}"/><br>
     You are <c:out value="${sessionScope.regedAs.role}"/><br>
     <c:if test="${sessionScope.regedAs.role == 'user'}">
-    Your points: <c:out value="${sessionScope.regedAs.totalPoints}"/><br>
+    Your points: ${sessionScope.regedAs.totalPoints}<br>
     You have taken <c:out value="${sessionScope.regedAs.activitiesAmount}"/> activities<br>
     Forgot password? <a href="ActivityTracker?command=changePass">Change it!</a>
         <c:if test="${!empty sessionScope.showChangePassField}">
@@ -47,7 +47,10 @@
                     <td>${activity.description}</td>
                     <td>${activity.status}</td>
                     <td>${activity.timeSpent}</td>
-                    <td> <a href="ActivityTracker?command=giveUpActivity&activityId=${activity.id}">give up</a> </td>
+                    <c:if test="${activity.status == 'in_process'}">
+                    <td> <a href="ActivityTracker?command=deleteUsersActivity&activityId=${activity.id}&wasCompleted=true">completed</a> </td>
+                    <td> <a href="ActivityTracker?command=deleteUsersActivity&activityId=${activity.id}&wasCompleted=false">give up</a> </td>
+                    </c:if>
                 </tr>
             </c:forEach>
     </table>

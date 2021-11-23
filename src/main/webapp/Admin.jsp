@@ -27,6 +27,7 @@
                 <th> Status </th>
                 <th> Activities amount</th>
                 <th> total points </th>
+                <th> Number of requested activities </th>
                 <th> Block user </th>
             </tr>
 
@@ -36,6 +37,14 @@
                     <td>${user.status}</td>
                     <td>${user.activitiesAmount}</td>
                     <td>${user.totalPoints}</td>
+                    <td>
+                        <c:if test="${user.requestsAmount != 0}">
+                            <a href="ActivityTracker?command=getUsersRequests&userId=${user.id}">${user.requestsAmount}</a>
+                        </c:if>
+                        <c:if test="${user.requestsAmount == 0}">
+                            ${user.requestsAmount}
+                        </c:if>
+                    </td>
                     <td> <a href="ActivityTracker?command=blockUser&userId=${user.id}">block!</a> </td>
                     <td> <a href="ActivityTracker?command=deleteUser&userId=${user.id}">delete!</a> </td>
                 </tr>
@@ -74,9 +83,10 @@
         </form>
         <table>
             <tr>
-                <th> Name </th>
-                <th> Duration </th>
-                <th> Reward </th>
+                <th> <a href="ActivityTracker?command=sortActivities&sortBy=name"> Name </a></th>
+                <th> <a href="ActivityTracker?command=sortActivities&sortBy=duration"> Duration </a></th>
+                <th> <a href="ActivityTracker?command=sortActivities&sortBy=reward"> Reward </a></th>
+                <th> <a href="ActivityTracker?command=sortActivities&sortBy=numberOfTakes"> Taken by </a></th>
                 <th>
                     <c:if test="${!sessionScope.shouldShowTags}">
                         <a href="ActivityTracker?command=getActivitiesDescription">Show tags</a>
@@ -91,6 +101,7 @@
                     <td>${activity.name}</td>
                     <td>${activity.duration}</td>
                     <td>${activity.reward}</td>
+                    <td>${activity.takenByAmount}</td>
                     <td>
                     <c:if test="${sessionScope.shouldShowTags}">
                         <c:out value="${activity.description}" />
@@ -112,6 +123,12 @@
             <input type="text" name="description"><br>
             <input type="submit">
         </form>
+        <c:if test="${sessionScope.wrongDurationFormat}">
+            Wrong duration Format!
+        </c:if>
+        <c:if test="${sessionScope.activityExists}">
+            Activity with such name already exists!
+        </c:if>
     </c:if>
 </c:if>
 <c:if test="${sessionScope.regedAs.role ne 'admin'}">

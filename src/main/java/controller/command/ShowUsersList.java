@@ -16,6 +16,7 @@ public class ShowUsersList implements Command{
 
         UserService userService = new UserService();
         List<User> users = userService.getAllItemsAsList();
+        req.getSession().removeAttribute("wrongDurationFormat");
         req.getSession().removeAttribute("blockedUsers");
         req.getSession().setAttribute("users", users);
         req.getSession().setAttribute("shouldShowUsers", true);

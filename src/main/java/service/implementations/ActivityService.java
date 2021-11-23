@@ -3,7 +3,7 @@ package service.implementations;
 import model.dao.ActivityDAO;
 import model.dao.DAOFactory;
 import model.entity.Activity;
-import model.exception.DBException;
+
 import model.exception.ServiceException;
 import service.entityExtention.ActivityExtension;
 
@@ -30,7 +30,7 @@ public class ActivityService implements ActivityExtension {
     }
 
     @Override
-    public Activity getItemById(Integer id) throws DBException, ServiceException {
+    public Activity getItemById(Integer id)  {
         return activityDAO.getActivityById(id);
     }
 

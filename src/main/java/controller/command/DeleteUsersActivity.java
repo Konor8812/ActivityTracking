@@ -16,6 +16,7 @@ public class DeleteUsersActivity implements Command {
         User user = (User)req.getSession().getAttribute("regedAs");
         int activityId = Integer.parseInt(req.getParameter("activityId"));
         boolean wasCompleted = Boolean.parseBoolean(req.getParameter("wasCompleted"));
+
         UserActivityService userActivityService = new UserActivityService();
 
         if(wasCompleted) {
@@ -23,6 +24,7 @@ public class DeleteUsersActivity implements Command {
         } else{
             userActivityService.activityGaveUp(user.getId(), activityId);
         }
+
         UserService userService = new UserService();
         try {
             user = userService.getItemById(user.getId());
@@ -34,6 +36,6 @@ public class DeleteUsersActivity implements Command {
         req.getSession().setAttribute("regedAs", user);
         req.getSession().setAttribute("usersActivities", usersActivities);
 
-        return "Profile.jsp";
+        return CommandFactory.getInstance().getCommand("showProfile", req, null).execute(req);
     }
 }

@@ -4,14 +4,12 @@ import model.dao.DAOFactory;
 import model.dao.UserActivityDAO;
 import model.entity.Activity;
 import model.exception.ServiceException;
-import org.apache.log4j.Logger;
 import service.entityExtention.UserActivityFunctionality;
 
 import java.util.List;
 
 public class UserActivityService implements UserActivityFunctionality {
 
-    private static Logger logger = Logger.getLogger(UserActivityService.class);
     private final DAOFactory daoFactory = DAOFactory.getInstance();
     private UserActivityDAO userActivityDAO = daoFactory.getUserActivityDAO();
 
@@ -22,16 +20,7 @@ public class UserActivityService implements UserActivityFunctionality {
 
     @Override
     public void activityCompleted(int userId, int activityId) {
-        userActivityDAO.deleteUsersActivity(userId, activityId, true);
-    }
-
-    @Override
-    public void userTookActivity(int userId, int activityId) throws ServiceException {
-        userActivityDAO.regActivityForUser(userId, activityId);
-        UserService userService = new UserService();
-        userService.userTookActivity(userId);
-        ActivityService activityService = new ActivityService();
-        activityService.wasTakenOrCompleted(activityId, true);
+        userActivityDAO.completedUsersActivity(userId, activityId);
     }
 
     @Override
@@ -47,6 +36,36 @@ public class UserActivityService implements UserActivityFunctionality {
     @Override
     public List<Integer> usersWithThisActivity(int activityId) {
         return userActivityDAO.getListOfUsersHadThisActivity(activityId);
+    }
+
+    @Override
+    public void userRequestedActivity(int userId, int activityId) throws ServiceException {
+        userActivityDAO.reqActivityForUser(userId, activityId);
+        UserService userService = new UserService();
+        userService.changeUsersRequestsAmount(userId, true);
+    }
+
+    @Override
+    public void denyApprovalActivityForUser(int userId, int activityId) {
+        userActivityDAO.denyApproval(userId, activityId);
+    }
+
+
+    @Override
+    public void approveActivityForUser(int userId, int activityId) {
+        userActivityDAO.approveActivity(userId, activityId);
+
+        UserService userService = new UserService();
+        userService.userTookActivity(userId);
+
+        ActivityService activityService = new ActivityService();
+        activityService.wasTakenOrCompleted(activityId, true);
+    }
+
+    @Override
+    public List<Integer> usersWithRequestedActivity(int activityId) {
+
+        return userActivityDAO.getListOfUsersRequestedThisActivity(activityId);
     }
 
 

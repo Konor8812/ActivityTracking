@@ -1,9 +1,9 @@
 package model.dao;
 
 import model.database.ConnectionPool;
+import model.database.Util;
+import model.entity.Activity;
 import model.entity.User;
-import model.exception.ServiceException;
-import model.exception.UserAlreadyExists;
 import model.exception.WrongLoginData;
 import org.apache.log4j.Logger;
 import service.implementations.UserActivityService;
@@ -14,6 +14,7 @@ import java.util.List;
 
 public class UserDAO {
     private static UserDAO instance;
+    private static Logger logger = Logger.getLogger(UserDAO.class);
 
     private static final String GET_LOGGED_IN_USER = "SELECT * FROM user WHERE login=(?)";
     private static final String GET_USER_BY_ID = "SELECT * FROM user WHERE id=(?)";
@@ -28,8 +29,10 @@ public class UserDAO {
     private static final String BLOCK_USER = "UPDATE user SET status='blocked' WHERE id=(?)";
     private static final String UNBLOCK_USER = "UPDATE user SET status='available' WHERE id=(?)";
     private static final String GET_ALL_BLOCKED = "SELECT * FROM user WHERE status='blocked'";
+    private static final String CHANGE_REQUESTS_AMOUNT = "UPDATE user SET requests_amount=(?) WHERE id=(?)";
+    private static final String GET_USERS_REQUESTED_ACTIVITIES = "SELECT * FROM user_has_activity WHERE user_id=(?) AND status='requested'";
 
-    private static Logger logger = Logger.getLogger(UserDAO.class);
+
 
     public static synchronized UserDAO getInstance() {
         if (instance == null) {
@@ -57,7 +60,7 @@ public class UserDAO {
         } catch (SQLException e) {
             logger.error("SQLException during registration occurred ", e);
         } finally {
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
     }
 
@@ -74,7 +77,7 @@ public class UserDAO {
         } catch (SQLException e) {
             logger.error("Wasn't able to delete user, id ==> " + userId, e);
         } finally {
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
         return false;
     }
@@ -90,7 +93,7 @@ public class UserDAO {
         } catch (SQLException e) {
             logger.error("SQLException occurred trying to delete all users", e);
         } finally {
-            close(stmt, con);
+            Util.close(stmt, con);
         }
     }
 
@@ -113,15 +116,44 @@ public class UserDAO {
                 user.setRole(rs.getString("role"));
                 user.setTotalPoints(rs.getInt("total_points"));
                 user.setStatus(rs.getString("status"));
+                user.setRequestsAmount(rs.getInt("requests_amount"));
 
                 users.add(user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            close(rs, stmt, con);
+            Util.close(rs, stmt, con);
         }
         return users;
+    }
+
+    public void changeUsersRequestsAmount(int userId, boolean increment){
+        Connection con = null;
+
+        PreparedStatement prstmt = null;
+        try {
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(CHANGE_REQUESTS_AMOUNT);
+            User user = getUserById(userId);
+            int requestsAmount = user.getRequestsAmount();
+            if(increment){
+                prstmt.setInt(1, ++requestsAmount);
+            }else{
+                prstmt.setInt(1, --requestsAmount);
+            }
+            prstmt.setInt(2, userId);
+            prstmt.execute();
+
+        } catch (SQLException exception) {
+            logger.error("SQLException occurred during getting logged in user!", exception);
+        } catch (WrongLoginData wrongLoginData) {
+            //not gonna happen
+        } finally {
+            Util.close( prstmt, con);
+        }
+
     }
 
     public User getLoggedInUser(String login, String password) throws WrongLoginData {
@@ -147,21 +179,12 @@ public class UserDAO {
         } catch (SQLException exception) {
             logger.error("SQLException occurred during getting logged in user!", exception);
         } finally {
-            close(rs, prstmt, con);
+            Util.close(rs, prstmt, con);
         }
 
         return user;
     }
 
-    private void close(AutoCloseable... ac) {
-        try {
-            for (AutoCloseable autoCloseable : ac) {
-                autoCloseable.close();
-            }
-        } catch (Exception e) {
-            logger.info("AutoCloseable wasn't closed", e);
-        }
-    }
 
     private boolean checkIfLoginExists(String login) {
         Connection con = null;
@@ -179,7 +202,7 @@ public class UserDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } finally {
-            close(rs, prstmt, con);
+            Util.close(rs, prstmt, con);
         }
 
         return false;
@@ -206,7 +229,7 @@ public class UserDAO {
         } catch (SQLException throwable) {
             logger.error("An error occurred during incrementing users activities amount", throwable);
         } finally {
-            close(rs, prstmt, con);
+            Util.close(rs, prstmt, con);
         }
     }
 
@@ -223,7 +246,7 @@ public class UserDAO {
         } catch (SQLException throwable) {
             logger.error("An error during changing password, user id ==> " + id, throwable);
         } finally {
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
     }
 
@@ -252,7 +275,7 @@ public class UserDAO {
         } catch (WrongLoginData wrongLoginData) {
             //not gonna happen
         } finally {
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
     }
 
@@ -273,9 +296,10 @@ public class UserDAO {
                 user.setLogin(rs.getString("login"));
                 user.setPassword((rs.getString("password")));
                 user.setRole(rs.getString("role"));
-                user.setTotalPoints(rs.getInt("total_points"));
+                user.setTotalPoints(rs.getDouble("total_points"));
                 user.setActivitiesAmount(rs.getInt("activities_amount"));
                 user.setStatus(rs.getString("status"));
+                user.setRequestsAmount(rs.getInt("requests_amount"));
 
             } else {
                 throw new WrongLoginData();
@@ -284,7 +308,7 @@ public class UserDAO {
         } catch (SQLException exception) {
             logger.error("Error occurred trying to get user, id ==> " + userId, exception);
         } finally {
-            close(rs, prstmt, con);
+            Util.close(rs, prstmt, con);
         }
         return user;
     }
@@ -299,6 +323,8 @@ public class UserDAO {
 
             UserActivityService userActivityService = new UserActivityService();
             List<Integer> usersIdHadActivity = userActivityService.usersWithThisActivity(activityId);
+            List<Integer> usersWithRequest = userActivityService.usersWithRequestedActivity(activityId);
+
             for (int i : usersIdHadActivity) {
                 User user = getUserById(i);
                 int activitiesAmount = user.getActivitiesAmount();
@@ -307,12 +333,18 @@ public class UserDAO {
                 prstmt.execute();
             }
 
+            System.out.println("is users with requests list empty? " + usersWithRequest.isEmpty());
+            System.out.println(usersWithRequest);
+            for(int i: usersWithRequest){
+                changeUsersRequestsAmount(i, false);
+            }
+
         } catch (SQLException throwable) {
             logger.error("SQLException while updating activities amount after activity was deleted by admin", throwable);
         } catch (WrongLoginData wrongLoginData) {
             logger.error("An error while updating users activities amount, user exists but something went wrong", wrongLoginData);
         } finally {
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
     }
 
@@ -334,7 +366,7 @@ public class UserDAO {
         } catch (WrongLoginData wrongLoginData) {
             //not gonna happen
         } finally {
-            close(rs, prstmt, con);
+            Util.close(rs, prstmt, con);
         }
         return blockedUsers;
     }
@@ -356,8 +388,32 @@ public class UserDAO {
         } catch (SQLException throwable) {
             logger.error("SQLException while blocking user", throwable);
         } finally {
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
+    }
+
+    public List<Activity> getUsersRequestedActivities(int userId) {
+        List<Activity> usersRequestedActivities = new ArrayList<>();
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        ResultSet rs = null;
+        ActivityDAO ad = ActivityDAO.getInstance();
+        try {
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(GET_USERS_REQUESTED_ACTIVITIES);
+            prstmt.setInt(1, userId);
+            rs = prstmt.executeQuery();
+            while (rs.next()) {
+                Activity activity = ad.getActivityById(rs.getInt("activity_id"));
+                usersRequestedActivities.add(activity);
+            }
+        } catch (SQLException e) {
+            logger.error("Error while getting users requested activities", e);
+        } finally {
+            Util.close(rs, prstmt, con);
+        }
+        return usersRequestedActivities;
     }
 }
 

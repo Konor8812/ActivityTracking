@@ -1,6 +1,7 @@
 package model.dao;
 
 import model.database.ConnectionPool;
+import model.database.Util;
 import model.entity.Activity;
 import model.exception.ActivityAlreadyExists;
 import org.apache.log4j.Logger;
@@ -52,7 +53,7 @@ public class ActivityDAO {
         } catch (SQLException e) {
             logger.error("Error occurred during inserting activity", e);
         }finally{
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
     }
 
@@ -74,7 +75,7 @@ public class ActivityDAO {
         } catch(Exception e){
             logger.error("Error during getting activities list", e);
         }   finally{
-            close(rs, stmt, con);
+            Util.close(rs, stmt, con);
         }
         return activities;
     }
@@ -101,20 +102,9 @@ public class ActivityDAO {
         } catch(Exception e){
             e.printStackTrace();
         } finally{
-            close(rs, prstmt, con);
+            Util.close(rs, prstmt, con);
         }
         return activity;
-    }
-
-    private void close(AutoCloseable... ac){
-        try{
-            for(AutoCloseable autoCloseable: ac){
-                autoCloseable.close();
-            }
-        }  catch(Exception e){
-            logger.info("AutoCloseable wasn't closed successfully");
-        }
-
     }
 
     public boolean deleteActivity(int activityId){
@@ -128,9 +118,9 @@ public class ActivityDAO {
             prstmt.execute();
             return true;
         } catch (SQLException e) {
-            logger.error("Wasn't able to delete activity");
+            logger.error("Wasn't able to delete activity", e);
         }finally{
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
         return false;
     }
@@ -156,7 +146,7 @@ public class ActivityDAO {
         } catch (SQLException e) {
             logger.error("Wasn't able to update activity");
         }finally{
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
         return activity;
     }
@@ -181,7 +171,7 @@ public class ActivityDAO {
         } catch (SQLException e) {
             logger.error("Wasn't able to update activity");
         }finally{
-            close(prstmt, con);
+            Util.close(prstmt, con);
         }
     }
 
@@ -209,7 +199,7 @@ public class ActivityDAO {
         } catch(Exception e){
             logger.error("Error getting activity by name", e);
         } finally{
-            close(rs, prstmt, con);
+            Util.close(rs, prstmt, con);
         }
         return activity;
     }

@@ -13,10 +13,12 @@ public class DeleteActivity implements Command {
 
         ActivityService activityService = new ActivityService();
         int activityId = Integer.parseInt(req.getParameter("activityId"));
-        activityService.delete(activityId);
 
         UserService userService = new UserService();
+
         userService.updateActivitiesAmountAfterActivityWasDeleted(activityId);
+
+        activityService.delete(activityId);
 
         return cf.getCommand("showActivities", req, null).execute(req);
     }

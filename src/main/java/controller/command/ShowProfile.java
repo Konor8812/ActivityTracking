@@ -1,6 +1,7 @@
 package controller.command;
 
 import model.entity.User;
+import model.exception.ServiceException;
 import model.exception.WrongLoginData;
 import service.implementations.UserService;
 
@@ -11,14 +12,17 @@ public class ShowProfile implements Command{
     public String execute(HttpServletRequest req) {
 
         UserService userService = new UserService();
-        User user = (User)req.getSession().getAttribute("regedAs");
 
+        User user = (User)req.getSession().getAttribute("regedAs");
+        req.getSession().removeAttribute("wrongDurationFormat");
         try {
-            user = userService.getUserByLoginAndPassword(user.getLogin(), user.getPassword());
-        }catch (WrongLoginData wrongLoginData) {
+            user = userService.getItemById(user.getId());
+        }catch (ServiceException wrongLoginData) {
             // not gonna happen
         }
+
         req.getSession().setAttribute("regedAs", user);
+
         return "Profile.jsp";
     }
 }

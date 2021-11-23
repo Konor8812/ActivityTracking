@@ -41,7 +41,7 @@
                     <c:out value="${activity.description}" />
                 </c:if>
             </td>
-            <td><a href="ActivityTracker?command=regActivityForUser&userId=${sessionScope.regedAs.id}&activityId=${activity.id}">take activity</a></td>
+            <td><a href="ActivityTracker?command=reqActivity&userId=${sessionScope.regedAs.id}&activityId=${activity.id}">take activity</a></td>
         </tr>
     </c:forEach>
     </table>

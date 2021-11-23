@@ -12,8 +12,6 @@ public interface UserExtension extends ItemService<Integer, User> {
 
     List<User> getAllBlocked();
 
-    void userTookActivity(int userId);
-
     List<Activity> getUsersActivities(int userId);
 
     void changePass(int userId, String newPass);
@@ -22,7 +20,12 @@ public interface UserExtension extends ItemService<Integer, User> {
 
     void deleteAllUsers();
 
+    void userTookActivity(int userId);
     void userCompletedActivity(int userId, double pointForActivity);
 
     void changeUsersStatus(int userId, boolean block);
+
+    void changeUsersRequestsAmount(int userId, boolean b);
+
+    List<Activity> getRequestedActivities(int userId);
 }
