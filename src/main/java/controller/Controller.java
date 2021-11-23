@@ -1,7 +1,6 @@
 package controller;
 
 
-import model.dao.UserDAO;
 import org.apache.log4j.Logger;
 import controller.command.CommandFactory;
 
