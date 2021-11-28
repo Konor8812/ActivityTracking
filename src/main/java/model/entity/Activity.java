@@ -10,6 +10,7 @@ public class Activity {
 
     private String status;
     private String timeSpent = "";
+
     public String getStatus() {
         return status;
     }

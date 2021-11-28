@@ -1,7 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="time" uri="/WEB-INF/customTag.tld" %>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="language" value="${empty sessionScope.language ? 'en' : sessionScope.language}" scope="session"/>
+<fmt:setLocale value="${language}"/>
+<fmt:setBundle basename="loc"/>
 <html>
 <head>
     <link rel="stylesheet" href="style.css"/>
@@ -14,18 +17,19 @@
     </output>
 </form>
 
-
-
 <c:if test="${not empty sessionScope.regedAs}">
     <c:out value="${sessionScope.regedAs.login}"/><br>
-    You are <c:out value="${sessionScope.regedAs.role}"/><br>
+    <fmt:message key="You.are"/> <fmt:message key="${sessionScope.regedAs.role}"/><br>
+    <c:if test="${sessionScope.regedAs.role == 'admin'}">
+        <img src="http://dl3.joxi.net/drive/2021/11/28/0038/3938/2494306/06/5150b13566.png">
+    </c:if>
     <c:if test="${sessionScope.regedAs.role == 'user'}">
-        Your points: ${sessionScope.regedAs.totalPoints}<br>
-        You have taken <c:out value="${sessionScope.regedAs.activitiesAmount}"/> activities<br>
-        Forgot password? <a href="ActivityTracker?command=changePass">Change it!</a>
+        <fmt:message key="Your.points"/> ${sessionScope.regedAs.totalPoints}<br>
+        <fmt:message key="You.have.taken"/> ${sessionScope.regedAs.activitiesAmount} <fmt:message key="activities"/><br>
+        Forgot password? <a href="ActivityTracker?command=changePass"><fmt:message key="Change.it!"/></a>
         <c:if test="${!empty sessionScope.showChangePassField}">
             <form action="ActivityTracker?command=changePass" method="post">
-                Enter new pass <br>
+                <fmt:message key="Enter.new.pass"/> <br>
                 <input type="text" name="newPassword">
                 <input type="submit" value="submit changes">
             </form>

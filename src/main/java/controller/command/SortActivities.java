@@ -1,6 +1,6 @@
 package controller.command;
 
-import model.database.Util;
+import model.util.Util;
 import model.entity.Activity;
 
 import javax.servlet.http.HttpServletRequest;

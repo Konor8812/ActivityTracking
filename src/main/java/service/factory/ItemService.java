@@ -14,7 +14,7 @@ public interface ItemService <K, T> {
 
     boolean delete(K id);
 
-    List<T> getAllItemsAsList();
+    List<T> getAllItemsAsList(int num);
 
 
 }

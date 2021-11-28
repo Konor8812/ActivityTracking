@@ -1,13 +1,11 @@
-package model.database;
+package model.util;
 
 import model.entity.Activity;
 
+import javax.servlet.http.HttpServletRequest;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -126,5 +124,33 @@ public abstract class Util {
         }
 
         return sorted;
+    }
+
+    public static String getDescriptionAccordingToLang(String description, String lang) {
+        String rbLang = "loc_" + lang;
+        ResourceBundle rb = ResourceBundle.getBundle(rbLang);
+
+        StringBuilder sb = new StringBuilder();
+        String[] words = description.split(", ");
+
+        for(int i = 0; i < words.length; i++){
+            sb.append(rb.getString(words[i]))
+                    .append(", ");
+            if(i == words.length - 2){
+                sb.append(rb.getString(words[++i]));
+                break;
+            }
+        }
+
+        return sb.toString();
+
+    }
+
+    public static void removeUnneededAttributes(HttpServletRequest req) {
+        req.getSession().removeAttribute("loginError");
+        req.getSession().removeAttribute("regError");
+        req.getSession().removeAttribute("userIsBlocked");
+        req.getSession().removeAttribute("wrongData");
+
     }
 }

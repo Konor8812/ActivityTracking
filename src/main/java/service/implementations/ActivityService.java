@@ -50,7 +50,7 @@ public class ActivityService implements ActivityExtension {
     }
 
     @Override
-    public List<Activity> getAllItemsAsList() {
-        return activityDAO.getActivitiesList();
+    public List<Activity> getAllItemsAsList(int num) {
+        return activityDAO.getActivitiesList(num);
     }
 }

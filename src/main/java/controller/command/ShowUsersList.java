@@ -15,7 +15,7 @@ public class ShowUsersList implements Command{
     public String execute(HttpServletRequest req) {
 
         UserService userService = new UserService();
-        List<User> users = userService.getAllItemsAsList();
+        List<User> users = userService.getAllItemsAsList(0);
         req.getSession().removeAttribute("wrongDurationFormat");
         req.getSession().removeAttribute("blockedUsers");
         req.getSession().setAttribute("users", users);

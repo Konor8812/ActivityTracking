@@ -89,7 +89,7 @@ public class UserService implements UserExtension {
     }
 
     @Override
-    public List<User> getAllItemsAsList() {
+    public List<User> getAllItemsAsList(int num) {
         return userDAO.getUsersList();
     }
 

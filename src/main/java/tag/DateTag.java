@@ -10,7 +10,7 @@ public class DateTag extends SimpleTagSupport {
 
     public void doTag() throws IOException {
         JspWriter out = getJspContext().getOut();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
         out.print(formatter.format(LocalDateTime.now()));
     }
 }

@@ -1,5 +1,6 @@
 package controller.command;
 
+import controller.InputDataValidator;
 import model.entity.Activity;
 import model.exception.ServiceException;
 import service.implementations.ActivityService;
@@ -15,18 +16,22 @@ public class InsertActivity implements Command {
         req.getSession().removeAttribute("activityExists");
         req.getSession().removeAttribute("wrongDurationFormat");
 
+        String name = req.getParameter("name");
         String duration = req.getParameter("duration");
+        String description = req.getParameter("description");
+        String reward = req.getParameter("reward");
+        //Double reward = Double.parseDouble();
         Activity activity = null;
 
-        Matcher m = Pattern.compile("\\d (hours|days)").matcher(duration);
-        if(m.find()){
+
+        if(InputDataValidator.validateActivity(name, duration, description, reward)){
             activity = new Activity();
-            activity.setName(req.getParameter("name"));
+            activity.setName(name);
             activity.setDuration(duration);
-            activity.setReward(Double.parseDouble(req.getParameter("reward")));
-            activity.setDescription(req.getParameter("description"));
+            activity.setReward(Double.parseDouble(reward));
+            activity.setDescription(description);
         } else {
-            req.getSession().setAttribute("wrongDurationFormat", true);
+            req.getSession().setAttribute("wrongDataFormat", true);
             return CommandFactory.getInstance().getCommand("showActivities", req, null).execute(req);
         }
 

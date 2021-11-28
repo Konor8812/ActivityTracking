@@ -1,7 +1,7 @@
 package model.dao;
 
 import model.database.ConnectionPool;
-import model.database.Util;
+import model.util.Util;
 import model.entity.Activity;
 import model.exception.ActivityAlreadyExists;
 import org.apache.log4j.Logger;
@@ -15,7 +15,7 @@ public class ActivityDAO {
     private static Logger logger = Logger.getLogger(ActivityDAO.class);
 
     private static final String INSERT_ACTIVITY = "INSERT INTO activity (name, duration, reward, description, taken_by) VALUES (?,?,?,?,?)";
-    private static final String ALL_ACTIVITIES_LIST = "SELECT * FROM activity";
+    private static final String ALL_ACTIVITIES_LIST = "SELECT * FROM activity LIMIT ?,?";
     private static final String GET_ACTIVITY_BY_ID = "SELECT * FROM activity WHERE id=(?)";
     private static final String GET_ACTIVITY_BY_NAME = "SELECT * FROM activity WHERE name=(?)";
     private static final String DELETE_ACTIVITY = "DELETE FROM activity WHERE id=(?)";
@@ -58,16 +58,18 @@ public class ActivityDAO {
     }
 
 
-    public List<Activity> getActivitiesList(){
+    public List<Activity> getActivitiesList(int num){
         Connection con = null;
         ResultSet rs = null;
-        Statement stmt = null;
+        PreparedStatement prstmt = null;
         List<Activity> activities = new ArrayList<>();
         try{
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            stmt = con.createStatement();
-            rs = stmt.executeQuery(ALL_ACTIVITIES_LIST);
+            prstmt = con.prepareStatement(ALL_ACTIVITIES_LIST);
+            prstmt.setInt(1, num);
+            prstmt.setInt(2, num + 5);
+            rs = prstmt.executeQuery();
             while(rs.next()){
                 Activity activity = getActivityById(rs.getInt("id"));
                 activities.add(activity);
@@ -75,7 +77,7 @@ public class ActivityDAO {
         } catch(Exception e){
             logger.error("Error during getting activities list", e);
         }   finally{
-            Util.close(rs, stmt, con);
+            Util.close(rs, prstmt, con);
         }
         return activities;
     }

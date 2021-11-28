@@ -103,6 +103,9 @@ public class CommandFactory {
             case "sortActivities":
                 com = new SortActivities();
                 break;
+            case "setLanguage":
+                com = new SetLanguage();
+                break;
         }
         return com;
     }

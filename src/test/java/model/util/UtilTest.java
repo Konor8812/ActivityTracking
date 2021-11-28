@@ -1,6 +1,7 @@
-package model.database;
+package model.util;
 
 import model.entity.Activity;
+import model.util.Util;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -90,5 +91,18 @@ class UtilTest {
             actual.append(a.getReward());
         }
         Assertions.assertEquals(expectedRewardConcatenation, actual.toString());
+    }
+
+    @Test
+    public void descriptionTest(){
+        String given = "sport, free, entertainment";
+        String expectedEng = "sport, free, entertainment";
+        String expectedRu = "спорт, бесплатно, развлечения";
+
+        String actualEng = Util.getDescriptionAccordingToLang(given, "en");
+        String actualRu = Util.getDescriptionAccordingToLang(given, "ru");
+        Assertions.assertEquals(expectedEng, actualEng);
+        Assertions.assertEquals(expectedRu, actualRu);
+
     }
 }
