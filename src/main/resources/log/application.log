@@ -2842,3 +2842,1473 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 03:50:17,727  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
 03:50:17,728  INFO http-nio-8080-exec-27 Controller:doGet:25 - Get#command ==> showActivities
 03:50:17,753  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:31:23,970  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:31:39,640  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:34:41,108  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:34:41,108  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> setLanguage
+14:34:41,178  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:34:51,027  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:34:51,027  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> logIn
+14:34:57,206  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:34:58,819  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:04,732  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:04,732  INFO http-nio-8080-exec-2 Controller:doGet:25 - Get#command ==> getUsersRequests
+14:35:05,219  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:07,570  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:07,573  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> showUsers
+14:35:07,580  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:09,169  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:09,172  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> showProfile
+14:35:09,234  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:10,459  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:20,925  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:20,925  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> returnToMain
+14:35:20,963  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:22,881  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:22,882  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> showActivities
+14:35:22,965  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:36,174  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:36,175  INFO http-nio-8080-exec-9 Controller:doGet:25 - Get#command ==> showActivities
+14:35:36,196  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:38,307  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:38,308  INFO http-nio-8080-exec-1 Controller:doGet:25 - Get#command ==> showActivities
+14:35:38,348  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:47,942  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:47,943  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> showActivities
+14:35:47,960  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:50,574  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:50,575  INFO http-nio-8080-exec-9 Controller:doGet:25 - Get#command ==> showActivities
+14:35:50,596  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:58,802  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:35:58,803  INFO http-nio-8080-exec-3 Controller:doGet:25 - Get#command ==> showActivities
+14:35:58,817  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:36:03,205  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:36:03,207  INFO http-nio-8080-exec-5 Controller:doGet:25 - Get#command ==> showActivities
+14:36:03,233  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:36:38,945  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:36:38,948  INFO http-nio-8080-exec-1 Controller:doPost:32 - Post#command ==> addActivity
+14:36:39,002  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:37:46,518  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:37:46,519  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> showProfile
+14:37:46,529  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:37:47,972  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:37:47,972  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> returnToMain
+14:37:47,980  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:40:47,546  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:40:50,109  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:40:50,111  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> setLanguage
+14:40:50,137  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:40:53,944  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:40:53,945  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> logIn
+14:40:54,281  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:40:58,203  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:40:58,204  INFO http-nio-8080-exec-11 Controller:doPost:32 - Post#command ==> showProfile
+14:40:58,229  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:09,575  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:09,576  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> returnToMain
+14:41:09,588  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:13,703  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:13,704  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> showActivities
+14:41:13,730  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:50,417  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:50,418  INFO http-nio-8080-exec-12 Controller:doPost:32 - Post#command ==> addActivity
+14:41:50,425 ERROR http-nio-8080-exec-12 Util:loadProperty:181 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: src\main\resources\loc_ru.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:176)
+	at controller.command.InsertActivity.execute(InsertActivity.java:33)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+14:41:51,494  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:53,244  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:53,245  INFO http-nio-8080-exec-10 Controller:doGet:25 - Get#command ==> showActivities
+14:41:53,263  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:56,517  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:41:56,518  INFO http-nio-8080-exec-18 Controller:doGet:25 - Get#command ==> showActivities
+14:41:56,540  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+14:44:35,990  INFO main Util:loadProperty:179 - properties successfully loaded
+16:04:17,361  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:04:27,731  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:27,423  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:27,423  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> setLanguage
+16:05:27,485  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:31,065  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:31,066  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> setLanguage
+16:05:31,098  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:38,030  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:38,031  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> logIn
+16:05:38,123  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:47,429  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:05:47,430  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> logIn
+16:05:47,434  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:06:43,996  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:06:43,996  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> logIn
+16:06:46,838  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:06:56,412  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:06:56,413  INFO http-nio-8080-exec-8 Controller:doPost:32 - Post#command ==> showActivities
+16:06:56,564  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:09,700  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:09,701  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> logOut
+16:07:09,749  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:10,826  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:10,827  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> setLanguage
+16:07:10,831  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:14,519  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:14,519  INFO http-nio-8080-exec-8 Controller:doPost:32 - Post#command ==> logIn
+16:07:14,538  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:17,489  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:17,490  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> showActivities
+16:07:17,518  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:30,153  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:30,154  INFO http-nio-8080-exec-5 Controller:doGet:25 - Get#command ==> showActivities
+16:07:30,168  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:34,484  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:34,485  INFO http-nio-8080-exec-8 Controller:doGet:25 - Get#command ==> showActivities
+16:07:34,520  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:42,841  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:07:42,842  INFO http-nio-8080-exec-3 Controller:doGet:25 - Get#command ==> showActivities
+16:07:42,861  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:00,850  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:08,253  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:24,296  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:24,297  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> regUser
+16:12:24,341  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:35,555  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:35,556  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> logIn
+16:12:35,561  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:45,613  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:45,613  INFO http-nio-8080-exec-8 Controller:doPost:32 - Post#command ==> logIn
+16:12:47,472  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:54,296  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:12:54,297  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> showActivities
+16:12:54,340  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:02,857  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:02,857  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> sortActivities
+16:13:02,864  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:04,254  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:04,255  INFO http-nio-8080-exec-8 Controller:doGet:25 - Get#command ==> sortActivities
+16:13:04,263  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:06,093  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:06,094  INFO http-nio-8080-exec-10 Controller:doGet:25 - Get#command ==> showActivities
+16:13:06,119  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:10,553  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:10,554  INFO http-nio-8080-exec-2 Controller:doGet:25 - Get#command ==> sortActivities
+16:13:10,570  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:11,783  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:11,783  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> showActivities
+16:13:11,809  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:44,313  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:44,314  INFO http-nio-8080-exec-8 Controller:doGet:25 - Get#command ==> showActivities
+16:13:44,331  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:46,182  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:13:46,183  INFO http-nio-8080-exec-10 Controller:doGet:25 - Get#command ==> showActivities
+16:13:46,211  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:00,370  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:00,371  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> sortActivities
+16:14:00,380  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:02,829  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:02,830  INFO http-nio-8080-exec-6 Controller:doGet:25 - Get#command ==> showActivities
+16:14:02,852  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:07,599  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:07,600  INFO http-nio-8080-exec-10 Controller:doGet:25 - Get#command ==> sortActivities
+16:14:07,627  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:15,520  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:15,521  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> showActivities
+16:14:15,544  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:19,442  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:19,442  INFO http-nio-8080-exec-8 Controller:doPost:32 - Post#command ==> logOut
+16:14:19,467  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:24,337  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:24,337  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> setLanguage
+16:14:24,367  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:28,601  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:28,602  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> logIn
+16:14:28,634  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:31,709  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:31,710  INFO http-nio-8080-exec-8 Controller:doPost:32 - Post#command ==> showActivities
+16:14:31,726  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:34,744  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:34,745  INFO http-nio-8080-exec-3 Controller:doGet:25 - Get#command ==> showActivities
+16:14:34,769  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:37,171  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:37,172  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> showActivities
+16:14:37,207  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:38,794  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:38,795  INFO http-nio-8080-exec-8 Controller:doGet:25 - Get#command ==> showActivities
+16:14:38,816  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:41,434  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:41,435  INFO http-nio-8080-exec-10 Controller:doGet:25 - Get#command ==> showActivities
+16:14:41,453  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:45,552  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:14:45,553  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:14:45,926  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:15:12,941  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:15:12,942  INFO http-nio-8080-exec-8 Controller:doPost:32 - Post#command ==> addActivity
+16:15:12,988  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:25,862  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:25,863  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> addActivity
+16:16:25,880  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:27,388  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:27,389  INFO http-nio-8080-exec-4 Controller:doGet:25 - Get#command ==> showActivities
+16:16:27,427  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:29,386  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:29,386  INFO http-nio-8080-exec-6 Controller:doGet:25 - Get#command ==> showActivities
+16:16:29,405  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:31,680  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:16:31,681  INFO http-nio-8080-exec-8 Controller:doGet:25 - Get#command ==> showActivities
+16:16:31,698  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:01,585  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:07,412  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:16,776  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:16,778  INFO http-nio-8080-exec-9 Controller:doPost:32 - Post#command ==> logIn
+16:20:20,473  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:24,185  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:24,186  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> showActivities
+16:20:24,292  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:29,599  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:20:29,600  INFO http-nio-8080-exec-6 Controller:doGet:25 - Get#command ==> showActivities
+16:20:29,612  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:44,227  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:50,114  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:50,115  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> logIn
+16:23:50,510  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:52,575  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:52,576  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> showActivities
+16:23:52,775  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:56,450  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:56,451  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> showActivities
+16:23:56,467  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:58,440  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:23:58,441  INFO http-nio-8080-exec-3 Controller:doGet:25 - Get#command ==> showActivities
+16:23:58,462  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:25:56,881  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:01,804  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:01,804  INFO http-nio-8080-exec-15 Controller:doPost:32 - Post#command ==> logIn
+16:26:02,076  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:03,922  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:03,923  INFO http-nio-8080-exec-13 Controller:doPost:32 - Post#command ==> showActivities
+16:26:03,990  INFO http-nio-8080-exec-20 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:06,708  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:06,709  INFO http-nio-8080-exec-16 Controller:doGet:25 - Get#command ==> showActivities
+16:26:06,727  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:26,648  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:26,649  INFO http-nio-8080-exec-22 Controller:doGet:25 - Get#command ==> showActivities
+16:26:26,668  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:54,822  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:26:54,825  INFO http-nio-8080-exec-12 Controller:doPost:32 - Post#command ==> addActivity
+16:26:54,874  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:28:59,539  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:28:59,540  INFO http-nio-8080-exec-21 Controller:doPost:32 - Post#command ==> addActivity
+16:28:59,600  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:36,548  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:46,838  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:56,707  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:56,709  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> logIn
+16:34:59,149  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:01,873  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:01,875  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> showActivities
+16:35:02,039  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:03,958  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:03,958  INFO http-nio-8080-exec-6 Controller:doGet:25 - Get#command ==> showActivities
+16:35:03,982  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:26,247  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:26,249  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> addActivity
+16:35:26,271 ERROR http-nio-8080-exec-10 Util:loadProperty:178 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: src\main\resources\loc_ru.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:173)
+	at controller.command.InsertActivity.execute(InsertActivity.java:29)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+16:35:26,290 ERROR http-nio-8080-exec-10 Util:loadProperty:178 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: src\main\resources\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:173)
+	at controller.command.InsertActivity.execute(InsertActivity.java:30)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+16:35:27,033  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:29,520  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:29,522  INFO http-nio-8080-exec-2 Controller:doGet:25 - Get#command ==> showActivities
+16:39:55,847  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:39:58,476  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:39:58,477  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> setLanguage
+16:39:58,668  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:02,460  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:02,461  INFO http-nio-8080-exec-9 Controller:doPost:32 - Post#command ==> logIn
+16:40:03,119  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:05,200  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:05,201  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> showActivities
+16:40:05,247  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:06,411  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:06,411  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> showActivities
+16:40:06,438  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:09,547  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:09,547  INFO http-nio-8080-exec-2 Controller:doGet:25 - Get#command ==> showActivities
+16:40:09,611  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:11,305  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:11,306  INFO http-nio-8080-exec-14 Controller:doGet:25 - Get#command ==> showActivities
+16:40:11,325  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:13,045  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:13,046  INFO http-nio-8080-exec-11 Controller:doGet:25 - Get#command ==> showActivities
+16:40:13,079  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:15,055  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:15,055  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:40:15,076  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:45,327  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:40:45,329  INFO http-nio-8080-exec-14 Controller:doGet:25 - Get#command ==> null
+16:42:12,680  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:15,255  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:15,256  INFO http-nio-8080-exec-17 Controller:doPost:32 - Post#command ==> setLanguage
+16:42:15,279  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:19,900  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:19,900  INFO http-nio-8080-exec-13 Controller:doPost:32 - Post#command ==> logIn
+16:42:19,906  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:27,749  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:27,750  INFO http-nio-8080-exec-14 Controller:doPost:32 - Post#command ==> logIn
+16:42:28,026  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:30,348  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:30,349  INFO http-nio-8080-exec-22 Controller:doPost:32 - Post#command ==> showActivities
+16:42:30,388  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:34,207  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:34,208  INFO http-nio-8080-exec-24 Controller:doGet:25 - Get#command ==> showActivities
+16:42:34,256  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:40,466  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:40,467  INFO http-nio-8080-exec-26 Controller:doGet:25 - Get#command ==> showActivities
+16:42:40,518  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:42,152  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:42,153  INFO http-nio-8080-exec-22 Controller:doGet:25 - Get#command ==> showActivities
+16:42:42,173  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:43,237  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:43,237  INFO http-nio-8080-exec-23 Controller:doGet:25 - Get#command ==> showActivities
+16:42:43,259  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:58,324  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:42:58,324  INFO http-nio-8080-exec-25 Controller:doGet:25 - Get#command ==> showActivities
+16:42:58,348  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:43:57,409  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:43:57,410  INFO http-nio-8080-exec-22 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:43:57,419  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:43:59,387  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:43:59,389  INFO http-nio-8080-exec-23 Controller:doGet:25 - Get#command ==> showActivities
+16:43:59,406  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:44:00,686  INFO http-nio-8080-exec-29 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:44:00,687  INFO http-nio-8080-exec-29 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:44:00,691  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:44:13,886  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:44:13,887  INFO http-nio-8080-exec-26 Controller:doGet:25 - Get#command ==> null
+16:45:23,426  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:30,864  INFO http-nio-8080-exec-29 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:30,866  INFO http-nio-8080-exec-29 Controller:doPost:32 - Post#command ==> logIn
+16:45:31,315  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:34,357  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:34,358  INFO http-nio-8080-exec-25 Controller:doPost:32 - Post#command ==> showActivities
+16:45:34,455  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:37,593  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:37,593  INFO http-nio-8080-exec-28 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:45:37,602  INFO http-nio-8080-exec-31 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:38,950  INFO http-nio-8080-exec-32 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:38,951  INFO http-nio-8080-exec-32 Controller:doGet:25 - Get#command ==> showActivities
+16:45:38,972  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:42,940  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:42,941  INFO http-nio-8080-exec-21 Controller:doGet:25 - Get#command ==> showActivities
+16:45:42,964  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:44,409  INFO http-nio-8080-exec-33 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:44,410  INFO http-nio-8080-exec-33 Controller:doGet:25 - Get#command ==> showActivities
+16:45:44,428  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:46,835  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:46,835  INFO http-nio-8080-exec-27 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:45:46,841  INFO http-nio-8080-exec-34 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:50,141  INFO http-nio-8080-exec-32 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:50,142  INFO http-nio-8080-exec-32 Controller:doPost:32 - Post#command ==> logOut
+16:45:50,158  INFO http-nio-8080-exec-35 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:51,670  INFO http-nio-8080-exec-36 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:51,670  INFO http-nio-8080-exec-36 Controller:doPost:32 - Post#command ==> setLanguage
+16:45:51,679  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:55,474  INFO http-nio-8080-exec-33 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:55,474  INFO http-nio-8080-exec-33 Controller:doPost:32 - Post#command ==> logIn
+16:45:55,499  INFO http-nio-8080-exec-37 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:56,545  INFO http-nio-8080-exec-38 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:56,545  INFO http-nio-8080-exec-38 Controller:doPost:32 - Post#command ==> showActivities
+16:45:56,566  INFO http-nio-8080-exec-34 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:57,703  INFO http-nio-8080-exec-32 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:57,703  INFO http-nio-8080-exec-32 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:45:57,710  INFO http-nio-8080-exec-35 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:59,414  INFO http-nio-8080-exec-36 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:45:59,415  INFO http-nio-8080-exec-36 Controller:doGet:25 - Get#command ==> showActivities
+16:45:59,434  INFO http-nio-8080-exec-39 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:01,275  INFO http-nio-8080-exec-33 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:01,275  INFO http-nio-8080-exec-33 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:46:01,293  INFO http-nio-8080-exec-37 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:02,335  INFO http-nio-8080-exec-38 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:02,336  INFO http-nio-8080-exec-38 Controller:doGet:25 - Get#command ==> showActivities
+16:46:02,347  INFO http-nio-8080-exec-34 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:04,476  INFO http-nio-8080-exec-31 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:04,477  INFO http-nio-8080-exec-31 Controller:doGet:25 - Get#command ==> showActivities
+16:46:04,499  INFO http-nio-8080-exec-40 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:05,861  INFO http-nio-8080-exec-32 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:05,861  INFO http-nio-8080-exec-32 Controller:doGet:25 - Get#command ==> showActivities
+16:46:05,881  INFO http-nio-8080-exec-35 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:06,643  INFO http-nio-8080-exec-36 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:06,643  INFO http-nio-8080-exec-36 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+16:46:06,647  INFO http-nio-8080-exec-39 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:20,202  INFO http-nio-8080-exec-38 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:46:20,203  INFO http-nio-8080-exec-38 Controller:doPost:32 - Post#command ==> loadTag
+16:46:20,293 ERROR http-nio-8080-exec-38 Util:loadProperty:182 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: src\main\resources\loc_ru.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:177)
+	at controller.command.LoadTag.execute(LoadTag.java:14)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+16:46:20,295 ERROR http-nio-8080-exec-38 Util:loadProperty:182 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: src\main\resources\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:177)
+	at controller.command.LoadTag.execute(LoadTag.java:15)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+17:40:26,043  INFO main Util:loadProperty:181 - properties successfully loaded
+18:05:45,319  INFO main Util:loadProperty:189 - properties successfully loaded
+18:07:32,569  INFO main Util:loadProperty:189 - properties successfully loaded
+18:14:18,808  INFO main Util:loadProperty:189 - properties successfully loaded
+18:15:10,902  INFO main Util:loadProperty:189 - properties successfully loaded
+18:30:55,975  INFO main Util:loadProperty:189 - properties successfully loaded
+18:38:47,395  INFO main Util:loadProperty:189 - properties successfully loaded
+18:39:39,386  INFO main Util:loadProperty:189 - properties successfully loaded
+18:44:31,576  INFO main Util:loadProperty:189 - properties successfully loaded
+18:49:30,201  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:49:42,070  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:49:54,709  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:49:54,710  INFO http-nio-8080-exec-1 Controller:doPost:32 - Post#command ==> setLanguage
+18:49:56,500  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:06,510  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:06,511  INFO http-nio-8080-exec-8 Controller:doPost:32 - Post#command ==> logIn
+18:50:14,326  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:21,282  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:21,283  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> showActivities
+18:50:21,425  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:25,574  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:25,575  INFO http-nio-8080-exec-7 Controller:doGet:25 - Get#command ==> showActivities
+18:50:25,600  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:27,090  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:27,090  INFO http-nio-8080-exec-9 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+18:50:27,130  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:43,795  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:50:43,799  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> loadTag
+18:50:43,836 ERROR http-nio-8080-exec-2 Util:checkIfPropExists:231 - error while reading properties
+java.io.FileNotFoundException: src\main\resources\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileReader.<init>(FileReader.java:75)
+	at model.util.Util.checkIfPropExists(Util.java:221)
+	at controller.InputDataValidator.validateTag(InputDataValidator.java:62)
+	at controller.command.LoadTag.execute(LoadTag.java:12)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:50:43,879 ERROR http-nio-8080-exec-2 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: src\main\resources\loc_ru.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:14)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:50:43,880 ERROR http-nio-8080-exec-2 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: src\main\resources\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:15)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:56:17,348  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:31,129  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:31,130  INFO http-nio-8080-exec-13 Controller:doPost:32 - Post#command ==> logIn
+18:56:31,765  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:34,185  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:34,186  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> showActivities
+18:56:34,273  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:37,368  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:37,369  INFO http-nio-8080-exec-11 Controller:doPost:32 - Post#command ==> loadTag
+18:56:37,373 ERROR http-nio-8080-exec-11 Util:checkIfPropExists:231 - error while reading properties
+java.io.FileNotFoundException: \resources\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileReader.<init>(FileReader.java:75)
+	at model.util.Util.checkIfPropExists(Util.java:221)
+	at controller.InputDataValidator.validateTag(InputDataValidator.java:62)
+	at controller.command.LoadTag.execute(LoadTag.java:12)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:56:37,374 ERROR http-nio-8080-exec-11 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: \resources\loc_ru.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:14)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:56:37,375 ERROR http-nio-8080-exec-11 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: \resources\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:15)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:56:37,403  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:40,247  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:40,247  INFO http-nio-8080-exec-16 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+18:56:40,291  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:41,332  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:41,333  INFO http-nio-8080-exec-14 Controller:doGet:25 - Get#command ==> showActivities
+18:56:41,354  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:42,495  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:42,496  INFO http-nio-8080-exec-18 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+18:56:42,504  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:44,586  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:44,587  INFO http-nio-8080-exec-19 Controller:doPost:32 - Post#command ==> logOut
+18:56:44,635  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:46,319  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:46,319  INFO http-nio-8080-exec-16 Controller:doPost:32 - Post#command ==> setLanguage
+18:56:46,324  INFO http-nio-8080-exec-20 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:50,146  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:50,149  INFO http-nio-8080-exec-21 Controller:doPost:32 - Post#command ==> logIn
+18:56:50,192  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:51,225  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:51,226  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> showActivities
+18:56:51,248  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:52,121  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:52,122  INFO http-nio-8080-exec-19 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+18:56:52,142  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:54,867  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:54,868  INFO http-nio-8080-exec-16 Controller:doGet:25 - Get#command ==> showActivities
+18:56:54,905  INFO http-nio-8080-exec-20 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:55,542  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:56:55,545  INFO http-nio-8080-exec-21 Controller:doGet:25 - Get#command ==> getActivitiesDescription
+18:56:55,551  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:59:39,138  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:59:41,356  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:59:41,357  INFO http-nio-8080-exec-16 Controller:doPost:32 - Post#command ==> setLanguage
+18:59:41,365  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:59:46,148  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:59:46,148  INFO http-nio-8080-exec-19 Controller:doPost:32 - Post#command ==> logIn
+18:59:46,483  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:59:52,381  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+18:59:52,382  INFO http-nio-8080-exec-25 Controller:doPost:32 - Post#command ==> showActivities
+18:59:52,457  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:00:03,182  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:00:03,184  INFO http-nio-8080-exec-24 Controller:doPost:32 - Post#command ==> loadTag
+19:00:03,189 ERROR http-nio-8080-exec-24 Util:checkIfPropExists:231 - error while reading properties
+java.io.FileNotFoundException: \classes\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileReader.<init>(FileReader.java:75)
+	at model.util.Util.checkIfPropExists(Util.java:221)
+	at controller.InputDataValidator.validateTag(InputDataValidator.java:62)
+	at controller.command.LoadTag.execute(LoadTag.java:12)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:00:03,189 ERROR http-nio-8080-exec-24 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: \classes\loc_ru.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:14)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:00:03,190 ERROR http-nio-8080-exec-24 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: \classes\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:15)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:00:03,215  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:38,914  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:41,168  INFO http-nio-8080-exec-32 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:41,169  INFO http-nio-8080-exec-32 Controller:doPost:32 - Post#command ==> setLanguage
+19:04:41,371  INFO http-nio-8080-exec-33 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:44,335  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:44,337  INFO http-nio-8080-exec-27 Controller:doPost:32 - Post#command ==> logIn
+19:04:44,748  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:46,334  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:46,334  INFO http-nio-8080-exec-28 Controller:doPost:32 - Post#command ==> showActivities
+19:04:46,359  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:50,092  INFO http-nio-8080-exec-36 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:04:50,093  INFO http-nio-8080-exec-36 Controller:doPost:32 - Post#command ==> loadTag
+19:04:50,117 ERROR http-nio-8080-exec-36 Util:checkIfPropExists:231 - error while reading properties
+java.io.FileNotFoundException: \classes\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileReader.<init>(FileReader.java:75)
+	at model.util.Util.checkIfPropExists(Util.java:221)
+	at controller.InputDataValidator.validateTag(InputDataValidator.java:62)
+	at controller.command.LoadTag.execute(LoadTag.java:15)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:04:50,118 ERROR http-nio-8080-exec-36 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: \classes\loc_ru.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:17)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:04:50,119 ERROR http-nio-8080-exec-36 Util:loadProperty:191 - Wasn't able to load properties for activity
+java.io.FileNotFoundException: \classes\loc_en.properties (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at model.util.Util.loadProperty(Util.java:186)
+	at controller.command.LoadTag.execute(LoadTag.java:18)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:04:50,214  INFO http-nio-8080-exec-33 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:28,868  INFO http-nio-8080-exec-39 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:39,423  INFO http-nio-8080-exec-38 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:39,424  INFO http-nio-8080-exec-38 Controller:doPost:32 - Post#command ==> setLanguage
+19:11:41,336  INFO http-nio-8080-exec-41 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:46,705  INFO http-nio-8080-exec-40 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:46,706  INFO http-nio-8080-exec-40 Controller:doPost:32 - Post#command ==> logIn
+19:11:48,014  INFO http-nio-8080-exec-37 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:50,325  INFO http-nio-8080-exec-46 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:50,326  INFO http-nio-8080-exec-46 Controller:doPost:32 - Post#command ==> showActivities
+19:11:51,471  INFO http-nio-8080-exec-47 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:54,655  INFO http-nio-8080-exec-50 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:11:54,656  INFO http-nio-8080-exec-50 Controller:doPost:32 - Post#command ==> loadTag
+19:11:54,737 ERROR http-nio-8080-exec-50 Util:checkIfPropExists:231 - error while reading properties
+java.io.FileNotFoundException: \loc_en.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileReader.<init>(FileReader.java:75)
+	at model.util.Util.checkIfPropExists(Util.java:221)
+	at controller.InputDataValidator.validateTag(InputDataValidator.java:62)
+	at controller.command.LoadTag.execute(LoadTag.java:14)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:24)
+	at controller.Controller.executeCommand(Controller.java:40)
+	at controller.Controller.doPost(Controller.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:17)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:11:55,059  INFO http-nio-8080-exec-50 Util:loadProperty:189 - properties successfully loaded
+19:11:55,104  INFO http-nio-8080-exec-50 Util:loadProperty:189 - properties successfully loaded
+19:11:55,456  INFO http-nio-8080-exec-42 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:22,372  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:29,445  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:34,091  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:34,091  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> setLanguage
+19:15:34,106  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:37,830  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:37,831  INFO http-nio-8080-exec-9 Controller:doPost:32 - Post#command ==> logIn
+19:15:39,553  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:42,442  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:42,442  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> showActivities
+19:15:42,516  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:45,190  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:15:45,191  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> loadTag
+19:15:45,273  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:23:49,274  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:23:54,463  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:23:54,464  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> setLanguage
+19:23:54,601  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:23:58,134  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:23:58,135  INFO http-nio-8080-exec-9 Controller:doPost:32 - Post#command ==> logIn
+19:23:59,121  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:24:03,521  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:24:03,522  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> showActivities
+19:24:03,703  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:24:08,039  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:24:08,040  INFO http-nio-8080-exec-13 Controller:doPost:32 - Post#command ==> loadTag
+19:24:08,105  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:06,103  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:07,956  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:07,958  INFO http-nio-8080-exec-18 Controller:doPost:32 - Post#command ==> setLanguage
+19:26:07,973  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:11,022  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:11,022  INFO http-nio-8080-exec-11 Controller:doPost:32 - Post#command ==> logIn
+19:26:11,032  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:14,840  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:14,841  INFO http-nio-8080-exec-19 Controller:doPost:32 - Post#command ==> logIn
+19:26:15,215  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:16,690  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:16,690  INFO http-nio-8080-exec-12 Controller:doPost:32 - Post#command ==> showActivities
+19:26:16,751  INFO http-nio-8080-exec-20 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:19,261  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+19:26:19,262  INFO http-nio-8080-exec-21 Controller:doPost:32 - Post#command ==> loadTag
+19:26:19,267  INFO http-nio-8080-exec-21 Util:loadProperty:189 - properties successfully loaded
+19:26:19,268  INFO http-nio-8080-exec-21 Util:loadProperty:189 - properties successfully loaded
+19:26:19,286  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+22:34:59,911  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+22:35:12,761  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+22:35:21,178  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+22:35:21,179  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> setLanguage
+22:35:21,232  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+22:35:27,585  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+22:35:27,590  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> logIn
+22:35:36,610  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:02:15,750  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:02:36,391  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:02:51,203  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:02:51,205  INFO http-nio-8080-exec-1 Controller:doPost:32 - Post#command ==> setLanguage
+15:02:51,346  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:02:58,902  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:02:58,904  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> logIn
+15:03:02,258  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:07,535  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:07,535  INFO http-nio-8080-exec-9 Controller:doPost:32 - Post#command ==> showActivities
+15:03:07,625  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:12,083  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:12,084  INFO http-nio-8080-exec-1 Controller:doGet:25 - Get#command ==> showActivities
+15:03:12,138  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:14,702  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:14,703  INFO http-nio-8080-exec-5 Controller:doGet:25 - Get#command ==> showActivities
+15:03:14,729  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:17,395  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:03:17,396  INFO http-nio-8080-exec-9 Controller:doGet:25 - Get#command ==> showActivities
+15:03:17,418  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:27,964  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:27,965  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> showProfile
+15:05:28,014  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:29,626  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:32,880  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:32,881  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> returnToMain
+15:05:32,936  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:34,897  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:34,897  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> showUsers
+15:05:34,921  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:39,181  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:39,181  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> showOnlyBlockedUsers
+15:05:39,227  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:43,078  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:05:43,080  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> showUsers
+15:05:43,088  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:14,739  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:25,581  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:33,197  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:33,197  INFO http-nio-8080-exec-10 Controller:doPost:32 - Post#command ==> setLanguage
+15:53:33,351  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:37,832  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:37,833  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> logIn
+15:53:42,209  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:45,417  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:45,418  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> showActivities
+15:53:45,574  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:48,614  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:53:48,615  INFO http-nio-8080-exec-8 Controller:doGet:25 - Get#command ==> showActivities
+15:53:48,639  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:54:02,824  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:54:02,825  INFO http-nio-8080-exec-3 Controller:doGet:25 - Get#command ==> showActivities
+15:54:02,893  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:54:25,901  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:54:25,913  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> addActivity
+15:54:26,517  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:12,417  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:19,297  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:19,298  INFO http-nio-8080-exec-5 Controller:doPost:32 - Post#command ==> logIn
+15:56:19,790  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:26,837  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:26,837  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> showActivities
+15:56:26,869  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:29,137  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:29,138  INFO http-nio-8080-exec-2 Controller:doGet:25 - Get#command ==> showActivities
+15:56:29,159  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:30,569  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:30,569  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> sortActivities
+15:56:30,576  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:32,875  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:32,876  INFO http-nio-8080-exec-5 Controller:doGet:25 - Get#command ==> sortActivities
+15:56:32,881  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:34,477  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:34,477  INFO http-nio-8080-exec-15 Controller:doGet:25 - Get#command ==> showActivities
+15:56:34,504  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:35,508  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:35,508  INFO http-nio-8080-exec-16 Controller:doGet:25 - Get#command ==> sortActivities
+15:56:35,512  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:36,520  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:36,520  INFO http-nio-8080-exec-11 Controller:doGet:25 - Get#command ==> showActivities
+15:56:36,536  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:38,053  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:38,054  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> sortActivities
+15:56:38,060  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:41,488  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:56:41,488  INFO http-nio-8080-exec-15 Controller:doGet:25 - Get#command ==> showActivities
+15:56:41,510  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:57:37,953  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:57:37,954  INFO http-nio-8080-exec-11 Controller:doPost:32 - Post#command ==> addActivity
+15:57:38,925  INFO http-nio-8080-exec-20 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:57:41,191  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+15:57:41,192  INFO http-nio-8080-exec-17 Controller:doGet:25 - Get#command ==> showActivities
+15:57:41,210  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:31:54,121  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:02,390  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:26,920  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:26,920  INFO http-nio-8080-exec-9 Controller:doPost:32 - Post#command ==> setLanguage
+16:32:26,965  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:31,599  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:31,600  INFO http-nio-8080-exec-3 Controller:doPost:32 - Post#command ==> logIn
+16:32:34,373  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:36,784  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:36,785  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> showActivities
+16:32:36,858  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:41,847  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:32:41,848  INFO http-nio-8080-exec-10 Controller:doGet:25 - Get#command ==> showActivities
+16:32:41,897  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:33:57,340  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:02,838  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:31,127  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:31,128  INFO http-nio-8080-exec-9 Controller:doPost:32 - Post#command ==> setLanguage
+16:34:31,170  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:35,068  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:35,070  INFO http-nio-8080-exec-1 Controller:doPost:32 - Post#command ==> logIn
+16:34:39,200  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:43,105  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:43,107  INFO http-nio-8080-exec-4 Controller:doPost:32 - Post#command ==> showActivities
+16:34:43,355  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:45,175  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:45,175  INFO http-nio-8080-exec-7 Controller:doGet:25 - Get#command ==> showActivities
+16:34:45,226  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:47,966  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:47,967  INFO http-nio-8080-exec-9 Controller:doGet:25 - Get#command ==> showActivities
+16:34:48,036  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:52,259  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:52,259  INFO http-nio-8080-exec-3 Controller:doGet:25 - Get#command ==> showActivities
+16:34:52,296  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:54,424  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:34:54,424  INFO http-nio-8080-exec-7 Controller:doGet:25 - Get#command ==> showActivities
+16:34:54,460  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:35:58,988  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:00,992  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:00,993  INFO http-nio-8080-exec-7 Controller:doPost:32 - Post#command ==> setLanguage
+16:36:01,023  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:05,058  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:05,059  INFO http-nio-8080-exec-2 Controller:doPost:32 - Post#command ==> logIn
+16:36:05,385  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:07,247  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:07,248  INFO http-nio-8080-exec-6 Controller:doPost:32 - Post#command ==> showActivities
+16:36:07,380  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:13,072  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:13,072  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> showActivities
+16:36:13,109  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:14,672  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:14,673  INFO http-nio-8080-exec-14 Controller:doGet:25 - Get#command ==> showActivities
+16:36:14,707  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:18,945  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:18,945  INFO http-nio-8080-exec-15 Controller:doGet:25 - Get#command ==> showActivities
+16:36:18,980  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:20,105  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:20,107  INFO http-nio-8080-exec-11 Controller:doGet:25 - Get#command ==> showActivities
+16:36:20,142  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:21,065  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:21,065  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> showActivities
+16:36:21,124  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:22,288  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:22,290  INFO http-nio-8080-exec-1 Controller:doGet:25 - Get#command ==> sortActivities
+16:36:22,331  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:25,382  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:25,384  INFO http-nio-8080-exec-15 Controller:doGet:25 - Get#command ==> sortActivities
+16:36:25,391  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:26,936  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:26,937  INFO http-nio-8080-exec-11 Controller:doGet:25 - Get#command ==> showActivities
+16:36:26,969  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:28,350  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:28,352  INFO http-nio-8080-exec-12 Controller:doGet:25 - Get#command ==> showActivities
+16:36:28,382  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:31,443  INFO http-nio-8080-exec-20 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:31,444  INFO http-nio-8080-exec-20 Controller:doGet:25 - Get#command ==> showActivities
+16:36:31,483  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:37,945  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:37,945  INFO http-nio-8080-exec-15 Controller:doGet:25 - Get#command ==> showActivities
+16:36:37,982  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:40,619  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:40,620  INFO http-nio-8080-exec-11 Controller:doGet:25 - Get#command ==> sortActivities
+16:36:40,624  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:42,887  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:42,888  INFO http-nio-8080-exec-12 Controller:doPost:32 - Post#command ==> showUsers
+16:36:42,893  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:44,431  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:44,432  INFO http-nio-8080-exec-18 Controller:doPost:32 - Post#command ==> showOnlyBlockedUsers
+16:36:44,447  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:52,834  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:52,835  INFO http-nio-8080-exec-15 Controller:doPost:32 - Post#command ==> showProfile
+16:36:52,894  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:58,413  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+16:36:58,413  INFO http-nio-8080-exec-16 Controller:doPost:32 - Post#command ==> returnToMain
+16:36:58,418  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8

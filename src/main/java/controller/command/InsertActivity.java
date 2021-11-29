@@ -3,11 +3,10 @@ package controller.command;
 import controller.InputDataValidator;
 import model.entity.Activity;
 import model.exception.ServiceException;
+import model.util.Util;
 import service.implementations.ActivityService;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class InsertActivity implements Command {
 
@@ -20,11 +19,12 @@ public class InsertActivity implements Command {
         String duration = req.getParameter("duration");
         String description = req.getParameter("description");
         String reward = req.getParameter("reward");
-        //Double reward = Double.parseDouble();
+
         Activity activity = null;
 
+        if (InputDataValidator.validateActivity(name, duration, description, reward) ) {
 
-        if(InputDataValidator.validateActivity(name, duration, description, reward)){
+
             activity = new Activity();
             activity.setName(name);
             activity.setDuration(duration);
@@ -38,6 +38,11 @@ public class InsertActivity implements Command {
         ActivityService activityService = new ActivityService();
         try {
             activityService.add(activity);
+
+            int totalActivitiesAmount = activityService.getAllItemsAsList().size();
+
+            req.getSession().setAttribute("totalActivitiesAmount", totalActivitiesAmount);
+
         } catch (ServiceException e) {
             req.getSession().setAttribute("activityExists", true);
         }

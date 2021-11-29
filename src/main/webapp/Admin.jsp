@@ -31,7 +31,7 @@
 
     <c:if test="${sessionScope.shouldShowUsers == true}">
         <c:if test="${sessionScope.language == 'en'}">
-        <form action="ActivityTracker?command=showActivities&showDescription=false&num=1" method="post">
+        <form action="ActivityTracker?command=showActivities&showDescription=false&numberOfSeries=0" method="post">
             <input type="submit" value="go to activities!"/>
         </form><hr>
         <form action="ActivityTracker?command=showOnlyBlockedUsers" method="post">
@@ -42,7 +42,7 @@
         </form>
         </c:if>
         <c:if test="${sessionScope.language == 'ru'}">
-            <form action="ActivityTracker?command=showActivities&showDescription=false&num=1" method="post">
+            <form action="ActivityTracker?command=showActivities&showDescription=false&numberOfSeries=0" method="post">
                 <input type="submit" value="перейти к активностям!"/>
             </form><hr>
             <form action="ActivityTracker?command=showOnlyBlockedUsers" method="post">
@@ -153,10 +153,10 @@
                 </tr>
             </c:forEach>
         </table>
-        <c:if test="${sessionScope.numberOfSeries < sessionScope.activitiesAmount}">
-            <a href="ActivityTracker?command=showActivities&num=${sessionScope.numberOfSeries+5}"><fmt:message key="next"/> 6 </a>
-        </c:if><br>
-            <a href="ActivityTracker?command=showActivities&num=1"><fmt:message key="to.begin"/></a>
+        <c:if test="${sessionScope.numberOfSeries + 5< sessionScope.totalActivitiesAmount}">
+            <a href="ActivityTracker?command=showActivities&numberOfSeries=${sessionScope.numberOfSeries+5}"><fmt:message key="next"/> 5 </a>
+        </c:if><br><br>
+            <a href="ActivityTracker?command=showActivities&num=0"><fmt:message key="to.begin"/></a>
 <hr>
         <b><fmt:message key="Add.new.activity"/></b>
         <form method="post" action="ActivityTracker?command=addActivity">
@@ -170,6 +170,7 @@
             <input type="text" name="description"><br>
             <input type="submit">
         </form>
+
         <c:if test="${sessionScope.wrongDataFormat}">
             <fmt:message key="Wrong.data.Format!"/><br>
             <fmt:message key="Should.be"/>:

@@ -15,12 +15,13 @@ public class ActivityDAO {
     private static Logger logger = Logger.getLogger(ActivityDAO.class);
 
     private static final String INSERT_ACTIVITY = "INSERT INTO activity (name, duration, reward, description, taken_by) VALUES (?,?,?,?,?)";
-    private static final String ALL_ACTIVITIES_LIST = "SELECT * FROM activity LIMIT ?,?";
+    private static final String ALL_ACTIVITIES_LIST = "SELECT * FROM activity";
     private static final String GET_ACTIVITY_BY_ID = "SELECT * FROM activity WHERE id=(?)";
     private static final String GET_ACTIVITY_BY_NAME = "SELECT * FROM activity WHERE name=(?)";
     private static final String DELETE_ACTIVITY = "DELETE FROM activity WHERE id=(?)";
     private static final String UPDATE_ACTIVITY = "UPDATE activity SET name=(?), duration=(?), reward=(?), description=(?), taken_by=(?) WHERE id=(?) OR name=(?)";
     private static final String CHANGE_TAKEN_BY_AMOUNT = "UPDATE activity SET taken_by=(?) WHERE id=(?)";
+    private static final String FIVE_ACTIVITIES_LIST = "SELECT * FROM activity LIMIT ?,?";
 
     private ActivityDAO() {
     }
@@ -37,7 +38,7 @@ public class ActivityDAO {
         Connection con = null;
         PreparedStatement prstmt = null;
         try {
-            if(getActivityByName(activity.getName()) == null) {
+            if (getActivityByName(activity.getName()) == null) {
                 ConnectionPool cp = ConnectionPool.getInstance();
                 con = cp.getConnection();
                 prstmt = con.prepareStatement(INSERT_ACTIVITY);
@@ -47,53 +48,51 @@ public class ActivityDAO {
                 prstmt.setString(4, activity.getDescription());
                 prstmt.setInt(5, 0);
                 prstmt.execute();
-            } else{
+            } else {
                 throw new ActivityAlreadyExists();
             }
         } catch (SQLException e) {
             logger.error("Error occurred during inserting activity", e);
-        }finally{
+        } finally {
             Util.close(prstmt, con);
         }
     }
 
 
-    public List<Activity> getActivitiesList(int num){
+    public List<Activity> getActivitiesList() {
         Connection con = null;
         ResultSet rs = null;
         PreparedStatement prstmt = null;
         List<Activity> activities = new ArrayList<>();
-        try{
+        try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
             prstmt = con.prepareStatement(ALL_ACTIVITIES_LIST);
-            prstmt.setInt(1, num);
-            prstmt.setInt(2, num + 5);
             rs = prstmt.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Activity activity = getActivityById(rs.getInt("id"));
                 activities.add(activity);
             }
-        } catch(Exception e){
+        } catch (Exception e) {
             logger.error("Error during getting activities list", e);
-        }   finally{
+        } finally {
             Util.close(rs, prstmt, con);
         }
         return activities;
     }
 
-    public Activity getActivityById(int id){
+    public Activity getActivityById(int id) {
         Activity activity = new Activity();
         Connection con = null;
         ResultSet rs = null;
         PreparedStatement prstmt = null;
-        try{
+        try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
             prstmt = con.prepareStatement(GET_ACTIVITY_BY_ID);
             prstmt.setInt(1, id);
             rs = prstmt.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 activity.setId(rs.getInt("id"));
                 activity.setName(rs.getString("name"));
                 activity.setDuration(rs.getString("duration"));
@@ -101,15 +100,15 @@ public class ActivityDAO {
                 activity.setDescription(rs.getString("description"));
                 activity.setTakenByAmount(rs.getInt("taken_by"));
             }
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             Util.close(rs, prstmt, con);
         }
         return activity;
     }
 
-    public boolean deleteActivity(int activityId){
+    public boolean deleteActivity(int activityId) {
         Connection con = null;
         PreparedStatement prstmt = null;
         try {
@@ -121,7 +120,7 @@ public class ActivityDAO {
             return true;
         } catch (SQLException e) {
             logger.error("Wasn't able to delete activity", e);
-        }finally{
+        } finally {
             Util.close(prstmt, con);
         }
         return false;
@@ -147,7 +146,7 @@ public class ActivityDAO {
 
         } catch (SQLException e) {
             logger.error("Wasn't able to update activity");
-        }finally{
+        } finally {
             Util.close(prstmt, con);
         }
         return activity;
@@ -162,9 +161,9 @@ public class ActivityDAO {
             Activity activity = getActivityById(activityId);
             int takenBy = activity.getTakenByAmount();
             prstmt = con.prepareStatement(CHANGE_TAKEN_BY_AMOUNT);
-            if(increment){
+            if (increment) {
                 prstmt.setInt(1, ++takenBy);
-            }else{
+            } else {
                 prstmt.setInt(1, --takenBy);
             }
             prstmt.setInt(2, activityId);
@@ -172,7 +171,7 @@ public class ActivityDAO {
 
         } catch (SQLException e) {
             logger.error("Wasn't able to update activity");
-        }finally{
+        } finally {
             Util.close(prstmt, con);
         }
     }
@@ -182,27 +181,52 @@ public class ActivityDAO {
         Connection con = null;
         ResultSet rs = null;
         PreparedStatement prstmt = null;
-        try{
+        try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
             prstmt = con.prepareStatement(GET_ACTIVITY_BY_NAME);
             prstmt.setString(1, name);
             rs = prstmt.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 activity.setId(rs.getInt("id"));
                 activity.setName(name);
                 activity.setDuration(rs.getString("duration"));
                 activity.setReward(rs.getDouble("reward"));
                 activity.setDescription(rs.getString("description"));
                 activity.setTakenByAmount(rs.getInt("taken_by"));
-            }else{
+            } else {
                 return null;
             }
-        } catch(Exception e){
+        } catch (Exception e) {
             logger.error("Error getting activity by name", e);
-        } finally{
+        } finally {
             Util.close(rs, prstmt, con);
         }
         return activity;
+    }
+
+    public List<Activity> getFiveActivities(int num) {
+
+        Connection con = null;
+        ResultSet rs = null;
+        PreparedStatement prstmt = null;
+        List<Activity> activities = new ArrayList<>();
+        try {
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(FIVE_ACTIVITIES_LIST);
+            prstmt.setInt(1, num);
+            prstmt.setInt(2, 5);
+            rs = prstmt.executeQuery();
+            while (rs.next()) {
+                Activity activity = getActivityById(rs.getInt("id"));
+                activities.add(activity);
+            }
+        } catch (Exception e) {
+            logger.error("Error during getting activities list", e);
+        } finally {
+            Util.close(rs, prstmt, con);
+        }
+        return activities;
     }
 }

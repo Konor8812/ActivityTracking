@@ -14,7 +14,7 @@ public class ShowProfile implements Command{
         UserService userService = new UserService();
 
         User user = (User)req.getSession().getAttribute("regedAs");
-        req.getSession().removeAttribute("wrongDurationFormat");
+
         try {
             user = userService.getItemById(user.getId());
         }catch (ServiceException wrongLoginData) {

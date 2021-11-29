@@ -20,6 +20,9 @@ public class DeleteActivity implements Command {
 
         activityService.delete(activityId);
 
+        int totalActivitiesAmount = activityService.getAllItemsAsList().size();
+        req.getSession().setAttribute("totalActivitiesAmount", totalActivitiesAmount);
+
         return cf.getCommand("showActivities", req, null).execute(req);
     }
 }

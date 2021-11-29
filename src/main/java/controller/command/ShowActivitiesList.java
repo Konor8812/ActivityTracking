@@ -10,18 +10,17 @@ import java.util.List;
 
 public class ShowActivitiesList implements Command {
 
-    public ShowActivitiesList() {
-    }
-
-
     @Override
     public String execute(HttpServletRequest req) {
-        int numberOfSeries = 1;
-        try {
-            numberOfSeries = Integer.parseInt(req.getParameter("num"));
+
+        int numberOfSeries = 0;
+        try{
+            numberOfSeries = Integer.parseInt(req.getParameter("numberOfSeries"));
         }catch(Exception e){
-            //means should show first page
+            //after being sorted or added new, should return to begin
         }
+
+
         boolean isSorted = false;
         try {
             isSorted = (boolean) req.getAttribute("sorted");
@@ -30,17 +29,25 @@ public class ShowActivitiesList implements Command {
             // order by time activity was added to db
         }
         String language = (String) req.getSession().getAttribute("language");
-        System.out.println(language);
         if(!isSorted){
             ActivityService activityService = new ActivityService();
-            List<Activity> activities = activityService.getAllItemsAsList(numberOfSeries);
+            List<Activity> activities = activityService.getFiveItemsAsList(numberOfSeries);
+            int totalActivitiesAmount;
+
+            try{
+                totalActivitiesAmount = (int) req.getSession().getAttribute("activitiesAmount");
+            }catch(Exception e){
+                totalActivitiesAmount = activityService.getAllItemsAsList().size();
+            }
+            req.getSession().setAttribute("totalActivitiesAmount", totalActivitiesAmount);
+
             for(Activity activity: activities){
                 activity.setDescription(Util.getDescriptionAccordingToLang(activity.getDescription(), language));
             }
 
             req.getSession().setAttribute("numberOfSeries", numberOfSeries);
-            req.getSession().setAttribute("activitiesAmount", activities.size());
             req.getSession().setAttribute("activities", activities);
+            System.out.println("activities amount");
         }
 
         req.getSession().setAttribute("shouldShowActivities", true);

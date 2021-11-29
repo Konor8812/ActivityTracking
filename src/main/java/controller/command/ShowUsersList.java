@@ -8,14 +8,11 @@ import java.util.List;
 
 public class ShowUsersList implements Command{
 
-
-    public ShowUsersList() { }
-
     @Override
     public String execute(HttpServletRequest req) {
 
         UserService userService = new UserService();
-        List<User> users = userService.getAllItemsAsList(0);
+        List<User> users = userService.getAllItemsAsList();
         req.getSession().removeAttribute("wrongDurationFormat");
         req.getSession().removeAttribute("blockedUsers");
         req.getSession().setAttribute("users", users);
@@ -23,8 +20,6 @@ public class ShowUsersList implements Command{
         req.getSession().setAttribute("shouldShowActivities", false);
         req.getSession().setAttribute("shouldShowBlockedUsers", false);
         return "Admin.jsp";
-
     }
-
 
 }

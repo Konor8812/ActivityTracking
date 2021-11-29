@@ -8,6 +8,7 @@ import java.io.IOException;
 public class CommandFactory {
     private static CommandFactory instance;
 
+
     private CommandFactory() {
     }
 

@@ -30,6 +30,11 @@ public class ActivityService implements ActivityExtension {
     }
 
     @Override
+    public List<Activity> getFiveItemsAsList(int number) {
+        return activityDAO.getFiveActivities(number);
+    }
+
+    @Override
     public Activity getItemById(Integer id)  {
         return activityDAO.getActivityById(id);
     }
@@ -50,7 +55,7 @@ public class ActivityService implements ActivityExtension {
     }
 
     @Override
-    public List<Activity> getAllItemsAsList(int num) {
-        return activityDAO.getActivitiesList(num);
+    public List<Activity> getAllItemsAsList() {
+        return activityDAO.getActivitiesList();
     }
 }

@@ -1,8 +1,11 @@
 package model.util;
 
 import model.entity.Activity;
+import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
@@ -12,8 +15,13 @@ import java.util.stream.Collectors;
 
 public abstract class Util {
 
-    public static void close(AutoCloseable... ac){
-        for(AutoCloseable autoCloseable: ac) {
+    private static final Logger logger = Logger.getLogger(Util.class);
+
+    private static File filePropsEn = new File("/loc_en.properties");
+    private static File filePropsRu = new File("/loc_ru.properties");
+
+    public static void close(AutoCloseable... ac) {
+        for (AutoCloseable autoCloseable : ac) {
             try {
                 autoCloseable.close();
             } catch (Exception e) {
@@ -21,13 +29,14 @@ public abstract class Util {
             }
         }
     }
-    public static String getFormattedTime(long millis){
+
+    public static String getFormattedTime(long millis) {
 
         StringBuilder sb = new StringBuilder();
         long second = 1000;
-        long minute = 60*second;
-        long hour = 60*minute;
-        long day = 24*hour;
+        long minute = 60 * second;
+        long hour = 60 * minute;
+        long day = 24 * hour;
 
 
         long days = millis / day;
@@ -37,23 +46,23 @@ public abstract class Util {
         long minutes = leftOver / minute;
         leftOver = leftOver % minute;
         long seconds = leftOver / second;
-        if(days != 0){
+        if (days != 0) {
             sb.append(days).append(" days ");
         }
-        if(hours != 0){
+        if (hours != 0) {
             sb.append(hours).append(" hours ");
         }
-        if(minutes != 0){
+        if (minutes != 0) {
             sb.append(minutes).append(" minutes ");
         }
-        if(seconds != 0){
+        if (seconds != 0) {
             sb.append(seconds).append(" seconds ");
         }
         System.out.println(sb);
         return sb.toString();
     }
 
-    public static String encodePassword(String pass){
+    public static String encodePassword(String pass) {
 
         String generatedPassword = null;
         try {
@@ -74,7 +83,7 @@ public abstract class Util {
 
     public static List<Activity> sortBy(List<Activity> activities, String sortBy) {
 
-        switch(sortBy){
+        switch (sortBy) {
             case "name":
                 activities = activities.stream()
                         .sorted(Comparator.comparing(Activity::getName))
@@ -95,7 +104,7 @@ public abstract class Util {
                         .collect(Collectors.toList());
                 break;
         }
-        return  activities;
+        return activities;
     }
 
     private static List<Activity> sortByDuration(List<Activity> activities) {
@@ -104,11 +113,11 @@ public abstract class Util {
 
         List<Activity> sorted = new ArrayList<>();
 
-        for(Activity activity: activities){
+        for (Activity activity : activities) {
 
-            if(activity.getDuration().contains("days")){
+            if (activity.getDuration().contains("days")) {
                 daysDuration.add(activity);
-            }else{
+            } else {
                 hoursDuration.add(activity);
             }
         }
@@ -116,10 +125,10 @@ public abstract class Util {
         hoursDuration = hoursDuration.stream().sorted(Comparator.comparing(Activity::getDuration)).collect(Collectors.toList());
         daysDuration = daysDuration.stream().sorted(Comparator.comparing(Activity::getDuration)).collect(Collectors.toList());
 
-        for(Activity activity: hoursDuration){
+        for (Activity activity : hoursDuration) {
             sorted.add(activity);
         }
-        for(Activity activity: daysDuration){
+        for (Activity activity : daysDuration) {
             sorted.add(activity);
         }
 
@@ -133,12 +142,16 @@ public abstract class Util {
         StringBuilder sb = new StringBuilder();
         String[] words = description.split(", ");
 
-        for(int i = 0; i < words.length; i++){
-            sb.append(rb.getString(words[i]))
-                    .append(", ");
-            if(i == words.length - 2){
-                sb.append(rb.getString(words[++i]));
-                break;
+        for (int i = 0; i < words.length; i++) {
+            try {
+                sb.append(rb.getString(words[i]))
+                        .append(", ");
+                if (i == words.length - 2) {
+                    sb.append(rb.getString(words[++i]));
+                    break;
+                }
+            }catch(MissingResourceException e){
+                sb.append(words[i]).append(", ");
             }
         }
 
@@ -151,6 +164,80 @@ public abstract class Util {
         req.getSession().removeAttribute("regError");
         req.getSession().removeAttribute("userIsBlocked");
         req.getSession().removeAttribute("wrongData");
+        req.getSession().removeAttribute("shouldShowUsersActivities");
+        req.getSession().removeAttribute("activityTaken");
+        req.getSession().removeAttribute("wrongDataFormat");
+        req.getSession().removeAttribute("activityExists");
+        req.getSession().removeAttribute("wrongTranslationFormat");
+        req.getSession().removeAttribute("wrongTagName");
+    }
 
+    public static void loadProperty(String nameEn, String nameRu, String loc) {
+        File file = null;
+        if(loc.equals("en")){
+            file = filePropsEn;
+        } else if(loc.equals("ru")){
+            file = filePropsRu;
+        }
+
+        Properties props = new Properties();
+        props.setProperty(getFormattedStringForProps(nameEn), nameRu);
+        try {
+            PrintWriter fr = new PrintWriter(new OutputStreamWriter(new FileOutputStream(file, true), StandardCharsets.UTF_8));
+            props.store(fr, "");
+            fr.close();
+            logger.info("properties successfully loaded");
+        }catch(IOException e){
+            logger.error("Wasn't able to load properties for activity", e);
+        }
+    }
+
+    private static String getFormattedStringForProps(String s){
+        StringBuilder sb = new StringBuilder();
+        String[] words;
+
+        if(s.contains("--")){
+            words = s.split(" -- ");
+        } else{
+            words = s.split(" ");
+        }
+
+        for(String str: words){
+            sb.append(str).append(".");
+        }
+        sb.deleteCharAt(sb.length() - 1);
+        return sb.toString();
+    }
+
+    public static String[] splitTagName(String tagName){
+        String[] words;
+        words = tagName.split(" -- ");
+        return words;
+    }
+
+    public static boolean checkIfPropExists(String tagEn) {
+        Pattern p = Pattern.compile(getPattern(getFormattedStringForProps(tagEn)));
+
+        try(BufferedReader br = new BufferedReader(new FileReader(filePropsEn))){
+            while(br.ready()){
+                System.out.println(br.readLine());
+                System.out.println(tagEn);
+//                String line = br.readLine();
+//                Matcher m = p.matcher(line);
+//                System.out.println(line);
+//                if(m.matches()){
+//                    System.out.println(line + " matches! ");
+//                    return true;
+//                }
+            }
+        } catch(IOException e){
+            logger.error("error while reading properties", e);
+        }
+        System.out.println("no matches");
+        return false;
+    }
+
+    private static String getPattern(String tagEn) {
+        return tagEn + "=[a-zA-Z ]+";
     }
 }

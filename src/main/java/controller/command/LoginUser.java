@@ -40,7 +40,7 @@ public class LoginUser implements Command {
                 return "index.jsp";
             }
         }else{
-            req.getSession().setAttribute("wrongData", true);
+            req.getSession().setAttribute("loginError", true);
             return "index.jsp";
         }
     }
