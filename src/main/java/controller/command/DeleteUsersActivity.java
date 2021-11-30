@@ -36,6 +36,6 @@ public class DeleteUsersActivity implements Command {
         req.getSession().setAttribute("regedAs", user);
         req.getSession().setAttribute("usersActivities", usersActivities);
 
-        return CommandFactory.getInstance().getCommand("showProfile", req, null).execute(req);
+        return CommandFactory.getInstance().getCommand("showProfile").execute(req);
     }
 }

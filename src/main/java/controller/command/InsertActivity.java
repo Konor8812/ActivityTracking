@@ -24,7 +24,6 @@ public class InsertActivity implements Command {
 
         if (InputDataValidator.validateActivity(name, duration, description, reward) ) {
 
-
             activity = new Activity();
             activity.setName(name);
             activity.setDuration(duration);
@@ -32,7 +31,7 @@ public class InsertActivity implements Command {
             activity.setDescription(description);
         } else {
             req.getSession().setAttribute("wrongDataFormat", true);
-            return CommandFactory.getInstance().getCommand("showActivities", req, null).execute(req);
+            return CommandFactory.getInstance().getCommand("showActivities").execute(req);
         }
 
         ActivityService activityService = new ActivityService();
@@ -46,6 +45,6 @@ public class InsertActivity implements Command {
         } catch (ServiceException e) {
             req.getSession().setAttribute("activityExists", true);
         }
-        return CommandFactory.getInstance().getCommand("showActivities", req, null).execute(req);
+        return CommandFactory.getInstance().getCommand("showActivities").execute(req);
     }
 }

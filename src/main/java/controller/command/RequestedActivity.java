@@ -16,7 +16,7 @@ public class RequestedActivity implements Command {
         UserActivityService userActivityService = new UserActivityService();
         try {
             userActivityService.userRequestedActivity(userId, activityId);
-            return CommandFactory.getInstance().getCommand("showUsersActivities", req, null).execute(req);
+            return CommandFactory.getInstance().getCommand("showUsersActivities").execute(req);
         } catch(ServiceException e){
             req.getSession().setAttribute("activityTaken", true);
             return "User.jsp";

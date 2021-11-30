@@ -13,7 +13,7 @@ public class ApproveActivityForUser implements Command {
         UserActivityService userActivityService = new UserActivityService();
         userActivityService.approveActivityForUser(userId, activityId);
 
-        return CommandFactory.getInstance().getCommand("getUsersRequests",req, null).execute(req);
+        return CommandFactory.getInstance().getCommand("getUsersRequests").execute(req);
 
     }
 }

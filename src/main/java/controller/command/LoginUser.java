@@ -28,9 +28,9 @@ public class LoginUser implements Command {
 
                 req.getSession().setAttribute("regedAs", user);
                 if (role.equals("user")) {
-                    return CommandFactory.getInstance().getCommand("showActivities", req, null).execute(req);
+                    return CommandFactory.getInstance().getCommand("showActivities").execute(req);
                 } else if (role.equals("admin")) {
-                    return CommandFactory.getInstance().getCommand("showUsers", req, null).execute(req);
+                    return CommandFactory.getInstance().getCommand("showUsers").execute(req);
                 }else{
                     return "UnknownError.jsp";
                 }

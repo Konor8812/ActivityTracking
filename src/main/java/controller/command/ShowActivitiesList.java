@@ -20,7 +20,6 @@ public class ShowActivitiesList implements Command {
             //after being sorted or added new, should return to begin
         }
 
-
         boolean isSorted = false;
         try {
             isSorted = (boolean) req.getAttribute("sorted");
@@ -42,12 +41,14 @@ public class ShowActivitiesList implements Command {
             req.getSession().setAttribute("totalActivitiesAmount", totalActivitiesAmount);
 
             for(Activity activity: activities){
+                activity.setName(Util.getNameAccordingToLang(activity.getName(), language));
                 activity.setDescription(Util.getDescriptionAccordingToLang(activity.getDescription(), language));
+                activity.setDuration(Util.getDurationAccordingToLang(activity.getDuration(), language));
             }
 
             req.getSession().setAttribute("numberOfSeries", numberOfSeries);
             req.getSession().setAttribute("activities", activities);
-            System.out.println("activities amount");
+
         }
 
         req.getSession().setAttribute("shouldShowActivities", true);

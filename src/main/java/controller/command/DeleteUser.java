@@ -17,6 +17,6 @@ public class DeleteUser implements Command {
         int id = Integer.parseInt(req.getParameter("userId"));
         userService.delete(id);
 
-        return cf.getCommand("showUsers", req, null).execute(req);
+        return cf.getCommand("showUsers").execute(req);
     }
 }

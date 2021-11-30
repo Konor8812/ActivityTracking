@@ -30,7 +30,7 @@ public class RegUser implements Command {
                 req.getSession().setAttribute("regedAs", user);
                 CommandFactory cf = CommandFactory.getInstance();
 
-                return cf.getCommand("showActivities", req, null).execute(req);
+                return cf.getCommand("showActivities").execute(req);
 
             } catch (ServiceException e) {
                 req.getSession().setAttribute("regError", true);

@@ -13,6 +13,6 @@ public class DenyApproval implements Command {
 
         userActivityService.denyApprovalActivityForUser(userId, activityId);
 
-        return CommandFactory.getInstance().getCommand("getUsersRequests",req, null).execute(req);
+        return CommandFactory.getInstance().getCommand("getUsersRequests").execute(req);
     }
 }

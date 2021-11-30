@@ -2,34 +2,31 @@ package model.dao;
 
 import model.entity.User;
 import model.exception.WrongLoginData;
-import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
-import javax.sql.DataSource;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserDAOTest {
 
+    UserDAO userDAO;
+
+    @BeforeEach
+    void setUp() throws Exception{
+        userDAO = Mockito.mock(UserDAO.class);
+        Mockito.when(userDAO.getUserById(Mockito.anyInt())).thenReturn(new User());
+    }
+
+
     @Test
-    public void testUserDaoInsert() throws WrongLoginData {
-        UserDAO userDAO = Mockito.mock(UserDAO.class);
-        User admin = new User();
-        admin.setRole("admin");
+    public void testUserDaoGet() throws WrongLoginData {
 
-        Mockito.when(userDAO.getUserById(1)).thenReturn(admin);
         User user = userDAO.getUserById(1);
+        Assertions.assertEquals(User.class, user.getClass());
 
-        Assertions.assertEquals(admin, user);
-
-
+        user = userDAO.getUserById(7);
+        Assertions.assertEquals(User.class, user.getClass());
     }
 
 }

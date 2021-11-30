@@ -11,6 +11,6 @@ public class BlockUser implements Command {
         UserService userService = new UserService();
         int userId = Integer.parseInt(req.getParameter("userId"));
         userService.changeUsersStatus(userId, true);
-        return CommandFactory.getInstance().getCommand("showUsers", req, null).execute(req);
+        return CommandFactory.getInstance().getCommand("showUsers").execute(req);
     }
 }

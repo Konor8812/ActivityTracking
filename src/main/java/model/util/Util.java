@@ -15,10 +15,7 @@ import java.util.stream.Collectors;
 
 public abstract class Util {
 
-    private static final Logger logger = Logger.getLogger(Util.class);
-
-    private static File filePropsEn = new File("/loc_en.properties");
-    private static File filePropsRu = new File("/loc_ru.properties");
+    private static Logger logger = Logger.getLogger(Util.class);
 
     public static void close(AutoCloseable... ac) {
         for (AutoCloseable autoCloseable : ac) {
@@ -81,7 +78,7 @@ public abstract class Util {
         return generatedPassword;
     }
 
-    public static List<Activity> sortBy(List<Activity> activities, String sortBy) {
+    public static List<Activity> sortBy(List<Activity> activities, String sortBy, String lang) {
 
         switch (sortBy) {
             case "name":
@@ -95,7 +92,7 @@ public abstract class Util {
                         .collect(Collectors.toList());
                 break;
             case "duration":
-                activities = sortByDuration(activities);
+                activities = sortByDuration(activities, lang);
 
                 break;
             case "numberOfTakes":
@@ -107,7 +104,7 @@ public abstract class Util {
         return activities;
     }
 
-    private static List<Activity> sortByDuration(List<Activity> activities) {
+    private static List<Activity> sortByDuration(List<Activity> activities, String lang) {
         List<Activity> hoursDuration = new ArrayList<>();
         List<Activity> daysDuration = new ArrayList<>();
 
@@ -115,7 +112,7 @@ public abstract class Util {
 
         for (Activity activity : activities) {
 
-            if (activity.getDuration().contains("days")) {
+            if (activity.getDuration().contains(lang.equals("en") ? "days" : "дней")) {
                 daysDuration.add(activity);
             } else {
                 hoursDuration.add(activity);
@@ -135,6 +132,28 @@ public abstract class Util {
         return sorted;
     }
 
+    public static void removeUnneededAttributes(HttpServletRequest req) {
+        req.getSession().removeAttribute("loginError");
+        req.getSession().removeAttribute("regError");
+        req.getSession().removeAttribute("userIsBlocked");
+        req.getSession().removeAttribute("wrongData");
+        req.getSession().removeAttribute("shouldShowUsersActivities");
+        req.getSession().removeAttribute("activityTaken");
+        req.getSession().removeAttribute("wrongDataFormat");
+        req.getSession().removeAttribute("activityExists");
+        req.getSession().removeAttribute("wrongTranslationFormat");
+        req.getSession().removeAttribute("wrongTagName");
+    }
+
+
+    public static void removeActivityRelatedAttributes(HttpServletRequest req) {
+        req.getSession().removeAttribute("wrongDurationFormat");
+        req.getSession().removeAttribute("numberOfSeries");
+        req.getSession().removeAttribute("activities");
+        req.getSession().removeAttribute("sorted");
+        req.getSession().removeAttribute("activityExists");
+    }
+
     public static String getDescriptionAccordingToLang(String description, String lang) {
         String rbLang = "loc_" + lang;
         ResourceBundle rb = ResourceBundle.getBundle(rbLang);
@@ -152,92 +171,54 @@ public abstract class Util {
                 }
             }catch(MissingResourceException e){
                 sb.append(words[i]).append(", ");
+                try(BufferedWriter br = new BufferedWriter(new FileWriter("needs_localization.txt", true))){
+                    br.write("\n");
+                    br.write(words[i]);
+                } catch(IOException ioe){
+                    logger.error("wasn't able to write in needs_localization.txt", ioe);
+                }finally {
+                    logger.info("successfully added to needs_localization.txt");
+                }
             }
         }
-
         return sb.toString();
-
     }
 
-    public static void removeUnneededAttributes(HttpServletRequest req) {
-        req.getSession().removeAttribute("loginError");
-        req.getSession().removeAttribute("regError");
-        req.getSession().removeAttribute("userIsBlocked");
-        req.getSession().removeAttribute("wrongData");
-        req.getSession().removeAttribute("shouldShowUsersActivities");
-        req.getSession().removeAttribute("activityTaken");
-        req.getSession().removeAttribute("wrongDataFormat");
-        req.getSession().removeAttribute("activityExists");
-        req.getSession().removeAttribute("wrongTranslationFormat");
-        req.getSession().removeAttribute("wrongTagName");
-    }
-
-    public static void loadProperty(String nameEn, String nameRu, String loc) {
-        File file = null;
-        if(loc.equals("en")){
-            file = filePropsEn;
-        } else if(loc.equals("ru")){
-            file = filePropsRu;
+    public static String getNameAccordingToLang(String name, String language) {
+        String rbLang = "loc_" + language;
+        ResourceBundle rb = ResourceBundle.getBundle(rbLang);
+        String formattedName = name.replaceAll(" ", ".");
+        while(formattedName.endsWith(".")){
+            formattedName = new StringBuilder(formattedName).deleteCharAt(formattedName.length()-1).toString();
         }
-
-        Properties props = new Properties();
-        props.setProperty(getFormattedStringForProps(nameEn), nameRu);
         try {
-            PrintWriter fr = new PrintWriter(new OutputStreamWriter(new FileOutputStream(file, true), StandardCharsets.UTF_8));
-            props.store(fr, "");
-            fr.close();
-            logger.info("properties successfully loaded");
-        }catch(IOException e){
-            logger.error("Wasn't able to load properties for activity", e);
-        }
-    }
-
-    private static String getFormattedStringForProps(String s){
-        StringBuilder sb = new StringBuilder();
-        String[] words;
-
-        if(s.contains("--")){
-            words = s.split(" -- ");
-        } else{
-            words = s.split(" ");
-        }
-
-        for(String str: words){
-            sb.append(str).append(".");
-        }
-        sb.deleteCharAt(sb.length() - 1);
-        return sb.toString();
-    }
-
-    public static String[] splitTagName(String tagName){
-        String[] words;
-        words = tagName.split(" -- ");
-        return words;
-    }
-
-    public static boolean checkIfPropExists(String tagEn) {
-        Pattern p = Pattern.compile(getPattern(getFormattedStringForProps(tagEn)));
-
-        try(BufferedReader br = new BufferedReader(new FileReader(filePropsEn))){
-            while(br.ready()){
-                System.out.println(br.readLine());
-                System.out.println(tagEn);
-//                String line = br.readLine();
-//                Matcher m = p.matcher(line);
-//                System.out.println(line);
-//                if(m.matches()){
-//                    System.out.println(line + " matches! ");
-//                    return true;
-//                }
+            return rb.getString(formattedName);
+        }catch(MissingResourceException e){
+            try(BufferedWriter br = new BufferedWriter(new FileWriter("needs_localization.txt", true))){
+                br.write("\n");
+                br.write(name);
+            } catch(IOException ioe){
+                logger.error("wasn't able to write in needs_localization.txt", ioe);
+            }finally {
+                logger.info("successfully added to needs_localization.txt");
+                return name;
             }
-        } catch(IOException e){
-            logger.error("error while reading properties", e);
         }
-        System.out.println("no matches");
-        return false;
     }
 
-    private static String getPattern(String tagEn) {
-        return tagEn + "=[a-zA-Z ]+";
+    public static String getDurationAccordingToLang(String duration, String language) {
+
+        String rbLang = "loc_" + language;
+        ResourceBundle rb = ResourceBundle.getBundle(rbLang);
+        Pattern p = Pattern.compile(duration.contains(".") ? "([0-9]+.[0-9]) (hours|days)" : "([0-9])+ (hours|days)");
+        Matcher m = p.matcher(duration);
+
+        StringBuilder sb = new StringBuilder();
+        if(m.find()){
+            sb.append(m.group(1)).append(" ").append(rb.getString(m.group(2)));
+        }
+
+        return sb.toString().trim();
+
     }
 }

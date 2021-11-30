@@ -22,7 +22,7 @@
     </c:if>
     <c:if test="${sessionScope.language == 'ru'}">
         <form action="ActivityTracker?command=logOut" method="post">
-            <input type="submit" value="выйти" name="log out"/>
+            <input type="submit" value="выйти" />
         </form>
         <form method="post" action="ActivityTracker?command=showProfile">
             <input type="submit" value="профиль">
@@ -96,9 +96,9 @@
         </c:if>
         <table>
             <tr>
-                <th> Login </th>
-                <th> Activities amount</th>
-                <th> total points </th>
+                <th> <fmt:message key="Login"/> </th>
+                <th> <fmt:message key="Activities.amount"/> </th>
+                <th> <fmt:message key="Total.points"/> </th>
                 <th> <fmt:message key="Unblock.user"/> </th>
             </tr>
             <c:forEach var="user" items="${sessionScope.blockedUsers}">

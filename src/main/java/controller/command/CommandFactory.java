@@ -20,13 +20,13 @@ public class CommandFactory {
     }
 
     public void executeCommand(HttpServletRequest req, HttpServletResponse resp, String command) throws IOException {
-        Command com = getCommand(command, req, resp);
+        Command com = getCommand(command);
         String next = com.execute(req);
 
         resp.sendRedirect(next);
     }
 
-    public Command getCommand(String name, HttpServletRequest req, HttpServletResponse resp) {
+    public Command getCommand(String name) {
         Command com = null;
         switch (name) {
             case "regUser":

@@ -1,6 +1,7 @@
 package controller.command;
 
 import model.entity.User;
+import model.util.Util;
 import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,10 +11,10 @@ public class ShowUsersList implements Command{
 
     @Override
     public String execute(HttpServletRequest req) {
-
+        Util.removeActivityRelatedAttributes(req);
         UserService userService = new UserService();
         List<User> users = userService.getAllItemsAsList();
-        req.getSession().removeAttribute("wrongDurationFormat");
+
         req.getSession().removeAttribute("blockedUsers");
         req.getSession().setAttribute("users", users);
         req.getSession().setAttribute("shouldShowUsers", true);

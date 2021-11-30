@@ -8,29 +8,42 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css"/>
-    <title>Activity Tracker</title>
+    <title><fmt:message key="ActivityTracker"/></title>
 </head>
 <body>
 <c:if test="${sessionScope.regedAs.role == 'user'}">
     <hr>
-    Success!
-    <c:out value="You are logged as ${sessionScope.regedAs.login}" />
-    <form action="ActivityTracker?command=logOut" method="post">
-        <input type="submit" value="log out!"/>
-    </form>
+    <fmt:message key="Success!"/>
+    <fmt:message key="You.are.logged.as"/> ${sessionScope.regedAs.login}"<hr>
+    <c:if test="${sessionScope.language == 'en'}">
+        <form action="ActivityTracker?command=logOut" method="post">
+            <input type="submit" value="logOut" name="log out"/>
+        </form>
+        <form method="post" action="ActivityTracker?command=showProfile">
+            <input type="submit" value="profile">
+        </form>
+    </c:if>
+    <c:if test="${sessionScope.language == 'ru'}">
+        <form action="ActivityTracker?command=logOut" method="post">
+            <input type="submit" value="выйти" />
+        </form>
+        <form method="post" action="ActivityTracker?command=showProfile">
+            <input type="submit" value="профиль">
+        </form>
+    </c:if>
 <c:if test="${sessionScope.shouldShowActivities == true}">
 
     <table>
     <tr>
-    <th> Name </th>
-    <th> Duration </th>
-    <th> Reward </th>
+    <th> <fmt:message key="Name"/> </th>
+    <th> <fmt:message key="Duration"/> </th>
+    <th> <fmt:message key="Reward"/> </th>
     <th>
     <c:if test="${!sessionScope.shouldShowTags}">
-        <a href="ActivityTracker?command=getActivitiesDescription">Show tags</a>
+        <a href="ActivityTracker?command=getActivitiesDescription"><fmt:message key="Show.tags"/></a>
     </c:if>
     <c:if test="${sessionScope.shouldShowTags}">
-        <a href="ActivityTracker?command=hideActivitiesDescription">Hide tags</a>
+        <a href="ActivityTracker?command=hideActivitiesDescription"><fmt:message key="Hide.tags"/></a>
     </c:if>
     </th>
         <th></th>
@@ -45,21 +58,19 @@
                     <c:out value="${activity.description}" />
                 </c:if>
             </td>
-            <td><a href="ActivityTracker?command=reqActivity&userId=${sessionScope.regedAs.id}&activityId=${activity.id}">take activity</a></td>
+            <td><a href="ActivityTracker?command=reqActivity&userId=${sessionScope.regedAs.id}&activityId=${activity.id}"><fmt:message key="take.activity"/></a></td>
         </tr>
     </c:forEach>
     </table>
     <c:if test="${sessionScope.activityTaken}">
-        <c:out value="You have already taken this activity!"/>
+        <fmt:message key="You.have.already.taken.this.activity"/>
     </c:if>
 </c:if>
-<form method="post" action="ActivityTracker?command=showProfile">
-    <input type="submit" value="profile">
-</form>
+
 </c:if>
     <c:if test="${sessionScope.regedAs.role ne 'user'}">
-        <c:out value="Access denied!!!"/><br>
-        <a href="index.jsp">Log in</a>
+        <fmt:message key="Access.denied!!!"/>
+        <a href="index.jsp"><fmt:message key="Log.in"/></a>
     </c:if>
 </body>
 </html>

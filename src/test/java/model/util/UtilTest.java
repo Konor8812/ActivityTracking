@@ -67,7 +67,7 @@ class UtilTest {
         activityList.add(activity5);
 
 
-        activityList = Util.sortBy(activityList, "name");;
+        activityList = Util.sortBy(activityList, "name", "en");;
 
         StringBuilder actual = new StringBuilder();
         for(Activity a: activityList){
@@ -77,7 +77,7 @@ class UtilTest {
         Assertions.assertEquals(expectedNamesConcatenation, actual.toString());
         actual = new StringBuilder();
 
-        activityList = Util.sortBy(activityList, "duration");
+        activityList = Util.sortBy(activityList, "duration", "en");
 
         for(Activity a: activityList){
             actual.append(a.getDuration());
@@ -85,7 +85,7 @@ class UtilTest {
         Assertions.assertEquals(expectedDurationConcatenation, actual.toString());
         actual = new StringBuilder();
 
-        activityList = Util.sortBy(activityList, "reward");
+        activityList = Util.sortBy(activityList, "reward", "en");
 
         for(Activity a: activityList){
             actual.append(a.getReward());
@@ -104,5 +104,31 @@ class UtilTest {
         Assertions.assertEquals(expectedEng, actualEng);
         Assertions.assertEquals(expectedRu, actualRu);
 
+    }
+
+    @Test
+    public void getNameAccordingToLangTest(){
+        String given = "visiting grandma";
+        String expectedEn = "visiting grandma";
+        String expectedRu = "сходить в гости к бабушке";
+
+        String actualEn = Util.getNameAccordingToLang(given, "en");
+        String actualRu = Util.getNameAccordingToLang(given, "ru");
+
+        Assertions.assertEquals(expectedEn, actualEn);
+        Assertions.assertEquals(expectedRu, actualRu);
+    }
+
+    @Test
+    public void getDurationAccordingToLangTest(){
+        String given = "5 hours";
+        String expectedEn = "5 hours";
+        String expectedRu = "5 часов";
+
+        String actualEn = Util.getDurationAccordingToLang(given, "en");
+        String actualRu = Util.getDurationAccordingToLang(given, "ru");
+
+        Assertions.assertEquals(expectedEn, actualEn);
+        Assertions.assertEquals(expectedRu, actualRu);
     }
 }
