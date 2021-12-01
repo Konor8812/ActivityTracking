@@ -1,6 +1,9 @@
 package model.util;
 
 import model.entity.Activity;
+import org.apache.commons.configuration2.PropertiesConfiguration;
+import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
+import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -143,6 +146,7 @@ public abstract class Util {
         req.getSession().removeAttribute("activityExists");
         req.getSession().removeAttribute("wrongTranslationFormat");
         req.getSession().removeAttribute("wrongTagName");
+        req.getSession().removeAttribute("wrongTranslation");
     }
 
 
@@ -165,23 +169,20 @@ public abstract class Util {
             try {
                 sb.append(rb.getString(words[i]))
                         .append(", ");
-                if (i == words.length - 2) {
-                    sb.append(rb.getString(words[++i]));
-                    break;
-                }
             }catch(MissingResourceException e){
                 sb.append(words[i]).append(", ");
                 try(BufferedWriter br = new BufferedWriter(new FileWriter("needs_localization.txt", true))){
                     br.write("\n");
                     br.write(words[i]);
+                    logger.info("successfully added to needs_localization.txt");
                 } catch(IOException ioe){
                     logger.error("wasn't able to write in needs_localization.txt", ioe);
-                }finally {
-                    logger.info("successfully added to needs_localization.txt");
                 }
             }
         }
-        return sb.toString();
+        StringBuilder temp = new StringBuilder(sb.toString().trim());
+
+        return temp.toString().endsWith(",") ? temp.deleteCharAt(temp.length() - 1).toString() : temp.toString();
     }
 
     public static String getNameAccordingToLang(String name, String language) {
@@ -220,5 +221,39 @@ public abstract class Util {
 
         return sb.toString().trim();
 
+    }
+
+    public static void loadProperty(String key, String value, String loc){
+        String bundleName = "loc_" + loc;
+        if(!propExists(key, bundleName)) {
+            try {
+                Configurations configs = new Configurations();
+
+                FileBasedConfigurationBuilder<PropertiesConfiguration> propBuilder = configs.propertiesBuilder(bundleName + ".properties");
+
+                PropertiesConfiguration config = propBuilder.getConfiguration();
+                String formattedKey = key.trim().replaceAll(" ", ".");
+                config.addProperty(formattedKey, value);
+
+                propBuilder.save();
+                System.out.println("added");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static boolean propExists(String key, String bundleName){
+
+        ResourceBundle rb = ResourceBundle.getBundle(bundleName);
+        String formattedKey = key.trim().replaceAll(" ", ".");
+
+        System.out.print(formattedKey);
+        if(rb.containsKey(key)){
+            System.out.print("   exists\n");
+            return true;
+        }
+        System.out.print("   not exists\n");
+        return false;
     }
 }
