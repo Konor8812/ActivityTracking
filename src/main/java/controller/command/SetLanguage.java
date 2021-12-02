@@ -10,7 +10,6 @@ public class SetLanguage implements Command {
 
 
         req.getSession().setAttribute("language", lang);
-        System.out.println(req.getSession().getAttribute("language"));
         return "index.jsp";
     }
 }

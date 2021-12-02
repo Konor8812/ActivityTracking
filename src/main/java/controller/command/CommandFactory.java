@@ -107,6 +107,9 @@ public class CommandFactory {
             case "setLanguage":
                 com = new SetLanguage();
                 break;
+            case "loadProperty":
+                com = new LoadProperty();
+                break;
         }
         return com;
     }

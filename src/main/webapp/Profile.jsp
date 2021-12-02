@@ -21,7 +21,6 @@
     <c:out value="${sessionScope.regedAs.login}"/><br>
     <fmt:message key="You.are"/> <fmt:message key="${sessionScope.regedAs.role}"/><br>
     <c:if test="${sessionScope.regedAs.role == 'admin'}"><br>
-        <fmt:message key="Download.txt.for.translation"/>
         <br>
         <img src="http://dl3.joxi.net/drive/2021/11/28/0038/3938/2494306/06/5150b13566.png">
     </c:if>

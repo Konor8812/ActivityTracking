@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="language" value="${empty sessionScope.language ? 'en' : sessionScope.language}" scope="session"/>
@@ -7,7 +7,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css"/>
-    <title>ActivityTracker</title>
+    <title><fmt:message key="ActivityTracker"/></title>
 </head>
 <body>
 <c:if test="${sessionScope.regedAs.role == 'admin'}">
@@ -170,7 +170,24 @@
             <input type="text" name="description"><br>
             <input type="submit">
         </form>
+<hr>
+        <form method="post" action="ActivityTracker?command=loadProperty">
+            <i> <fmt:message key="Enter.translation"/> </i><br>
+            <i><fmt:message key="Key"/> - </i>
+            <input type="text" name="key" ><br>
+            <i><fmt:message key="Value"/> - </i>
+            <input type="text" name="value"> <br>
 
+            <input type="submit">
+        </form>
+        <c:if test="${sessionScope.propertyExists}">
+            <fmt:message key="property.exists"/>
+        </c:if>
+<c:if test="${sessionScope.wrongTranslation}">
+    <fmt:message key="Wrong.translation.format"/>
+    <fmt:message key="Should.be"/>:
+    <fmt:message key="Translation.format"/>
+</c:if>
         <c:if test="${sessionScope.wrongDataFormat}">
             <fmt:message key="Wrong.data.Format!"/><br>
             <fmt:message key="Should.be"/>:

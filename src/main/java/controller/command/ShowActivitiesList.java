@@ -17,7 +17,7 @@ public class ShowActivitiesList implements Command {
         try{
             numberOfSeries = Integer.parseInt(req.getParameter("numberOfSeries"));
         }catch(Exception e){
-            //after being sorted or added new, should return to begin
+            //after added new, should return to begin
         }
 
         boolean isSorted = false;
@@ -34,7 +34,7 @@ public class ShowActivitiesList implements Command {
             int totalActivitiesAmount;
 
             try{
-                totalActivitiesAmount = (int) req.getSession().getAttribute("activitiesAmount");
+                totalActivitiesAmount = (int) req.getSession().getAttribute("totalActivitiesAmount");
             }catch(Exception e){
                 totalActivitiesAmount = activityService.getAllItemsAsList().size();
             }

@@ -38,4 +38,13 @@ public abstract class InputDataValidator {
         return nameMatches && durationMatches && descriptionMatches && rewardMatches;
     }
 
+    public static boolean validateProperty(String key, String value){
+        Pattern patternEn = Pattern.compile("[a-zA-Z ]+");
+        Pattern patternRu = Pattern.compile("[а-яА-Я ]+");
+
+        Matcher matcherEn = patternEn.matcher(key);
+        Matcher matcherRu = patternRu.matcher(value);
+
+        return matcherEn.matches() && matcherRu.matches();
+    }
 }

@@ -1,14 +1,15 @@
 package model.util;
 
 import model.entity.Activity;
+import model.exception.PropertyAlreadyExistsException;
 import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
+import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
@@ -160,24 +161,32 @@ public abstract class Util {
 
     public static String getDescriptionAccordingToLang(String description, String lang) {
         String rbLang = "loc_" + lang;
-        ResourceBundle rb = ResourceBundle.getBundle(rbLang);
+
+        Configurations configs = new Configurations();
+
+        FileBasedConfigurationBuilder<PropertiesConfiguration> propBuilder = configs.propertiesBuilder(rbLang + ".properties");
+
+        PropertiesConfiguration config = null;
+        try {
+            config = propBuilder.getConfiguration();
+
+        } catch (ConfigurationException e) {
+            logger.error("error getting config", e);
+        }
 
         StringBuilder sb = new StringBuilder();
         String[] words = description.split(", ");
 
         for (int i = 0; i < words.length; i++) {
             try {
-                sb.append(rb.getString(words[i]))
+                String word = config.getString(words[i]);
+
+                sb.append(word == null ? words[i] : word)
                         .append(", ");
-            }catch(MissingResourceException e){
+            } catch (MissingResourceException e) {
+                logger.info("Missing resource " + words[i]);
                 sb.append(words[i]).append(", ");
-                try(BufferedWriter br = new BufferedWriter(new FileWriter("needs_localization.txt", true))){
-                    br.write("\n");
-                    br.write(words[i]);
-                    logger.info("successfully added to needs_localization.txt");
-                } catch(IOException ioe){
-                    logger.error("wasn't able to write in needs_localization.txt", ioe);
-                }
+
             }
         }
         StringBuilder temp = new StringBuilder(sb.toString().trim());
@@ -188,22 +197,14 @@ public abstract class Util {
     public static String getNameAccordingToLang(String name, String language) {
         String rbLang = "loc_" + language;
         ResourceBundle rb = ResourceBundle.getBundle(rbLang);
-        String formattedName = name.replaceAll(" ", ".");
-        while(formattedName.endsWith(".")){
-            formattedName = new StringBuilder(formattedName).deleteCharAt(formattedName.length()-1).toString();
-        }
+        String formattedName = name.trim().replaceAll(" ", ".");
+
         try {
             return rb.getString(formattedName);
-        }catch(MissingResourceException e){
-            try(BufferedWriter br = new BufferedWriter(new FileWriter("needs_localization.txt", true))){
-                br.write("\n");
-                br.write(name);
-            } catch(IOException ioe){
-                logger.error("wasn't able to write in needs_localization.txt", ioe);
-            }finally {
-                logger.info("successfully added to needs_localization.txt");
-                return name;
-            }
+        } catch (MissingResourceException e) {
+            logger.info("Missing resource " + formattedName);
+            return name;
+
         }
     }
 
@@ -215,17 +216,15 @@ public abstract class Util {
         Matcher m = p.matcher(duration);
 
         StringBuilder sb = new StringBuilder();
-        if(m.find()){
+        if (m.find()) {
             sb.append(m.group(1)).append(" ").append(rb.getString(m.group(2)));
         }
-
         return sb.toString().trim();
-
     }
 
-    public static void loadProperty(String key, String value, String loc){
+    public static void loadProperty(String key, String value, String loc) throws PropertyAlreadyExistsException {
         String bundleName = "loc_" + loc;
-        if(!propExists(key, bundleName)) {
+        if (!propExists(key, bundleName)) {
             try {
                 Configurations configs = new Configurations();
 
@@ -236,24 +235,22 @@ public abstract class Util {
                 config.addProperty(formattedKey, value);
 
                 propBuilder.save();
-                System.out.println("added");
+                System.out.println("prop added " + formattedKey);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 
-    private static boolean propExists(String key, String bundleName){
+    private static boolean propExists(String key, String bundleName) throws PropertyAlreadyExistsException {
 
         ResourceBundle rb = ResourceBundle.getBundle(bundleName);
         String formattedKey = key.trim().replaceAll(" ", ".");
 
-        System.out.print(formattedKey);
-        if(rb.containsKey(key)){
-            System.out.print("   exists\n");
-            return true;
+        if (rb.containsKey(formattedKey)) {
+            throw new PropertyAlreadyExistsException(formattedKey + "exists");
+        } else {
+            return false;
         }
-        System.out.print("   not exists\n");
-        return false;
     }
 }

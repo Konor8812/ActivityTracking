@@ -21,15 +21,17 @@ public class Controller extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String command = req.getParameter("command");
-        logger.info("Get#command ==> " + command);
+//        logger.info("Get#command ==> " + command);
         executeCommand(req, resp, command);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String command = req.getParameter("command");
-        logger.info("Post#command ==> " + command);
+//        logger.info("Post#command ==> " + command);
         executeCommand(req, resp, command);
 
     }
