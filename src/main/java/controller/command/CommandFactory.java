@@ -1,6 +1,8 @@
 package controller.command;
 
 
+import model.util.Util;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -21,8 +23,10 @@ public class CommandFactory {
 
     public void executeCommand(HttpServletRequest req, HttpServletResponse resp, String command) throws IOException {
         Command com = getCommand(command);
-        String next = com.execute(req);
-
+        String next = "index.jsp";
+        if(Util.checkForSecurity(command, req)) {
+            next = com.execute(req);
+        }
         resp.sendRedirect(next);
     }
 
@@ -30,85 +34,88 @@ public class CommandFactory {
         Command com = null;
         switch (name) {
             case "regUser":
-                com = new RegUser();
+                com = new RegUserCommand();
                 break;
             case "deleteAllUsers":
-                com = new DeleteAllUsers();
+                com = new DeleteAllUsersCommand();
                 break;
             case "deleteUser":
-                com = new DeleteUser();
+                com = new DeleteUserCommand();
                 break;
             case "showUsers":
-                com = new ShowUsersList();
+                com = new ShowUsersListCommand();
                 break;
             case "logIn":
-                com = new LoginUser();
+                com = new LoginUserCommand();
                 break;
             case "showActivities":
-                com = new ShowActivitiesList();
+                com = new ShowActivitiesListCommand();
                 break;
             case "addActivity":
-                com = new InsertActivity();
+                com = new InsertActivityCommand();
                 break;
             case "getActivitiesDescription":
-                com = new GetActivityDescription();
+                com = new GetActivityDescriptionCommand();
                 break;
             case "hideActivitiesDescription":
-                com = new HideActivityDescription();
+                com = new HideActivityDescriptionCommand();
                 break;
             case "logOut":
-                com = new LogOut();
+                com = new LogOutCommand();
                 break;
             case "regActivityForUser":
-                com = new ApproveActivityForUser();
+                com = new ApproveActivityForUserCommand();
                 break;
             case "showProfile":
-                com = new ShowProfile();
+                com = new ShowProfileCommand();
                 break;
             case "changePass":
-                com = new ChangePass();
+                com = new ChangePassCommand();
                 break;
             case "returnToMain":
-                com = new ReturnToMain();
+                com = new ReturnToMainCommand();
                 break;
             case "showUsersActivities":
-                com = new ShowUsersActivities();
+                com = new ShowUsersActivitiesCommand();
                 break;
             case "deleteUsersActivity":
-                com = new DeleteUsersActivity();
+                com = new DeleteUsersActivityCommand();
                 break;
             case "deleteActivity":
-                com = new DeleteActivity();
+                com = new DeleteActivityCommand();
                 break;
             case "hideUsersActivities":
-                com = new HideUsersActivities();
+                com = new HideUsersActivitiesCommand();
                 break;
             case "blockUser":
-                com = new BlockUser();
+                com = new BlockUserCommand();
                 break;
             case "unblockUser":
-                com = new UnblockUser();
+                com = new UnblockUserCommand();
                 break;
             case "showOnlyBlockedUsers":
-                com = new GetAllBlocked();
+                com = new GetAllBlockedCommand();
                 break;
             case "reqActivity":
-                com = new RequestedActivity();
+                com = new RequestedActivityCommand();
                 break;
             case "getUsersRequests":
-                com = new GetUsersRequests();
+                com = new GetUsersRequestsCommand();
                 break;
             case "denyApproval":
-                com = new DenyApproval();
+                com = new DenyApprovalCommand();
                 break;
             case "sortActivities":
-                com = new SortActivities();
+                com = new SortActivitiesCommand();
                 break;
             case "setLanguage":
-                com = new SetLanguage();
+                com = new SetLanguageCommand();
                 break;
             case "loadProperty":
-                com = new LoadProperty();
+                com = new LoadPropertyCommand();
+                break;
+            case "searchByTag":
+                com = new SearchByTagCommand();
                 break;
         }
         return com;

@@ -4,7 +4,7 @@ import service.implementations.UserActivityService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class DenyApproval implements Command {
+public class DenyApprovalCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         UserActivityService userActivityService = new UserActivityService();

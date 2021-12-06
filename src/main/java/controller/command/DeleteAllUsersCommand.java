@@ -4,10 +4,10 @@ import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class DeleteAllUsers implements Command{
+public class DeleteAllUsersCommand implements Command{
 
 
-    public DeleteAllUsers() { }
+    public DeleteAllUsersCommand() { }
 
     @Override
     public String execute(HttpServletRequest req) {

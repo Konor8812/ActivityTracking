@@ -6,7 +6,7 @@ import service.implementations.UserService;
 import javax.servlet.http.HttpServletRequest;
 
 
-public class DeleteUser implements Command {
+public class DeleteUserCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {

@@ -6,7 +6,7 @@ import service.implementations.UserService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-public class GetAllBlocked implements Command {
+public class GetAllBlockedCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         UserService userService = new UserService();

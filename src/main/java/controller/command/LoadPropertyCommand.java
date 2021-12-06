@@ -6,9 +6,10 @@ import model.util.Util;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class LoadProperty implements Command {
+public class LoadPropertyCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
+        Util.removeActivityRelatedAttributes(req);
         String key = req.getParameter("key");
         String value = req.getParameter("value");
 
@@ -17,14 +18,13 @@ public class LoadProperty implements Command {
                 req.getSession().removeAttribute("propertyExists");
                 Util.loadProperty(key, value, "ru");
                 Util.loadProperty(key, key, "en");
-                req.setAttribute("isSorted", false);
             }catch(PropertyAlreadyExistsException e){
                 req.getSession().setAttribute("propertyExists", true);
             }
-
         }else{
             req.getSession().setAttribute("wrongTranslation", true);
         }
+
         return CommandFactory.getInstance().getCommand("showActivities").execute(req);
     }
 }

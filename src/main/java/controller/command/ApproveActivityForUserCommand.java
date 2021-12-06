@@ -4,7 +4,7 @@ import service.implementations.UserActivityService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class ApproveActivityForUser implements Command {
+public class ApproveActivityForUserCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         int userId = Integer.parseInt(req.getParameter("userId"));

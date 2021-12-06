@@ -4,7 +4,7 @@ import model.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class GetActivityDescription implements Command {
+public class GetActivityDescriptionCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {

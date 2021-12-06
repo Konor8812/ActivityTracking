@@ -9,7 +9,7 @@ import service.implementations.UserActivityService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-public class ShowUsersActivities implements Command {
+public class ShowUsersActivitiesCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {

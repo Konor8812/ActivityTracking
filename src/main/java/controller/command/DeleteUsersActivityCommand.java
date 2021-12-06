@@ -9,7 +9,7 @@ import service.implementations.UserService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-public class DeleteUsersActivity implements Command {
+public class DeleteUsersActivityCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
 

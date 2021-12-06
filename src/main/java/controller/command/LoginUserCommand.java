@@ -7,11 +7,11 @@ import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class LoginUser implements Command {
+public class LoginUserCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
-        Util.removeUnneededAttributes(req);
+        Util.removeIndexAttributes(req);
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         if (InputDataValidator.validatePass(password) && InputDataValidator.validateLogin(login)) {
@@ -25,7 +25,7 @@ public class LoginUser implements Command {
                     req.getSession().setAttribute("userIsBlocked", true);
                     return "index.jsp";
                 }
-
+                Util.removeIndexAttributes(req);
                 req.getSession().setAttribute("regedAs", user);
                 if (role.equals("user")) {
                     return CommandFactory.getInstance().getCommand("showActivities").execute(req);

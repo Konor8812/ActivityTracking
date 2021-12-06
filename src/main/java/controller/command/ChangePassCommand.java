@@ -5,7 +5,7 @@ import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class ChangePass implements Command{
+public class ChangePassCommand implements Command{
 
     @Override
     public String execute(HttpServletRequest req) {

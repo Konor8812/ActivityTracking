@@ -4,7 +4,7 @@ import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class BlockUser implements Command {
+public class BlockUserCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
 

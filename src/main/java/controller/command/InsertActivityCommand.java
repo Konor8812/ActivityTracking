@@ -8,7 +8,7 @@ import service.implementations.ActivityService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class InsertActivity implements Command {
+public class InsertActivityCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {

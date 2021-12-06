@@ -4,7 +4,7 @@ import model.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class HideActivityDescription implements Command {
+public class HideActivityDescriptionCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
 

@@ -62,6 +62,10 @@
         </tr>
     </c:forEach>
     </table>
+    <c:if test="${sessionScope.numberOfSeries + 5< sessionScope.totalActivitiesAmount}">
+        <a href="ActivityTracker?command=showActivities&numberOfSeries=${sessionScope.numberOfSeries+5}"><fmt:message key="next"/> 5 </a>
+    </c:if><br><br>
+    <a href="ActivityTracker?command=showActivities&num=0"><fmt:message key="to.begin"/></a><hr>
     <c:if test="${sessionScope.activityTaken}">
         <fmt:message key="You.have.already.taken.this.activity"/>
     </c:if>
@@ -72,5 +76,9 @@
         <fmt:message key="Access.denied!!!"/>
         <a href="index.jsp"><fmt:message key="Log.in"/></a>
     </c:if>
+<c:if test="${empty sessionScope.regedAs}">
+    <fmt:message key="Access.denied!!!"/><br>
+    <a href="index.jsp"><fmt:message key="Log.in"/></a>
+</c:if>
 </body>
 </html>

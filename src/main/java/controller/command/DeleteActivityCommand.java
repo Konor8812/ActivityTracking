@@ -5,7 +5,7 @@ import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class DeleteActivity implements Command {
+public class DeleteActivityCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
 

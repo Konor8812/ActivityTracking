@@ -8,7 +8,7 @@ import service.implementations.ActivityService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-public class ShowActivitiesList implements Command {
+public class ShowActivitiesListCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
@@ -17,7 +17,7 @@ public class ShowActivitiesList implements Command {
         try{
             numberOfSeries = Integer.parseInt(req.getParameter("numberOfSeries"));
         }catch(Exception e){
-            //after added new, should return to begin
+            //after added new activity or localization key, should return to begin
         }
 
         boolean isSorted = false;
@@ -54,6 +54,8 @@ public class ShowActivitiesList implements Command {
         req.getSession().setAttribute("shouldShowActivities", true);
         req.getSession().setAttribute("shouldShowUsers", false);
         req.getSession().setAttribute("shouldShowTags", false);
+
+
         User user = (User)req.getSession().getAttribute("regedAs");
         return user.getRole().equals("user") ? "User.jsp" : "Admin.jsp";
     }

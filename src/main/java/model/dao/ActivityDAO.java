@@ -206,7 +206,6 @@ public class ActivityDAO {
     }
 
     public List<Activity> getFiveActivities(int num) {
-
         Connection con = null;
         ResultSet rs = null;
         PreparedStatement prstmt = null;
@@ -229,4 +228,5 @@ public class ActivityDAO {
         }
         return activities;
     }
+
 }

@@ -117,10 +117,16 @@
         <form action="ActivityTracker?command=showUsers" method="post">
             <input type="submit" value="get users!"/>
         </form>
+            <form action="TagSearch.jsp" method="post">
+                <input type="submit" value="search activity by tag"/>
+            </form>
         </c:if>
         <c:if test="${sessionScope.language == 'ru'}">
             <form action="ActivityTracker?command=showUsers" method="post">
                 <input type="submit" value="показать пользователей!"/>
+            </form>
+            <form action="TagSearch.jsp">
+                <input type="submit" value="поиск по метке"/>
             </form>
         </c:if>
         <table>
@@ -203,6 +209,10 @@
 </c:if>
 <c:if test="${sessionScope.regedAs.role ne 'admin'}">
     <fmt:message key="Access.denied!!!"/>
+    <a href="index.jsp"><fmt:message key="Log.in"/></a>
+</c:if>
+<c:if test="${empty sessionScope.regedAs}">
+    <fmt:message key="Access.denied!!!"/><br>
     <a href="index.jsp"><fmt:message key="Log.in"/></a>
 </c:if>
 </body>

@@ -1,14 +1,16 @@
 package controller.command;
 
+import model.util.Util;
+
 import javax.servlet.http.HttpServletRequest;
 
-public class LogOut implements Command{
+public class LogOutCommand implements Command{
 
     @Override
     public String execute(HttpServletRequest req) {
 
-        req.getSession().removeAttribute("regedAs");
-        req.getSession().removeAttribute("activityTaken");
+        Util.removeAllAttributes(req);
+
         return "index.jsp";
     }
 }

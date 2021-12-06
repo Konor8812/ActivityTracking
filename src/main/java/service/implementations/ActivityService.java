@@ -7,6 +7,7 @@ import model.entity.Activity;
 import model.exception.ServiceException;
 import service.entityExtention.ActivityExtension;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ActivityService implements ActivityExtension {
@@ -22,11 +23,6 @@ public class ActivityService implements ActivityExtension {
     @Override
     public double getRewardForActivity(int activityId) {
         return activityDAO.getActivityById(activityId).getReward();
-    }
-
-    @Override
-    public Activity getActivityByName(String name) {
-        return activityDAO.getActivityByName(name);
     }
 
     @Override

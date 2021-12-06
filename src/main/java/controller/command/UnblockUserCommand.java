@@ -4,7 +4,7 @@ import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class UnblockUser implements Command {
+public class UnblockUserCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         UserService userService = new UserService();

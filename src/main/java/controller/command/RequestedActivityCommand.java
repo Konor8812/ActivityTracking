@@ -5,7 +5,7 @@ import service.implementations.UserActivityService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class RequestedActivity implements Command {
+public class RequestedActivityCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
 

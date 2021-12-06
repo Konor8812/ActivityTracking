@@ -1,6 +1,7 @@
 package model.util;
 
 import model.entity.Activity;
+import model.entity.User;
 import model.exception.PropertyAlreadyExistsException;
 import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
@@ -9,7 +10,6 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
@@ -136,39 +136,12 @@ public abstract class Util {
         return sorted;
     }
 
-    public static void removeUnneededAttributes(HttpServletRequest req) {
-        req.getSession().removeAttribute("loginError");
-        req.getSession().removeAttribute("regError");
-        req.getSession().removeAttribute("userIsBlocked");
-        req.getSession().removeAttribute("wrongData");
-        req.getSession().removeAttribute("shouldShowUsersActivities");
-        req.getSession().removeAttribute("activityTaken");
-        req.getSession().removeAttribute("wrongDataFormat");
-        req.getSession().removeAttribute("activityExists");
-        req.getSession().removeAttribute("wrongTranslationFormat");
-        req.getSession().removeAttribute("wrongTagName");
-        req.getSession().removeAttribute("wrongTranslation");
-    }
-
-
-    public static void removeActivityRelatedAttributes(HttpServletRequest req) {
-        req.getSession().removeAttribute("wrongDurationFormat");
-        req.getSession().removeAttribute("numberOfSeries");
-        req.getSession().removeAttribute("activities");
-        req.getSession().removeAttribute("sorted");
-        req.getSession().removeAttribute("activityExists");
-    }
-
     public static String getDescriptionAccordingToLang(String description, String lang) {
-        String rbLang = "loc_" + lang;
-
-        Configurations configs = new Configurations();
-
-        FileBasedConfigurationBuilder<PropertiesConfiguration> propBuilder = configs.propertiesBuilder(rbLang + ".properties");
+        String bundleName = "loc_" + lang;
 
         PropertiesConfiguration config = null;
         try {
-            config = propBuilder.getConfiguration();
+            config = getPropertiesConfiguration(bundleName);
 
         } catch (ConfigurationException e) {
             logger.error("error getting config", e);
@@ -195,17 +168,20 @@ public abstract class Util {
     }
 
     public static String getNameAccordingToLang(String name, String language) {
-        String rbLang = "loc_" + language;
-        ResourceBundle rb = ResourceBundle.getBundle(rbLang);
-        String formattedName = name.trim().replaceAll(" ", ".");
+        String bundleName = "loc_" + language;
 
+        PropertiesConfiguration config = null;
         try {
-            return rb.getString(formattedName);
-        } catch (MissingResourceException e) {
-            logger.info("Missing resource " + formattedName);
-            return name;
-
+            config = getPropertiesConfiguration(bundleName);
+        } catch (ConfigurationException e) {
+            logger.error("error getting config", e);
         }
+
+        String formattedName = name.trim().replaceAll(" ", ".");
+        String value = config.getString(formattedName);
+
+        return value == null ? name : value;
+
     }
 
     public static String getDurationAccordingToLang(String duration, String language) {
@@ -235,11 +211,17 @@ public abstract class Util {
                 config.addProperty(formattedKey, value);
 
                 propBuilder.save();
-                System.out.println("prop added " + formattedKey);
+                System.out.println("prop added " + config.getString(formattedKey));
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    private static PropertiesConfiguration getPropertiesConfiguration(String bundleName) throws ConfigurationException{
+        Configurations configs = new Configurations();
+        FileBasedConfigurationBuilder<PropertiesConfiguration> propBuilder = configs.propertiesBuilder(bundleName + ".properties");
+        return propBuilder.getConfiguration();
     }
 
     private static boolean propExists(String key, String bundleName) throws PropertyAlreadyExistsException {
@@ -252,5 +234,68 @@ public abstract class Util {
         } else {
             return false;
         }
+    }
+
+    public static void removeAllAttributes(HttpServletRequest req) {
+        removeIndexAttributes(req);
+        removeActivityRelatedAttributes(req);
+        removeUsersRelatedAttributes(req);
+        removeAdminRelatedAttributes(req);
+        req.getSession().removeAttribute("regedAs");
+
+    }
+
+    public static void removeIndexAttributes(HttpServletRequest req) {
+        req.getSession().removeAttribute("loginError");
+        req.getSession().removeAttribute("regError");
+        req.getSession().removeAttribute("userIsBlocked");
+        req.getSession().removeAttribute("wrongData");
+
+    }
+
+    public static void removeActivityRelatedAttributes(HttpServletRequest req) {
+        req.getSession().removeAttribute("wrongDurationFormat");
+        req.getSession().removeAttribute("numberOfSeries");
+        req.getSession().removeAttribute("activities");
+        req.getSession().removeAttribute("sorted");
+        req.getSession().removeAttribute("activityExists");
+        req.getSession().removeAttribute("wrongTranslation");
+        req.getSession().removeAttribute("shouldShowTags");
+        req.getSession().removeAttribute("wrongDataFormat");
+        req.getSession().removeAttribute("propertyExists");
+        req.getSession().removeAttribute("wrongTranslation");
+    }
+
+    public static void removeUsersRelatedAttributes(HttpServletRequest req) {
+        req.getSession().removeAttribute("totalActivitiesAmount");
+        req.getSession().removeAttribute("shouldShowUsersActivities");
+        req.getSession().removeAttribute("shouldShowActivities");
+        req.getSession().removeAttribute("shouldShowUsersActivities");
+        req.getSession().removeAttribute("activityTaken");
+        req.getSession().removeAttribute("usersActivities");
+        req.getSession().removeAttribute("showChangePassField");
+
+    }
+    public static void removeAdminRelatedAttributes(HttpServletRequest req) {
+        req.getSession().removeAttribute("shouldPrintUsers");
+        req.getSession().removeAttribute("shouldShowUsers");
+        req.getSession().removeAttribute("shouldShowActivities");
+        req.getSession().removeAttribute("blockedUsers");
+        req.getSession().removeAttribute("shouldShowBlockedUsers");
+        req.getSession().removeAttribute("requests");
+        req.getSession().removeAttribute("user");
+        req.getSession().removeAttribute("activities");
+        req.getSession().removeAttribute("users");
+        req.getSession().removeAttribute("invalidTagName");
+    }
+
+    public static boolean checkForSecurity(String command, HttpServletRequest req) {
+        User user = (User) req.getSession().getAttribute("regedAs");
+
+        if(user == null && (command.equals("regUser") || command.equals("logIn") || command.equals("setLanguage"))){
+            return true;
+        }
+        return user != null;
+
     }
 }

@@ -8,12 +8,12 @@ import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class RegUser implements Command {
+public class RegUserCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
 
-        Util.removeUnneededAttributes(req);
+        Util.removeIndexAttributes(req);
         String login = req.getParameter("login");
         String pass = req.getParameter("password");
 
@@ -29,7 +29,7 @@ public class RegUser implements Command {
                 user = userService.getUserByLoginAndPassword(login, encryptedPassword);
                 req.getSession().setAttribute("regedAs", user);
                 CommandFactory cf = CommandFactory.getInstance();
-
+                Util.removeIndexAttributes(req);
                 return cf.getCommand("showActivities").execute(req);
 
             } catch (ServiceException e) {

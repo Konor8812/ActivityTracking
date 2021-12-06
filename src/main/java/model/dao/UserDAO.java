@@ -114,7 +114,7 @@ public class UserDAO {
                 user.setId(rs.getInt("id"));
                 user.setActivitiesAmount(rs.getInt("activities_amount"));
                 user.setRole(rs.getString("role"));
-                user.setTotalPoints(rs.getInt("total_points"));
+                user.setTotalPoints(rs.getDouble("total_points"));
                 user.setStatus(rs.getString("status"));
                 user.setRequestsAmount(rs.getInt("requests_amount"));
 

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
-public class SortActivities implements Command{
+public class SortActivitiesCommand implements Command{
     @Override
     public String execute(HttpServletRequest req) {
 

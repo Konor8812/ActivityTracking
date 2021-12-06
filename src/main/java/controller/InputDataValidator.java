@@ -22,15 +22,17 @@ public abstract class InputDataValidator {
         Matcher durationMatcher = Pattern.compile(duration.contains(".") ? "([0-9]+.[0-9]) (hours|days)" : "([0-9])+ (hours|days)").matcher(duration);
         boolean durationMatches = durationMatcher.matches();
 
-
-
         Matcher descriptionMatcher = Pattern.compile("[a-zA-Z ,]{3,50}").matcher(description);
         boolean descriptionMatches = descriptionMatcher.matches();
 
         boolean rewardMatches = false;
         try {
             Double.parseDouble(reward);
-            rewardMatches = true;
+            Matcher m = Pattern.compile("([0-9]+.[0-9])").matcher(reward);
+            Matcher m2 = Pattern.compile("([0-9]+)").matcher(reward);
+            if(m.matches() || m2.matches()) {
+                rewardMatches = true;
+            }
         } catch (Exception e) {
             //reward format is wrong, data not valid
         }
@@ -46,5 +48,14 @@ public abstract class InputDataValidator {
         Matcher matcherRu = patternRu.matcher(value);
 
         return matcherEn.matches() && matcherRu.matches();
+    }
+
+    public static boolean validateTagName(String tagName) {
+        Pattern patternEn = Pattern.compile("[a-zA-Z ]+");
+        Pattern patternRu = Pattern.compile("[а-яА-Я ]+");
+
+        Matcher matcherEn = patternEn.matcher(tagName);
+        Matcher matcherRu = patternRu.matcher(tagName);
+        return matcherEn.matches() || matcherRu.matches();
     }
 }

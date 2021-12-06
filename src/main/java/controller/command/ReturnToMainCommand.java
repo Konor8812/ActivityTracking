@@ -5,11 +5,10 @@ import model.util.Util;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class ReturnToMain implements Command {
+public class ReturnToMainCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
-
-        Util.removeUnneededAttributes(req);
+        Util.removeIndexAttributes(req);
 
         User user = (User)req.getSession().getAttribute("regedAs");
 

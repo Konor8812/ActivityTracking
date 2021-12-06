@@ -2,7 +2,7 @@ package controller.command;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class HideUsersActivities implements Command {
+public class HideUsersActivitiesCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
 
