@@ -7663,3 +7663,21 @@ java.io.FileNotFoundException: loc_en.properties (The system cannot find the fil
 22:53:28,303  INFO http-nio-8080-exec-20 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
 22:54:49,531  INFO http-nio-8080-exec-13 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
 22:54:49,532  INFO http-nio-8080-exec-13 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:23:00,586  INFO http-nio-8080-exec-5 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:23:00,707  INFO http-nio-8080-exec-5 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:23:04,502  INFO http-nio-8080-exec-1 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:23:04,504  INFO http-nio-8080-exec-1 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:25:00,664  INFO http-nio-8080-exec-15 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:25:00,665  INFO http-nio-8080-exec-15 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:27:18,310  INFO http-nio-8080-exec-23 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:27:18,312  INFO http-nio-8080-exec-23 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:29:34,829  INFO http-nio-8080-exec-30 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:29:34,831  INFO http-nio-8080-exec-30 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:30:09,702  INFO http-nio-8080-exec-34 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:30:09,703  INFO http-nio-8080-exec-34 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:34:13,144  INFO http-nio-8080-exec-52 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:34:13,145  INFO http-nio-8080-exec-52 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:34:21,531  INFO http-nio-8080-exec-48 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:34:21,570  INFO http-nio-8080-exec-48 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+23:34:43,840  INFO http-nio-8080-exec-53 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
+23:34:43,842  INFO http-nio-8080-exec-53 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting

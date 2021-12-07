@@ -62,9 +62,13 @@
         </tr>
     </c:forEach>
     </table>
-    <c:if test="${sessionScope.numberOfSeries + 5< sessionScope.totalActivitiesAmount}">
+    <c:if test="${sessionScope.numberOfSeries + 5 < sessionScope.totalActivitiesAmount}">
         <a href="ActivityTracker?command=showActivities&numberOfSeries=${sessionScope.numberOfSeries+5}"><fmt:message key="next"/> 5 </a>
-    </c:if><br><br>
+    </c:if><br>
+    <c:if test="${sessionScope.numberOfSeries > 0}">
+
+    <a href="ActivityTracker?command=showActivities&numberOfSeries=${sessionScope.numberOfSeries-5}"><fmt:message key="prev"/> 5 </a>
+</c:if><br>
     <a href="ActivityTracker?command=showActivities&num=0"><fmt:message key="to.begin"/></a><hr>
     <c:if test="${sessionScope.activityTaken}">
         <fmt:message key="You.have.already.taken.this.activity"/>
