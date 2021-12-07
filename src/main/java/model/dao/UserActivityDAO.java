@@ -20,13 +20,6 @@ public class UserActivityDAO {
     private static UserActivityDAO instance;
     private static Logger logger = Logger.getLogger(UserActivityDAO.class);
 
-    private static final String REQ_ACTIVITY_FOR_USER = "INSERT INTO user_has_activity (user_id, activity_id) VALUES (?,?)";
-    private static final String REG_ACTIVITY_FOR_USER = "UPDATE user_has_activity SET time_spent=(?), status=(?) WHERE user_id=(?) AND activity_id=(?)";
-    private static final String CHECK_IF_ACTIVITY_ALREADY_TAKEN_BY_USER = "SELECT * FROM user_has_activity WHERE user_id=(?) AND activity_id=(?)";
-    private static final String GET_USERS_ACTIVITIES = "SELECT * FROM user_has_activity WHERE user_id=(?)";
-    private static final String DELETE_USERS_ACTIVITY = "DELETE FROM user_has_activity WHERE user_id=(?) AND activity_id=(?)";
-    private static final String GET_USERS_WITH_THIS_ACTIVITY = "SELECT * FROM user_has_activity WHERE activity_id=(?)";
-    private static final String GET_TIME_SPENT = "SELECT * FROM user_has_activity WHERE user_id=(?) AND activity_id=(?)";
 
     public static synchronized UserActivityDAO getInstance() {
         if (instance == null) {
@@ -43,7 +36,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(CHECK_IF_ACTIVITY_ALREADY_TAKEN_BY_USER);
+            prstmt = con.prepareStatement(ConstantsDAO.CHECK_IF_ACTIVITY_ALREADY_TAKEN_BY_USER);
             prstmt.setInt(1, userId);
             prstmt.setInt(2, activityId);
             rs = prstmt.executeQuery();
@@ -70,7 +63,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_USERS_ACTIVITIES);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_USERS_ACTIVITIES);
             prstmt.setInt(1, userId);
             rs = prstmt.executeQuery();
             while (rs.next()) {
@@ -99,7 +92,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(CHECK_IF_ACTIVITY_ALREADY_TAKEN_BY_USER);
+            prstmt = con.prepareStatement(ConstantsDAO.CHECK_IF_ACTIVITY_ALREADY_TAKEN_BY_USER);
             prstmt.setInt(1, userId);
             prstmt.setInt(2, activityId);
             rs = prstmt.executeQuery();
@@ -121,7 +114,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(DELETE_USERS_ACTIVITY);
+            prstmt = con.prepareStatement(ConstantsDAO.DELETE_USERS_ACTIVITY);
             prstmt.setInt(1, userId);
             prstmt.setInt(2, activityId);
             prstmt.execute();
@@ -144,7 +137,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_USERS_WITH_THIS_ACTIVITY);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_USERS_WITH_THIS_ACTIVITY);
             prstmt.setInt(1, activityId);
             rs = prstmt.executeQuery();
             while (rs.next()) {
@@ -167,7 +160,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_TIME_SPENT);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_TIME_SPENT);
             prstmt.setInt(1, userId);
             prstmt.setInt(2, activityId);
             rs = prstmt.executeQuery();
@@ -190,7 +183,7 @@ public class UserActivityDAO {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
             if (!checkIfUserHasThisActivity(userId, activityId)) {
-                prstmt = con.prepareStatement(REQ_ACTIVITY_FOR_USER);
+                prstmt = con.prepareStatement(ConstantsDAO.REQ_ACTIVITY_FOR_USER);
                 prstmt.setInt(1, userId);
                 prstmt.setInt(2, activityId);
                 prstmt.execute();
@@ -211,7 +204,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(REG_ACTIVITY_FOR_USER);
+            prstmt = con.prepareStatement(ConstantsDAO.REG_ACTIVITY_FOR_USER);
 
             prstmt.setLong(1, System.currentTimeMillis());
             prstmt.setString(2, "in_process");
@@ -233,7 +226,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(REG_ACTIVITY_FOR_USER);
+            prstmt = con.prepareStatement(ConstantsDAO.REG_ACTIVITY_FOR_USER);
             prstmt.setLong(1, 0);
             prstmt.setString(2, "denied");
             prstmt.setInt(3, userId);
@@ -254,7 +247,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(REG_ACTIVITY_FOR_USER);
+            prstmt = con.prepareStatement(ConstantsDAO.REG_ACTIVITY_FOR_USER);
             long timeSpent = getTimeSpent(userId, activityId);
             prstmt.setLong(1, timeSpent);
             prstmt.setString(2, "completed");
@@ -283,7 +276,7 @@ public class UserActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_USERS_WITH_THIS_ACTIVITY);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_USERS_WITH_THIS_ACTIVITY);
             prstmt.setInt(1, activityId);
             rs = prstmt.executeQuery();
             while (rs.next()) {

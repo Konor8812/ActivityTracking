@@ -16,23 +16,6 @@ public class UserDAO {
     private static UserDAO instance;
     private static Logger logger = Logger.getLogger(UserDAO.class);
 
-    private static final String GET_LOGGED_IN_USER = "SELECT * FROM user WHERE login=(?)";
-    private static final String GET_USER_BY_ID = "SELECT * FROM user WHERE id=(?)";
-    private static final String GET_USERS_AS_LIST = "SELECT * FROM user WHERE role='user' AND status='available'";
-    private static final String INSERT_USER = "INSERT INTO user (login, password) VALUES (?, ?)";
-    private static final String DELETE_USER = "DELETE FROM user WHERE id=(?)";
-    private static final String DELETE_ALL_USERS = "DELETE FROM user WHERE role='user'";
-    private static final String CHECK_IF_LOGIN_EXISTS = "SELECT * FROM user WHERE login=(?)";
-    private static final String UPDATE_PASSWORD = "UPDATE user SET password=(?) WHERE id=(?)";
-    private static final String CHANGE_ACTIVITIES_AMOUNT = "UPDATE user SET activities_amount=(?) WHERE id=(?)";
-    private static final String GIVE_POINT_FOR_COMPLETED_ACTIVITY = "UPDATE user SET total_points=(?) WHERE id=(?)";
-    private static final String BLOCK_USER = "UPDATE user SET status='blocked' WHERE id=(?)";
-    private static final String UNBLOCK_USER = "UPDATE user SET status='available' WHERE id=(?)";
-    private static final String GET_ALL_BLOCKED = "SELECT * FROM user WHERE status='blocked'";
-    private static final String CHANGE_REQUESTS_AMOUNT = "UPDATE user SET requests_amount=(?) WHERE id=(?)";
-    private static final String GET_USERS_REQUESTED_ACTIVITIES = "SELECT * FROM user_has_activity WHERE user_id=(?) AND status='requested'";
-
-
 
     public static synchronized UserDAO getInstance() {
         if (instance == null) {
@@ -50,7 +33,7 @@ public class UserDAO {
             if (!checkIfLoginExists(login)) {
                 ConnectionPool cp = ConnectionPool.getInstance();
                 con = cp.getConnection();
-                prstmt = con.prepareStatement(INSERT_USER);
+                prstmt = con.prepareStatement(ConstantsDAO.INSERT_USER);
                 prstmt.setString(1, login);
                 prstmt.setString(2, pass);
                 prstmt.execute();
@@ -70,7 +53,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(DELETE_USER);
+            prstmt = con.prepareStatement(ConstantsDAO.DELETE_USER);
             prstmt.setInt(1, userId);
             prstmt.execute();
             return true;
@@ -89,7 +72,7 @@ public class UserDAO {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
             stmt = con.createStatement();
-            stmt.execute(DELETE_ALL_USERS);
+            stmt.execute(ConstantsDAO.DELETE_ALL_USERS);
         } catch (SQLException e) {
             logger.error("SQLException occurred trying to delete all users", e);
         } finally {
@@ -106,7 +89,7 @@ public class UserDAO {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
             stmt = con.createStatement();
-            rs = stmt.executeQuery(GET_USERS_AS_LIST);
+            rs = stmt.executeQuery(ConstantsDAO.GET_USERS_AS_LIST);
             while (rs.next()) {
                 User user = new User();
                 user.setLogin(rs.getString("login"));
@@ -135,7 +118,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(CHANGE_REQUESTS_AMOUNT);
+            prstmt = con.prepareStatement(ConstantsDAO.CHANGE_REQUESTS_AMOUNT);
             User user = getUserById(userId);
             int requestsAmount = user.getRequestsAmount();
             if(increment){
@@ -164,7 +147,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_LOGGED_IN_USER);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_LOGGED_IN_USER);
             prstmt.setString(1, login);
             rs = prstmt.executeQuery();
             if (rs.next()) {
@@ -193,7 +176,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(CHECK_IF_LOGIN_EXISTS);
+            prstmt = con.prepareStatement(ConstantsDAO.CHECK_IF_LOGIN_EXISTS);
             prstmt.setString(1, login);
             rs = prstmt.executeQuery();
             if (rs.next()) {
@@ -216,12 +199,12 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_USER_BY_ID);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_USER_BY_ID);
             prstmt.setInt(1, userId);
             rs = prstmt.executeQuery();
             if (rs.next()) {
                 int activitiesAmount = rs.getInt("activities_amount");
-                prstmt = con.prepareStatement(CHANGE_ACTIVITIES_AMOUNT);
+                prstmt = con.prepareStatement(ConstantsDAO.CHANGE_ACTIVITIES_AMOUNT);
                 prstmt.setString(1, Integer.toString(++activitiesAmount));
                 prstmt.setInt(2, userId);
                 prstmt.execute();
@@ -239,7 +222,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(UPDATE_PASSWORD);
+            prstmt = con.prepareStatement(ConstantsDAO.UPDATE_PASSWORD);
             prstmt.setString(1, newPassword);
             prstmt.setString(2, Integer.toString(id));
             prstmt.execute();
@@ -258,14 +241,14 @@ public class UserDAO {
             con = cp.getConnection();
             User user = getUserById(userId);
 
-            prstmt = con.prepareStatement(CHANGE_ACTIVITIES_AMOUNT);
+            prstmt = con.prepareStatement(ConstantsDAO.CHANGE_ACTIVITIES_AMOUNT);
             int activitiesAmount = user.getActivitiesAmount();
             prstmt.setInt(1, --activitiesAmount);
             prstmt.setInt(2, userId);
             prstmt.execute();
             if (rewardForActivity != 0) {
                 double totalPoints = user.getTotalPoints();
-                prstmt = con.prepareStatement(GIVE_POINT_FOR_COMPLETED_ACTIVITY);
+                prstmt = con.prepareStatement(ConstantsDAO.GIVE_POINT_FOR_COMPLETED_ACTIVITY);
                 prstmt.setDouble(1, totalPoints + rewardForActivity);
                 prstmt.setInt(2, userId);
                 prstmt.execute();
@@ -287,7 +270,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_USER_BY_ID);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_USER_BY_ID);
             prstmt.setInt(1, userId);
             rs = prstmt.executeQuery();
             if (rs.next()) {
@@ -319,7 +302,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(CHANGE_ACTIVITIES_AMOUNT);
+            prstmt = con.prepareStatement(ConstantsDAO.CHANGE_ACTIVITIES_AMOUNT);
 
             UserActivityService userActivityService = new UserActivityService();
             List<Integer> usersIdHadActivity = userActivityService.usersWithThisActivity(activityId);
@@ -356,7 +339,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_ALL_BLOCKED);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_ALL_BLOCKED);
             rs = prstmt.executeQuery();
             while (rs.next()) {
                 blockedUsers.add(getUserById(rs.getInt("id")));
@@ -378,9 +361,9 @@ public class UserDAO {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
             if (block) {
-                prstmt = con.prepareStatement(BLOCK_USER);
+                prstmt = con.prepareStatement(ConstantsDAO.BLOCK_USER);
             } else {
-                prstmt = con.prepareStatement(UNBLOCK_USER);
+                prstmt = con.prepareStatement(ConstantsDAO.UNBLOCK_USER);
             }
             prstmt.setInt(1, userId);
             prstmt.execute();
@@ -401,7 +384,7 @@ public class UserDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_USERS_REQUESTED_ACTIVITIES);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_USERS_REQUESTED_ACTIVITIES);
             prstmt.setInt(1, userId);
             rs = prstmt.executeQuery();
             while (rs.next()) {

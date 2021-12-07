@@ -8,6 +8,14 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+/**
+ * This class takes responsibility of opening and closing connection.
+ * Closed connections are added to connection pool in order to save resources on opening new,
+ * unnecessary needed connections
+ *
+ * Configurations are managed in context.xml
+ */
+
 public class ConnectionPool {
 
     private ConnectionPool(){ }

@@ -14,15 +14,6 @@ public class ActivityDAO {
     private static ActivityDAO instance;
     private static Logger logger = Logger.getLogger(ActivityDAO.class);
 
-    private static final String INSERT_ACTIVITY = "INSERT INTO activity (name, duration, reward, description, taken_by) VALUES (?,?,?,?,?)";
-    private static final String ALL_ACTIVITIES_LIST = "SELECT * FROM activity";
-    private static final String GET_ACTIVITY_BY_ID = "SELECT * FROM activity WHERE id=(?)";
-    private static final String GET_ACTIVITY_BY_NAME = "SELECT * FROM activity WHERE name=(?)";
-    private static final String DELETE_ACTIVITY = "DELETE FROM activity WHERE id=(?)";
-    private static final String UPDATE_ACTIVITY = "UPDATE activity SET name=(?), duration=(?), reward=(?), description=(?), taken_by=(?) WHERE id=(?) OR name=(?)";
-    private static final String CHANGE_TAKEN_BY_AMOUNT = "UPDATE activity SET taken_by=(?) WHERE id=(?)";
-    private static final String FIVE_ACTIVITIES_LIST = "SELECT * FROM activity LIMIT ?,?";
-
     private ActivityDAO() {
     }
 
@@ -41,7 +32,7 @@ public class ActivityDAO {
             if (getActivityByName(activity.getName()) == null) {
                 ConnectionPool cp = ConnectionPool.getInstance();
                 con = cp.getConnection();
-                prstmt = con.prepareStatement(INSERT_ACTIVITY);
+                prstmt = con.prepareStatement(ConstantsDAO.INSERT_ACTIVITY);
                 prstmt.setString(1, activity.getName());
                 prstmt.setString(2, activity.getDuration());
                 prstmt.setDouble(3, activity.getReward());
@@ -67,7 +58,7 @@ public class ActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(ALL_ACTIVITIES_LIST);
+            prstmt = con.prepareStatement(ConstantsDAO.ALL_ACTIVITIES_LIST);
             rs = prstmt.executeQuery();
             while (rs.next()) {
                 Activity activity = getActivityById(rs.getInt("id"));
@@ -89,7 +80,7 @@ public class ActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_ACTIVITY_BY_ID);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_ACTIVITY_BY_ID);
             prstmt.setInt(1, id);
             rs = prstmt.executeQuery();
             if (rs.next()) {
@@ -114,7 +105,7 @@ public class ActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(DELETE_ACTIVITY);
+            prstmt = con.prepareStatement(ConstantsDAO.DELETE_ACTIVITY);
             prstmt.setInt(1, activityId);
             prstmt.execute();
             return true;
@@ -133,7 +124,7 @@ public class ActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(UPDATE_ACTIVITY);
+            prstmt = con.prepareStatement(ConstantsDAO.UPDATE_ACTIVITY);
             prstmt.setString(1, entity.getName());
             prstmt.setString(2, entity.getDuration());
             prstmt.setDouble(3, entity.getReward());
@@ -160,7 +151,7 @@ public class ActivityDAO {
             con = cp.getConnection();
             Activity activity = getActivityById(activityId);
             int takenBy = activity.getTakenByAmount();
-            prstmt = con.prepareStatement(CHANGE_TAKEN_BY_AMOUNT);
+            prstmt = con.prepareStatement(ConstantsDAO.CHANGE_TAKEN_BY_AMOUNT);
             if (increment) {
                 prstmt.setInt(1, ++takenBy);
             } else {
@@ -184,7 +175,7 @@ public class ActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(GET_ACTIVITY_BY_NAME);
+            prstmt = con.prepareStatement(ConstantsDAO.GET_ACTIVITY_BY_NAME);
             prstmt.setString(1, name);
             rs = prstmt.executeQuery();
             if (rs.next()) {
@@ -213,7 +204,7 @@ public class ActivityDAO {
         try {
             ConnectionPool cp = ConnectionPool.getInstance();
             con = cp.getConnection();
-            prstmt = con.prepareStatement(FIVE_ACTIVITIES_LIST);
+            prstmt = con.prepareStatement(ConstantsDAO.FIVE_ACTIVITIES_LIST);
             prstmt.setInt(1, num);
             prstmt.setInt(2, 5);
             rs = prstmt.executeQuery();

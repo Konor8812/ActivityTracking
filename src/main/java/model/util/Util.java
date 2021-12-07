@@ -17,6 +17,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * Utility class, contains a lot of essential for application work methods
+ */
 public abstract class Util {
 
     private static Logger logger = Logger.getLogger(Util.class);
@@ -151,16 +154,16 @@ public abstract class Util {
         String[] words = description.split(", ");
 
         for (int i = 0; i < words.length; i++) {
-            try {
-                String word = config.getString(words[i]);
 
-                sb.append(word == null ? words[i] : word)
-                        .append(", ");
-            } catch (MissingResourceException e) {
-                logger.info("Missing resource " + words[i]);
-                sb.append(words[i]).append(", ");
-
+            String word = config.getString(words[i]);
+            if(word == null){
+                logger.info("Missing resource ==> " + words[i]);
+                word = words[i];
             }
+
+            sb.append(word)
+                    .append(", ");
+
         }
         StringBuilder temp = new StringBuilder(sb.toString().trim());
 
@@ -179,8 +182,13 @@ public abstract class Util {
 
         String formattedName = name.trim().replaceAll(" ", ".");
         String value = config.getString(formattedName);
+        String result = value;
+        if (value == null) {
+            result = name;
+            logger.info("Missing resource ==> " + name);
+        }
 
-        return value == null ? name : value;
+        return result;
 
     }
 
@@ -218,7 +226,7 @@ public abstract class Util {
         }
     }
 
-    private static PropertiesConfiguration getPropertiesConfiguration(String bundleName) throws ConfigurationException{
+    private static PropertiesConfiguration getPropertiesConfiguration(String bundleName) throws ConfigurationException {
         Configurations configs = new Configurations();
         FileBasedConfigurationBuilder<PropertiesConfiguration> propBuilder = configs.propertiesBuilder(bundleName + ".properties");
         return propBuilder.getConfiguration();
@@ -276,6 +284,7 @@ public abstract class Util {
         req.getSession().removeAttribute("showChangePassField");
 
     }
+
     public static void removeAdminRelatedAttributes(HttpServletRequest req) {
         req.getSession().removeAttribute("shouldPrintUsers");
         req.getSession().removeAttribute("shouldShowUsers");
@@ -292,10 +301,11 @@ public abstract class Util {
     public static boolean checkForSecurity(String command, HttpServletRequest req) {
         User user = (User) req.getSession().getAttribute("regedAs");
 
-        if(user == null && (command.equals("regUser") || command.equals("logIn") || command.equals("setLanguage"))){
+        if (user == null && (command.equals("regUser") || command.equals("logIn") || command.equals("setLanguage"))) {
             return true;
         }
         return user != null;
 
     }
+
 }

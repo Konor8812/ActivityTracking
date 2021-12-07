@@ -42,5 +42,10 @@
     </form>
     </c:if>
 </table>
+<c:if test="${sessionScope.regedAs != 'admin'}">
+    <%
+        response.sendRedirect("index.jsp");
+    %>
+</c:if>
 </body>
 </html>

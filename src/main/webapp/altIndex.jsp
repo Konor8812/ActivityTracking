@@ -23,9 +23,9 @@
             <img src="http://dl4.joxi.net/drive/2021/11/26/0038/3938/2494306/06/cac8baea54.png" id="icon" alt="User Icon" size="80%" />
         </div>
 
-        <form action="ActivityTracker?command=logIn">
+        <form action="ActivityTracker?command=logIn" method="post">
             <input type="text" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" class="fadeIn third" name="password" placeholder="password">
+            <input type="password" class="fadeIn third" name="password" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log in">
         </form>
 

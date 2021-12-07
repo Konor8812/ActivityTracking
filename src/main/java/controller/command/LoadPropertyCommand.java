@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoadPropertyCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
-        Util.removeActivityRelatedAttributes(req);
+
         String key = req.getParameter("key");
         String value = req.getParameter("value");
 

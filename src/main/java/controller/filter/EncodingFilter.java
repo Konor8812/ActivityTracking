@@ -5,6 +5,9 @@ import org.apache.log4j.Logger;
 import javax.servlet.*;
 import java.io.IOException;
 
+/**
+ * This filter is responsible for setting page encoding, UTF-8 by default
+ */
 public class EncodingFilter implements Filter {
     private String encoding;
     private static Logger logger = Logger.getLogger(EncodingFilter.class);
@@ -12,7 +15,6 @@ public class EncodingFilter implements Filter {
     public void doFilter(ServletRequest servletRequest,
                          ServletResponse servletResponse,
                          FilterChain filterChain) throws IOException, ServletException {
-        logger.info("Encoding ==> " + encoding);
         servletRequest.setCharacterEncoding(encoding);
         filterChain.doFilter(servletRequest, servletResponse);
 
@@ -26,6 +28,10 @@ public class EncodingFilter implements Filter {
         }else{
             logger.info("Wasn't able to read encoding params from web.xml");
         }
+    }
 
+    @Override
+    public void destroy() {
+        encoding = null;
     }
 }

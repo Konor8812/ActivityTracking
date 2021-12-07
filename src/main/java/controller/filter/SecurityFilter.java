@@ -5,6 +5,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * This filter checks, if any User was logged in
+ * If positive, allows trying to get page content
+ * If negative, redirects to registration page
+ *
+ * Logic, which forbids Users access to Admins page and vice versa stands on relevant jsp pages
+ */
 public class SecurityFilter implements Filter {
 
     private FilterConfig filterConfig;
@@ -31,7 +38,11 @@ public class SecurityFilter implements Filter {
 
             boolean hasUserInSession = req.getSession().getAttribute("regedAs") != null;
 
-            if (requestedPage.equals("Admin.jsp") || requestedPage.equals("User.jsp")) {
+            if (requestedPage.equals("Admin.jsp")
+                    || requestedPage.equals("User.jsp")
+                    || requestedPage.equals("Profile.jsp")
+                    || requestedPage.equals("TagSearch.jsp")
+                    || requestedPage.equals("UsersRequests,jsp")) {
 
                 if (!hasUserInSession) {
                     HttpServletResponse resp = (HttpServletResponse) servletResponse;

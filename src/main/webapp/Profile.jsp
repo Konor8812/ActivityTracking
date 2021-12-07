@@ -105,11 +105,7 @@
         </form>
     </c:if>
 </c:if>
-<c:if test="${empty sessionScope.regedAs}">
-    <%
-        response.sendRedirect("index.jsp");
-    %>
-</c:if>
+
 <script type="text/javascript" src="js/refreshTime.js">
     refreshTime()
 </script>

@@ -7245,3 +7245,187 @@ java.io.FileNotFoundException: loc_en.properties (The system cannot find the fil
 18:31:24,595  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
 18:31:27,557  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
 18:31:27,630  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+11:59:44,787  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+11:59:59,154  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:00:21,043  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:00:30,444  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:00:48,212  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:03,872  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:06,562  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:06,651  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:16,448  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:16,453  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:16,901  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:16,907  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:17,219  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:17,226  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:17,502  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:17,512  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:17,886  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:17,894  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:20,161  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:20,172  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:24,368  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:30,976  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:39,471  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:40,024  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:41,815  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:41,867  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:42,313  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:42,360  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:43,692  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:43,713  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:50,465  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:50,568  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:55,179  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:55,197  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:56,649  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:56,691  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:57,479  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:57,523  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:57,935  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:57,975  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:58,876  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:02:58,884  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:06,997  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:08,772  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:08,795  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:11,448  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:11,908  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:13,721  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:13,852  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:15,720  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:15,761  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:16,031  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:16,058  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:16,888  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:16,896  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:22,822  INFO http-nio-8080-exec-6 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:22,915  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:24,550  INFO http-nio-8080-exec-7 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:24,584  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:25,118  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:25,170  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:25,881  INFO http-nio-8080-exec-14 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:25,885  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:31,107  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:31,149  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:32,434  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:32,464  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:33,238  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:33,273  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:33,649  INFO http-nio-8080-exec-11 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:33,677  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:34,522  INFO http-nio-8080-exec-12 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:04:34,526  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:09:49,689  INFO http-nio-8080-exec-18 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:09:51,560  INFO http-nio-8080-exec-16 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:09:51,612  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:09:54,011  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:09:54,275  INFO http-nio-8080-exec-20 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:09:55,761  INFO http-nio-8080-exec-17 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:09:55,842  INFO http-nio-8080-exec-19 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:00,313  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:00,322  INFO http-nio-8080-exec-13 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:05,278  INFO http-nio-8080-exec-15 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:05,303  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:09,082  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:09,109  INFO http-nio-8080-exec-21 Util:getNameAccordingToLang:185 - Missing resource ==> surfing the Internet 
+12:10:09,113  INFO http-nio-8080-exec-21 Util:getNameAccordingToLang:185 - Missing resource ==> going to gym
+12:10:09,116  INFO http-nio-8080-exec-21 Util:getNameAccordingToLang:185 - Missing resource ==> dreaming
+12:10:09,118  INFO http-nio-8080-exec-21 Util:getNameAccordingToLang:185 - Missing resource ==> doing pushups
+12:10:09,120  INFO http-nio-8080-exec-21 Util:getDescriptionAccordingToLang:157 - Missing resource ==> hard
+12:10:09,128  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:27,790  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:10:27,796  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:15,110  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:15,218  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:26,540  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:26,602  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:27,072  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:27,092  INFO http-nio-8080-exec-23 Util:getNameAccordingToLang:185 - Missing resource ==> going to gym
+12:11:27,095  INFO http-nio-8080-exec-23 Util:getNameAccordingToLang:185 - Missing resource ==> dreaming
+12:11:27,097  INFO http-nio-8080-exec-23 Util:getNameAccordingToLang:185 - Missing resource ==> doing pushups
+12:11:27,099  INFO http-nio-8080-exec-23 Util:getDescriptionAccordingToLang:157 - Missing resource ==> hard
+12:11:27,102  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:33,147  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:33,155  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:44,798  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:44,853  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:45,484  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:45,515  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:45,881  INFO http-nio-8080-exec-29 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:45,893  INFO http-nio-8080-exec-29 Util:getNameAccordingToLang:185 - Missing resource ==> going to gym
+12:11:45,895  INFO http-nio-8080-exec-29 Util:getNameAccordingToLang:185 - Missing resource ==> dreaming
+12:11:45,897  INFO http-nio-8080-exec-29 Util:getNameAccordingToLang:185 - Missing resource ==> doing pushups
+12:11:45,898  INFO http-nio-8080-exec-29 Util:getDescriptionAccordingToLang:157 - Missing resource ==> hard
+12:11:45,901  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:49,771  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:50,593  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:50,988  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:51,188  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:51,349  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:51,514  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:51,664  INFO http-nio-8080-exec-29 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:51,981  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:52,141  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:52,312  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:52,447  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:52,613  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:52,764  INFO http-nio-8080-exec-22 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:52,926  INFO http-nio-8080-exec-27 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:53,069  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:53,219  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:54,999  INFO http-nio-8080-exec-29 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:55,026  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:55,584  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:55,615  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:55,971  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:11:55,987  INFO http-nio-8080-exec-26 Util:getNameAccordingToLang:185 - Missing resource ==> dreaming
+12:11:55,990  INFO http-nio-8080-exec-26 Util:getNameAccordingToLang:185 - Missing resource ==> doing pushups
+12:11:55,991  INFO http-nio-8080-exec-26 Util:getDescriptionAccordingToLang:157 - Missing resource ==> hard
+12:11:55,996  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:12:02,332  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:12:02,479  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:12:08,420  INFO http-nio-8080-exec-29 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:12:08,458  INFO http-nio-8080-exec-24 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:12:10,320  INFO http-nio-8080-exec-26 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:12:10,344  INFO http-nio-8080-exec-26 Util:getNameAccordingToLang:185 - Missing resource ==> doing pushups
+12:12:10,345  INFO http-nio-8080-exec-26 Util:getDescriptionAccordingToLang:157 - Missing resource ==> hard
+12:12:10,349  INFO http-nio-8080-exec-21 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:13:33,184  INFO http-nio-8080-exec-23 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:13:33,254  INFO http-nio-8080-exec-28 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:13:47,423  INFO http-nio-8080-exec-30 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:13:47,492  INFO http-nio-8080-exec-25 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:24:49,070  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:00,448  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:28,839  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:28,911  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:33,455  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:35,044  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:42,094  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:42,468  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:43,933  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:43,989  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:44,450  INFO http-nio-8080-exec-4 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:44,470  INFO http-nio-8080-exec-4 Util:getNameAccordingToLang:185 - Missing resource ==> surfing the Internet 
+12:25:44,472  INFO http-nio-8080-exec-4 Util:getDescriptionAccordingToLang:157 - Missing resource ==> easy
+12:25:44,475  INFO http-nio-8080-exec-4 Util:getNameAccordingToLang:185 - Missing resource ==> going to gym
+12:25:44,478  INFO http-nio-8080-exec-4 Util:getDescriptionAccordingToLang:157 - Missing resource ==> exhausting
+12:25:44,481  INFO http-nio-8080-exec-4 Util:getNameAccordingToLang:185 - Missing resource ==> dreaming
+12:25:44,487  INFO http-nio-8080-exec-4 Util:getNameAccordingToLang:185 - Missing resource ==> doing pushups
+12:25:44,489  INFO http-nio-8080-exec-4 Util:getDescriptionAccordingToLang:157 - Missing resource ==> hard
+12:25:44,495  INFO http-nio-8080-exec-5 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:47,861  INFO http-nio-8080-exec-8 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:49,182  INFO http-nio-8080-exec-9 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:50,605  INFO http-nio-8080-exec-10 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:50,653  INFO http-nio-8080-exec-1 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:50,960  INFO http-nio-8080-exec-3 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
+12:25:50,976  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:185 - Missing resource ==> surfing the Internet 
+12:25:50,979  INFO http-nio-8080-exec-3 Util:getDescriptionAccordingToLang:157 - Missing resource ==> easy
+12:25:50,981  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:185 - Missing resource ==> going to gym
+12:25:50,983  INFO http-nio-8080-exec-3 Util:getDescriptionAccordingToLang:157 - Missing resource ==> exhausting
+12:25:50,985  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:185 - Missing resource ==> doing pushups
+12:25:50,987  INFO http-nio-8080-exec-3 Util:getDescriptionAccordingToLang:157 - Missing resource ==> hard
+12:25:50,989  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:185 - Missing resource ==> watching stream
+12:25:50,995  INFO http-nio-8080-exec-2 EncodingFilter:doFilter:15 - Encoding ==> UTF-8
