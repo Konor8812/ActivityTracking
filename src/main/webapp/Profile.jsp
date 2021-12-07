@@ -55,12 +55,12 @@
         <c:if test="${sessionScope.language == 'ru'}">
         <c:if test="${!sessionScope.shouldShowUsersActivities}">
             <form action="ActivityTracker?command=showUsersActivities" method="post">
-                <input type="submit" value="show your activities">
+                <input type="submit" value="посмотреть свои активности">
             </form>
         </c:if>
         <c:if test="${sessionScope.shouldShowUsersActivities}">
             <form action="ActivityTracker?command=hideUsersActivities" method="post">
-                <input type="submit" value="hide your activities">
+                <input type="submit" value="спрятать свои активности">
             </form>
         </c:if>
         </c:if>

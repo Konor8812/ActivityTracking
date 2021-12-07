@@ -46,7 +46,7 @@ public class SecurityFilter implements Filter {
 
                 if (!hasUserInSession) {
                     HttpServletResponse resp = (HttpServletResponse) servletResponse;
-                    resp.sendRedirect("index.jsp");
+                    resp.sendRedirect("GreetingPage.jsp");
                 } else {
                     filterChain.doFilter(servletRequest, servletResponse);
                 }

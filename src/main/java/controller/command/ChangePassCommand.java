@@ -1,6 +1,7 @@
 package controller.command;
 
 import model.entity.User;
+import model.util.Util;
 import service.implementations.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +17,7 @@ public class ChangePassCommand implements Command{
 
         User user = (User)req.getSession().getAttribute("regedAs");
         int id = user.getId();
-        String newPassword = req.getParameter("newPassword");
+        String newPassword = Util.encodePassword(req.getParameter("newPassword"));
 
         UserService userService = new UserService();
         userService.changePass(id, newPassword);

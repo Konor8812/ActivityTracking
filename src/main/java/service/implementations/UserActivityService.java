@@ -15,7 +15,7 @@ public class UserActivityService implements UserActivityFunctionality {
 
     @Override
     public void activityGaveUp(int userId, int activityId) {
-        userActivityDAO.deleteUsersActivity(userId, activityId, false);
+        userActivityDAO.deleteUsersActivity(userId, activityId);
     }
 
     @Override

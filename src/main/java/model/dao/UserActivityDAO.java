@@ -108,26 +108,7 @@ public class UserActivityDAO {
         return "";
     }
 
-    public void deleteUsersActivity(int userId, int activityId, boolean isCompleted) {
-        Connection con = null;
-        PreparedStatement prstmt = null;
-        try {
-            ConnectionPool cp = ConnectionPool.getInstance();
-            con = cp.getConnection();
-            prstmt = con.prepareStatement(ConstantsDAO.DELETE_USERS_ACTIVITY);
-            prstmt.setInt(1, userId);
-            prstmt.setInt(2, activityId);
-            prstmt.execute();
-            UserService userService = new UserService();
-            userService.userCompletedActivity(userId, 0);
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            Util.close(prstmt, con);
-        }
-
-    }
 
     public List<Integer> getListOfUsersHadThisActivity(int activityId) {
         List<Integer> result = new ArrayList<>();
@@ -141,7 +122,7 @@ public class UserActivityDAO {
             prstmt.setInt(1, activityId);
             rs = prstmt.executeQuery();
             while (rs.next()) {
-                if(!rs.getString("status").equals("requested"))
+                if(rs.getString("status").equals("in_process"))
                 result.add(rs.getInt("user_id"));
             }
         } catch (SQLException e) {
@@ -241,6 +222,31 @@ public class UserActivityDAO {
         }
     }
 
+    public void deleteUsersActivity(int userId, int activityId) {
+        Connection con = null;
+        PreparedStatement prstmt = null;
+        try {
+            ConnectionPool cp = ConnectionPool.getInstance();
+            con = cp.getConnection();
+            prstmt = con.prepareStatement(ConstantsDAO.DELETE_USERS_ACTIVITY);
+            prstmt.setInt(1, userId);
+            prstmt.setInt(2, activityId);
+            prstmt.execute();
+
+            UserService userService = new UserService();
+            userService.userCompletedActivity(userId, 0);
+
+            ActivityService activityService = new ActivityService();
+            activityService.wasTakenOrCompleted(activityId, false);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Util.close(prstmt, con);
+        }
+
+    }
+
     public void completedUsersActivity(int userId, int activityId) {
         Connection con = null;
         PreparedStatement prstmt = null;
@@ -256,9 +262,10 @@ public class UserActivityDAO {
             prstmt.execute();
 
             ActivityService activityService = new ActivityService();
-            UserService userService = new UserService();
-
             double pointForActivity = activityService.getRewardForActivity(activityId);
+            activityService.wasTakenOrCompleted(activityId, false);
+
+            UserService userService = new UserService();
             userService.userCompletedActivity(userId, pointForActivity);
 
         } catch (SQLException e) {

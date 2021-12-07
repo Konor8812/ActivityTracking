@@ -23,7 +23,7 @@ public class CommandFactory {
 
     public void executeCommand(HttpServletRequest req, HttpServletResponse resp, String command) throws IOException {
         Command com = getCommand(command);
-        String next = "index.jsp";
+        String next = "GreetingPage.jsp";
         if(Util.checkForSecurity(command, req)) {
             next = com.execute(req);
         }
@@ -117,6 +117,7 @@ public class CommandFactory {
             case "searchByTag":
                 com = new SearchByTagCommand();
                 break;
+
         }
         return com;
     }

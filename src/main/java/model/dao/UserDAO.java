@@ -6,6 +6,7 @@ import model.entity.Activity;
 import model.entity.User;
 import model.exception.WrongLoginData;
 import org.apache.log4j.Logger;
+import service.implementations.ActivityService;
 import service.implementations.UserActivityService;
 
 import java.sql.*;
@@ -253,6 +254,7 @@ public class UserDAO {
                 prstmt.setInt(2, userId);
                 prstmt.execute();
             }
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (WrongLoginData wrongLoginData) {
@@ -305,6 +307,7 @@ public class UserDAO {
             prstmt = con.prepareStatement(ConstantsDAO.CHANGE_ACTIVITIES_AMOUNT);
 
             UserActivityService userActivityService = new UserActivityService();
+
             List<Integer> usersIdHadActivity = userActivityService.usersWithThisActivity(activityId);
             List<Integer> usersWithRequest = userActivityService.usersWithRequestedActivity(activityId);
 
@@ -316,8 +319,6 @@ public class UserDAO {
                 prstmt.execute();
             }
 
-            System.out.println("is users with requests list empty? " + usersWithRequest.isEmpty());
-            System.out.println(usersWithRequest);
             for(int i: usersWithRequest){
                 changeUsersRequestsAmount(i, false);
             }

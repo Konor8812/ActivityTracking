@@ -11,6 +11,6 @@ public class LogOutCommand implements Command{
 
         Util.removeAllAttributes(req);
 
-        return "index.jsp";
+        return "GreetingPage.jsp";
     }
 }

@@ -23,7 +23,7 @@ public class LoginUserCommand implements Command {
                 String role = user.getRole();
                 if (user.getStatus().equals("blocked")) {
                     req.getSession().setAttribute("userIsBlocked", true);
-                    return "index.jsp";
+                    return "LogIn.jsp";
                 }
                 Util.removeIndexAttributes(req);
                 req.getSession().setAttribute("regedAs", user);
@@ -37,11 +37,11 @@ public class LoginUserCommand implements Command {
 
             } catch (Exception e) {
                 req.getSession().setAttribute("loginError", true);
-                return "index.jsp";
+                return "LogIn.jsp";
             }
         }else{
             req.getSession().setAttribute("loginError", true);
-            return "index.jsp";
+            return "LogIn.jsp";
         }
     }
 }

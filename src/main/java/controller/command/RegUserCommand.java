@@ -34,12 +34,12 @@ public class RegUserCommand implements Command {
 
             } catch (ServiceException e) {
                 req.getSession().setAttribute("regError", true);
-                return "index.jsp";
+                return "Registration.jsp";
             }
 
         }else{
             req.getSession().setAttribute("wrongData", true);
-            return "index.jsp";
+            return "Registration.jsp";
     }
     }
 }
