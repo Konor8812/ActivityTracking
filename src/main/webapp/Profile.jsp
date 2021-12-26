@@ -22,7 +22,7 @@
     <fmt:message key="You.are"/> <fmt:message key="${sessionScope.regedAs.role}"/><br>
     <c:if test="${sessionScope.regedAs.role == 'admin'}"><br>
         <br>
-        <img src="http://dl3.joxi.net/drive/2021/11/28/0038/3938/2494306/06/5150b13566.png">
+        <img src="http://dl3.joxi.net/drive/2021/11/28/0038/3938/2494306/06/5150b13566.png" size="30%">
     </c:if>
     <c:if test="${sessionScope.regedAs.role == 'user'}">
         <fmt:message key="Your.points"/> ${sessionScope.regedAs.totalPoints}<br>

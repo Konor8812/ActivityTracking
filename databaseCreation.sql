@@ -22,9 +22,9 @@ DROP TABLE IF EXISTS `FPDatabase`.`user` ;
 
 CREATE TABLE IF NOT EXISTS `FPDatabase`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(20) NOT NULL,
+  `login` VARCHAR(20) NOT NULL,
   `role` VARCHAR(45) NOT NULL DEFAULT 'user',
-  `password` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(200) NOT NULL,
   `total_points` DECIMAL(10) NOT NULL DEFAULT 0,
   `activities_amount` INT NOT NULL DEFAULT 0,
   `status` VARCHAR(10) NOT NULL DEFAULT 'available',

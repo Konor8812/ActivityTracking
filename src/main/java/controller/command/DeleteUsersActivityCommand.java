@@ -1,6 +1,5 @@
 package controller.command;
 
-import model.dao.UserActivityDAO;
 import model.entity.Activity;
 import model.entity.User;
 import service.implementations.UserActivityService;

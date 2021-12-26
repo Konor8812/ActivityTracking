@@ -7681,3 +7681,140 @@ java.io.FileNotFoundException: loc_en.properties (The system cannot find the fil
 23:34:21,570  INFO http-nio-8080-exec-48 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
 23:34:43,840  INFO http-nio-8080-exec-53 Util:getNameAccordingToLang:188 - Missing resource ==> going to gym
 23:34:43,842  INFO http-nio-8080-exec-53 Util:getDescriptionAccordingToLang:160 - Missing resource ==> exhausting
+13:10:44,365  INFO http-nio-8080-exec-9 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:11:06,879  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:11:27,410  INFO http-nio-8080-exec-6 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:11:41,740  INFO http-nio-8080-exec-10 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:12:14,350  INFO http-nio-8080-exec-4 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:12:30,167  INFO http-nio-8080-exec-9 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:13:01,369  INFO http-nio-8080-exec-2 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:13:19,939  INFO http-nio-8080-exec-6 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:13:23,798  INFO http-nio-8080-exec-9 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+13:13:25,418  INFO http-nio-8080-exec-1 Util:getNameAccordingToLang:188 - Missing resource ==> surfing the Internet 
+13:13:25,420  INFO http-nio-8080-exec-1 Util:getDescriptionAccordingToLang:160 - Missing resource ==> helpful
+13:13:28,338  INFO http-nio-8080-exec-4 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:13:38,733  INFO http-nio-8080-exec-10 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:13:49,264  INFO http-nio-8080-exec-9 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:13:59,619  INFO http-nio-8080-exec-5 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:14:05,538  INFO http-nio-8080-exec-10 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+13:14:06,313  INFO http-nio-8080-exec-4 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:14:07,210  INFO http-nio-8080-exec-5 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+13:14:20,873  INFO http-nio-8080-exec-9 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:14:25,088  INFO http-nio-8080-exec-8 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+13:14:26,650  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:188 - Missing resource ==> surfing the Internet 
+13:14:26,652  INFO http-nio-8080-exec-3 Util:getDescriptionAccordingToLang:160 - Missing resource ==> helpful
+13:14:29,963  INFO http-nio-8080-exec-7 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:14:31,076  INFO http-nio-8080-exec-9 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+13:14:31,569  INFO http-nio-8080-exec-8 Util:getNameAccordingToLang:188 - Missing resource ==> surfing the Internet 
+13:14:31,570  INFO http-nio-8080-exec-8 Util:getDescriptionAccordingToLang:160 - Missing resource ==> helpful
+13:14:32,601  INFO http-nio-8080-exec-3 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+13:14:47,559  INFO http-nio-8080-exec-9 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+13:14:52,280  INFO http-nio-8080-exec-2 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+13:15:06,439  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+14:09:19,809  INFO http-nio-8080-exec-6 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+14:09:55,376  INFO http-nio-8080-exec-10 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+14:09:57,007  INFO http-nio-8080-exec-5 Util:getNameAccordingToLang:188 - Missing resource ==> surfing the Internet 
+14:09:57,011  INFO http-nio-8080-exec-5 Util:getDescriptionAccordingToLang:160 - Missing resource ==> helpful
+14:09:59,581  INFO http-nio-8080-exec-7 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+14:10:35,942  INFO http-nio-8080-exec-10 Util:getNameAccordingToLang:188 - Missing resource ==> surfing the Internet 
+14:10:35,944  INFO http-nio-8080-exec-10 Util:getDescriptionAccordingToLang:160 - Missing resource ==> helpful
+14:10:50,138  INFO http-nio-8080-exec-8 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+14:10:51,508  INFO http-nio-8080-exec-3 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+14:10:55,964 ERROR http-nio-8080-exec-5 UserActivityDAO:reqActivityForUser:176 - Error while user requested activity
+java.sql.SQLException: Field 'time_spent' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserActivityDAO.reqActivityForUser(UserActivityDAO.java:170)
+	at service.implementations.UserActivityService.userRequestedActivity(UserActivityService.java:43)
+	at controller.command.RequestedActivityCommand.execute(RequestedActivityCommand.java:18)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:28)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doGet(Controller.java:27)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:54)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:19)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+14:12:40,720  INFO http-nio-8080-exec-3 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+14:12:47,842  INFO http-nio-8080-exec-5 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+14:12:56,492  INFO http-nio-8080-exec-10 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+14:13:15,628  INFO http-nio-8080-exec-1 Util:getDescriptionAccordingToLang:160 - Missing resource ==> hard
+14:13:27,861  INFO http-nio-8080-exec-9 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+14:14:00,019  INFO http-nio-8080-exec-9 Util:getNameAccordingToLang:188 - Missing resource ==> surfing the Internet 
+14:14:00,023  INFO http-nio-8080-exec-9 Util:getDescriptionAccordingToLang:160 - Missing resource ==> helpful
+06:41:38,959  INFO http-nio-8080-exec-8 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+06:41:47,549 ERROR http-nio-8080-exec-10 UserActivityDAO:reqActivityForUser:176 - Error while user requested activity
+java.sql.SQLException: Field 'time_spent' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:93)
+	at model.dao.UserActivityDAO.reqActivityForUser(UserActivityDAO.java:170)
+	at service.implementations.UserActivityService.userRequestedActivity(UserActivityService.java:43)
+	at controller.command.RequestedActivityCommand.execute(RequestedActivityCommand.java:18)
+	at controller.command.CommandFactory.executeCommand(CommandFactory.java:28)
+	at controller.Controller.executeCommand(Controller.java:42)
+	at controller.Controller.doGet(Controller.java:27)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.SecurityFilter.doFilter(SecurityFilter.java:54)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at controller.filter.EncodingFilter.doFilter(EncodingFilter.java:19)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+06:44:41,619  INFO http-nio-8080-exec-10 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
+06:45:30,799  INFO http-nio-8080-exec-12 Util:getNameAccordingToLang:188 - Missing resource ==> doing pushups
